@@ -688,7 +688,7 @@ p {
     height: 70px;
     background-color: rgb(224, 224, 224);
     border-radius: 50%;
-    background-image: url("perfil.png");
+    background-image: url("imagens/perfil.png");
     background-size: cover;
     border: solid 4px rgb(70, 70, 70);
 
