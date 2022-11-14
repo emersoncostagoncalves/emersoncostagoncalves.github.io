@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://rare-gallery.com/uploads/posts/341229-Cyberpunk-Cityscape-Scenery-Sci-Fi-Science-Fiction-City-Buildings-Headphone.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 80%);
+    width: 100%;
+    height: 100%;
+}
+
+.container-items {
+    background-color: rgba(0, 0, 0, 40%);
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 40px;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    border: 1px solid rgba(64, 230, 147, 10%);
+}
+
+.container-cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 1.2em;
+    margin-bottom: 60px;
+}
+
+.container-cabecalho p {
+    color: rgb(141, 141, 141);
+}
+.container-set {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+#range-senha {
+    width: 200px;
+    cursor: pointer;
+    accent-color: rgb(64, 230, 147);
+}
+
+.campo-senha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    
+}
+
+.senha-gerada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 40px;  
+    border-bottom: solid 1px white;
+    color: aliceblue;
+}
+
+.bnt-gerar {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+    transition: all 1s;
+    color: rgb(189, 189, 189);
+}
+
+.bnt-gerar:hover {
+    background-color: rgb(64, 230, 147);
+    transform: translateY(-5px);
+    color: black;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    color: aliceblue;
+    width: 150px;
+    height: 30px;
+}
+
+.bnt-copy {
+    cursor: pointer;
+    
+}
+
+.bnt-copy:hover {
+    color: rgb(64, 230, 147)
+}
+
+.bnt-copy:active {
+    font-size: 0.9em;
+}
