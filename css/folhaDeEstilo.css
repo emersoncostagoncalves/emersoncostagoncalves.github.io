@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(33, 36, 40);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(33, 36, 40, 80%);
+    padding: 0px 40px;
+    position: fixed;
+    border-bottom: solid 0.1px rgb(78, 78, 78);
+    box-shadow: 5px 10px 20px rgb(25, 25, 25);
+    backdrop-filter: blur(5px);
+
+
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px 1000px 1100px 700px 700px 1000px;
+    grid-template-areas:
+        "sobre-mim"
+        "skills"
+        "experiencia"
+        "educacao"
+        "portifolio"
+        "contato";
+    border-top: solid 1px rgb(227, 235, 241);
+    background-color: rgb(33, 36, 40);
+}
+
+.sobre-mim {
+    display: flex;
+    justify-content: center;
+    grid-area: sobre-mim;
+    background-color: #212428;
+    padding: 150px 20px 70px 20px;
+    gap: 20px;
+    border-bottom: solid 0.1px rgb(0, 0, 0);
+
+}
+
+
+
+.info {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 500px;
+    height: 100%;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    border-radius: 15px;
+    padding: 20px 20px;
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+    font-size: 1.2em;
+
+}
+
+.info-cabecalho {
+    box-sizing: border-box;
+    line-height: 55px;
+
+
+}
+
+.animar {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+.info-descricao {
+    display: flex;
+
+}
+
+.info-contato {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info-contato div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.sobre-mim>.foto {
+    float: right;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 700px;
+    height: 100%;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    border-radius: 15px;
+    padding: 20px 20px;
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+}
+
+.foto>.imagem {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 31, 31);
+    padding: 20px;
+    border-radius: 15px;
+    background-image: url("../imagens/imagem-emerson.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: background-size 1s;
+
+}
+
+.foto>.imagem:hover {
+    background-size: 120%;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: skills;
+    background-color: #212428;
+    padding: 120px 20px;
+    gap: 20px;
+    border-bottom: solid 0.1px rgb(0, 0, 0);
+}
+
+.cont-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    gap: 60px;
+
+}
+
+.cont-skills>.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    gap: 10px;
+
+}
+
+.cont-skills>.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    gap: 10px;
+
+}
+
+.photoshop {
+    display: flex;
+}
+
+.coreldraw {
+    display: flex;
+}
+
+.premiere {
+    display: flex;
+}
+
+.barra {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 400px;
+    height: 50px;
+    background: linear-gradient(175deg, #0f1113, rgb(43, 43, 43));
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 1px 10px 20px rgb(20, 20, 20);
+    transition: transform 1s;
+
+}
+
+.barra:hover {
+    transform: translateX(15px);
+}
+
+
+
+.skill1 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 95%;
+    height: 45px;
+    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
+    border-radius: 20px;
+    color: rgb(240, 248, 255);
+    padding: 10px;
+}
+
+.skill2 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.skill3 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 80%;
+    height: 45px;
+    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.skill4 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 75%;
+    height: 45px;
+    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.skill5 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 95%;
+    height: 45px;
+    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.skill6 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 70%;
+    height: 45px;
+    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.skill7 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 98%;
+    height: 45px;
+    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.skill8 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 96%;
+    height: 45px;
+    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.skill9 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 87%;
+    height: 45px;
+    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.skill10 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 80%;
+    height: 45px;
+    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.skill11 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 95%;
+    height: 45px;
+    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.skill12 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 75%;
+    height: 45px;
+    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: experiencia;
+    background-color: rgb(33, 36, 40);
+    border-bottom: solid 0.1px rgb(0, 0, 0);
+    padding: 120px 80px;
+    gap: 40px;
+    font-size: 1.3em;
+}
+
+.cabecalho-exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixa-exp {
+    width: 1100px;
+    height: 300px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+}
+
+.educacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: educacao;
+    background-color: #212428;
+    border-bottom: solid 0.1px rgb(0, 0, 0);
+    padding: 120px 80px;
+}
+
+.portifolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: portifolio;
+    background-color: #212428;
+    border-bottom: solid 0.1px rgb(0, 0, 0);
+    padding: 120px 80px;
+
+}
+
+.contato {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: contato;
+    background-color: #212428;
+    border-bottom: solid 0.1px rgb(0, 0, 0);
+    padding: 120px 80px;
+    gap: 40px
+}
+
+.cabecalho-contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contato-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    border-radius: 15px;
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+    font-size: 1.2em;
+    gap: 50px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 1em;
+
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.instagram {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+    border-radius: 5px;
+
+}
+
+.facebook {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+    border-radius: 5px;
+}
+
+.linkedin {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+    border-radius: 5px;
+}
+
+.bnt-midias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s, background-color 1s;
+}
+
+.bnt-midias:hover {
+    background: rgb(26, 26, 26);
+    transform: translateY(-10px)
+}
+
+.contato-container>.form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    border-radius: 15px;
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+    font-size: 1.2em;
+    padding: 30px;
+    color: rgb(203, 214, 223);
+    font-size: 1em;
+    box-sizing: border-box;
+    gap: 20px;
+
+
+
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    background-color: #cecece;
+    border-radius: 10px;
+    text-align: start;
+    padding: 5px;
+
+}
+
+input:focus {
+    border: solid 2px rgb(255, 1, 79);
+    outline: 0;
+    background-color: rgb(230, 230, 230);
+}
+
+
+#form-msg {
+    height: 200px;
+    text-align: start;
+    resize: none;
+    border-radius: 10px;
+    background-color: #cecece;
+    padding: 5px;
+}
+
+textarea:focus {
+    border: solid 2px rgb(255, 1, 79);
+    outline: 0;
+    background-color: rgb(230, 230, 230);
+}
+
+form>button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
+    border: none;
+    color: #cecece;
+    transition: transform 1s;
+}
+
+form>button:hover {
+    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
+    color: black;
+    transform: translateY(-5px);
+
+
+}
+
+.contato-campo1-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.contato-campo1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.contato-campo2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.contato-campo3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #212428;
+    gap: 10px;
+}
+
+
+
+
+.cabecalho>.foto {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 50%;
+    background-image: url("../imagens/perfil.png");
+    background-size: cover;
+    border: solid 4px rgb(70, 70, 70);
+
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+
+}
+
+a {
+    color: rgb(203, 214, 223);
+
+}
+
+a:visited {
+    color: rgb(203, 214, 223);
+}
+
+a:hover {
+    color: rgb(255, 1, 79);
+
+}
+
+h1 {
+    font-size: 50px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+h3 {
+    color: rgb(203, 214, 223);
+}
+
+p {
+
+    color: rgb(189, 199, 207);
+}
+
+.destaque {
+    color: rgb(255, 1, 79);
+}
+
+.rodape>.foto {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 50%;
+    background-image: url("perfil.png");
+    background-size: cover;
+    border: solid 4px rgb(70, 70, 70);
+
+}
+
+
+.animar {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: animar-texto;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+}
+
+.bnt-topo {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
+    box-shadow: 1px 5px 20px rgb(12, 12, 12);
+    border-radius: 50%;
+    transition: display 2s;
+}
+
+/*Animações*/
+
+@keyframes animar-texto {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 100%
+    }
+
+}
