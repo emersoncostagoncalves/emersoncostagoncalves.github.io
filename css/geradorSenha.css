@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @font-face {
     font-family: 'Blanka';
     src: url('../fonts/Blanka-Regular.otf') format('truetype');
-  }
+}
 
 * {
     margin: 0;
@@ -48,6 +49,7 @@ body {
     box-sizing: border-box;
     border: 1px solid rgba(64, 230, 147, 10%);
     transition: all 1s;
+    padding-bottom: 40px;
 
 
 
@@ -67,26 +69,31 @@ body {
     font-size: 1.2em;
     margin-bottom: 40px;
     margin-top: 40px;
-    gap: 5px;
-    
-    
-    
+    gap: 25px;
 
 }
 
+
 .cadeado-icon {
-    
+
     animation-name: "anima-cadeado";
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    
+
 }
 
-
-.container-cabecalho p {
+.cabecalho-texto {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: rgb(141, 141, 141);
+    white-space: wrap;
 }
+
+
 
 .container-set {
     display: flex;
@@ -111,7 +118,6 @@ body {
     align-items: center;
     gap: 20px;
     margin-top: 20px;
-
 
 }
 
@@ -146,10 +152,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
     color: aliceblue;
     width: 150px;
     height: 30px;
+
 }
 
 .bnt-copy {
@@ -165,22 +171,25 @@ body {
     font-size: 0.9em;
 }
 
-h1{
-    color: rgb(255, 255, 255);
+h1 {
+    color: rgb(64, 230, 147);
     font-family: 'Blanka';
-    animation-name: "anima-cadeado";
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    
+    letter-spacing: 2px;
+    font-size: 2.5em;
+
 }
 
 @keyframes anima-cadeado {
-    from{
-        color: rgb(255, 255, 255)
+    from {
+        color: rgb(255, 255, 255);
+        text-shadow: 0px 0px 5px rgb(255, 255, 255);
+
     }
+
     to {
-        color: rgb(64, 230, 147)
-        
+        color: rgb(64, 230, 147);
+        text-shadow: 0px 0px 40px rgb(64, 230, 147);
+
+
     }
 }
