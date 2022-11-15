@@ -44,15 +44,12 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    gap: 40px;
+    gap: 30px;
     backdrop-filter: blur(5px);
     box-sizing: border-box;
     border: 1px solid rgba(64, 230, 147, 10%);
     transition: all 1s;
-    padding-bottom: 40px;
-
-
-
+    
 }
 
 .container-items:hover {
@@ -153,9 +150,8 @@ body {
     justify-content: center;
     align-items: center;
     color: aliceblue;
-    width: 150px;
+    width: 200px;
     height: 30px;
-
 }
 
 .bnt-copy {
