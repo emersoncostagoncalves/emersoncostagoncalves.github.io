@@ -55,7 +55,7 @@ let operacaoFinal = []
 let resultado = [];
 
 
-
+historico.style.display = "flex"
 
 
 function Operacao(numero1, operacao, numero2){
@@ -90,14 +90,10 @@ botoes.forEach(e => {
             chaveBotoes = true;
             visorNumero.innerText = "";
             numero1.push(e.innerText)
-            visorNumero.innerText = numero1.join("");
-            
-            
-            
+            visorNumero.innerText = numero1.join(""); 
         }
         
     }
-
     }
     )
 
@@ -130,9 +126,6 @@ function Dividir(arr) {
 function Multiplicar(arr) {
     return arr.reduce((a, v) => a * v)
 }
-
-
-
 
 // Funções ao clicar
 
