@@ -30,8 +30,29 @@ header {
     border-bottom: solid 0.1px rgb(78, 78, 78);
     box-shadow: 5px 10px 20px rgb(25, 25, 25);
     backdrop-filter: blur(5px);
+    
 
 
+}
+
+.icons-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.instagram-icon:hover {
+    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
+}
+
+.facebook-icon:hover {
+    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
+}
+
+.linkedin-icon:hover {
+    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
 }
 
 
@@ -646,7 +667,10 @@ footer {
 
 .menu {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    
 
 }
 
