@@ -56,15 +56,15 @@ btnIniciar.onclick = () => {
 }
 
 btnReset.onclick = () => {
-    if(!iniciado){
+    if (!iniciado) {
         clearInterval(loop)
         btnIniciar.innerText = "Iniciar"
         segundos = 0;
         display.innerText = "00:00:00"
-    }else{
+    } else {
         btnIniciar.innerText = "Pausar"
         segundos = 0;
-        display.innerText = "00:00:00" 
+        display.innerText = "00:00:00"
     }
 }
 

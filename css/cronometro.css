@@ -22,7 +22,7 @@
     border-radius: 20px;
     box-sizing: border-box;
     overflow: hidden;
-    
+
 }
 
 
@@ -56,13 +56,13 @@
     background-color: rgb(255, 0, 98);
     border-radius: 100%;
     overflow: hidden;
-    
+
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
-    
-    
+
+
 }
 
 .display {
@@ -73,16 +73,17 @@
     height: 220px;
     background-color: aliceblue;
     border-radius: 100%;
-    box-shadow: 2px 10px 20px rgba(0,0,0, 40%);
-    
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 40%);
+
 }
 
 @keyframes cor {
-    from{
+    from {
         background-color: rgba(255, 0, 98, 1)
     }
+
     to {
-        
+
         background-color: blueviolet;
     }
 }
@@ -100,7 +101,7 @@
     height: 20%;
     gap: 10px;
     border-top: 1px solid rgb(230, 230, 230);
-    
+
 
 }
 
@@ -113,10 +114,11 @@ button {
     color: white;
     font-size: 16px;
     transition: all 1s;
-    
+
 }
 
-button:hover{
+button:hover {
     background-color: blueviolet;
-    transform: translateY(-3px)
+    transform: translateY(-5px);
+    
 }
