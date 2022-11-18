@@ -8,13 +8,13 @@
 
 body {
     height: 100vh;
-    background-color: rgb(60, 61, 61);
+    background-color: rgb(71, 0, 165);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Luckiest Guy', cursive;
-    background: url("https://rare-gallery.com/uploads/posts/501500-artist-4k-widescreen.jpg");
+   /* background: url("https://rare-gallery.com/uploads/posts/501500-artist-4k-widescreen.jpg");*/
     background-size: cover;
     background-image: center;
 }
@@ -38,13 +38,14 @@ body {
     width: 800px;
     max-width: 900px;
     height: 70%;
-    background-color: rgba(1, 202, 185, 20%);
+   /* background-color: rgba(1, 202, 185, 20%);*/
     border-radius: 15px;
     gap: 10px;
     color: aliceblue;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(1, 202, 185, 50%);
+    border: 2px solid rgba(255, 196, 0, 0.5);
     font-size: 40px;
+    background-color: rgb(240, 102, 38);
 
 
     
@@ -53,7 +54,7 @@ body {
 .btn-jogar {
     width: 200px;
     height: 40px;
-    background-color: rgb(1, 202, 185);
+    background-color: rgb(253, 236, 0);
     border: none;
     border-radius: 10px;
     font-size: 18px;
@@ -76,8 +77,9 @@ body {
     background-color: rgba(1, 202, 185, 20%);
     border-radius: 15px;
     gap: 0px;
-    border: solid 1px rgba(2, 178, 190, 0.3);
+    border: solid 2px rgba(240, 224, 4, 0.3);
     backdrop-filter: blur(10px);
+    background-color: rgb(240, 102, 38);
     
 }
 
@@ -126,11 +128,13 @@ body {
     background-color: rgba(0,0,0,50%);
     border-radius: 15px;
     transition: all 1s;
-    border: 1px solid rgba(0, 0, 0, 50%);
+    border: 2px solid rgb(255, 94, 1);
+    background-color: rgb(65, 0, 139);
 }
 
 .quadrados:hover {
-    border: 1px solid rgba(1, 202, 185, 0.5);
+    border: 2px solid rgba(255, 217, 0, 1);
+    background-color: rgb(77, 4, 160);
     
 
 }
@@ -204,8 +208,9 @@ body {
     gap: 5px;
     color: aliceblue;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(1, 202, 185, 50%);
+    border: 1px solid rgba(106, 14, 255, 0.5);
     font-size: 40px;
+    background-color: rgb(65, 0, 139);
 }
 
 .btn-again {
@@ -217,6 +222,7 @@ body {
     font-weight: bold;
     font-size: 12px;
     transition: all 1s;
+    background-color: rgb(253, 236, 0);
     
 }
 
