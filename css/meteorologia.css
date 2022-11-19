@@ -124,3 +124,24 @@ select:checked{
     color:black;
     margin-bottom: 30px;
 }
+
+.imagem-tempo{
+animation-name: "animar-imagem";
+animation-duration: 2s;
+animation-iteration-count: 1;
+animation-direction: normal;
+}
+
+@keyframes animar-imagem{
+    from{
+        transform: translateY(-30px);
+        opacity: 0%;
+        
+        
+    }
+    to{
+        transform: translateY(0px);
+        
+        
+    }
+}

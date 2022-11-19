@@ -154,6 +154,7 @@ return condicoesTempo.filter(e => e.code == numero)
 
 const resCond = Condicao(tempoCodigo)
 const imagem = document.createElement("img");
+imagem.className = "imagem-tempo"
 imagem.src = resCond[0].img
 imagem.style.width = "200px"
 localImagem.insertAdjacentElement("afterbegin", imagem)
