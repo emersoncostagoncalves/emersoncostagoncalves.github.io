@@ -17,6 +17,7 @@ body {
     font-family: 'Work Sans', sans-serif;
     background: url("https://rare-gallery.com/uploads/posts/5400744-cloud-sunrise-summit-sky-scenic-cloudscape-atmosphere-horizon-sunset-mountain-visit-asium-journey-travel-photography-hiking-outdoor-nature-photography-nature-great-nature-cloud-porn-sunray-cre.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     
     
 }
@@ -168,7 +169,6 @@ select:checked {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: white;
         color: white;
         font-family: 'Work Sans', sans-serif;
     }
@@ -177,10 +177,20 @@ select:checked {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 410px;
-        height: 660px;
+        width: 400px;
+        height: 620px;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 40px;
         backdrop-filter: blur(10px);
+    }
+
+    .container {
+        width: 380px;
+        height: 600px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+    
     }
 }
