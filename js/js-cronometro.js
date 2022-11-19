@@ -11,53 +11,46 @@ let minutos = 0
 let segFormat;
 let minFormat;
 let hFormat;
-
+const tempo = new Date();
 
 
 
 console.log(btnIniciar, btnReset, display)
 
+
+
 function cronometro() {
+    segundos += 1;
+    tempo.setHours(horas, minutos, segundos)
+    
+    segFormat = (tempo.getSeconds() < 10) ? ":0" + tempo.getSeconds() : ":" + tempo.getSeconds();
+    minFormat = (tempo.getMinutes() < 10) ? ":0" + tempo.getMinutes() : ":" + tempo.getMinutes()
+    hFormat = (tempo.getHours() < 10) ? "0" + tempo.getHours() : tempo.getHours()
 
-
-    const tempo = new Date();
-    this.loop = setInterval(() => {
-
-        segundos += 1;
-
-        tempo.setHours(horas, minutos, segundos)
-
-        segFormat = (tempo.getSeconds() < 10) ? ":0" + tempo.getSeconds() : ":" + tempo.getSeconds();
-        minFormat = (tempo.getMinutes() < 10) ? ":0" + tempo.getMinutes() : ":" + tempo.getMinutes()
-        hFormat = (tempo.getHours() < 10) ? "0" + tempo.getHours() : tempo.getHours()
-
-
-
-        display.innerText = hFormat + minFormat + segFormat
-
-    }, 1000)
-
-
+    display.innerText = hFormat + minFormat + segFormat
 }
 
 
-btnIniciar.onclick = () => {
+function iniciar() {
     if (!iniciado) {
-        cronometro();
+        this.intervalo = setInterval(cronometro, 1000)
         iniciado = true;
         btnIniciar.innerText = "Pausar"
         animation.style.animationName = "cor"
+        display.innerText = "00:00:01"
+        segundos = 1;
     } else {
-        clearInterval(loop)
+        clearInterval(intervalo)
         iniciado = false;
         btnIniciar.innerText = "Iniciar"
         animation.style.animationName = ""
     }
 }
 
-btnReset.onclick = () => {
+function resetar() {
+
     if (!iniciado) {
-        clearInterval(loop)
+        clearInterval(intervalo)
         btnIniciar.innerText = "Iniciar"
         segundos = 0;
         display.innerText = "00:00:00"
@@ -66,5 +59,15 @@ btnReset.onclick = () => {
         segundos = 0;
         display.innerText = "00:00:00"
     }
+}
+
+
+btnIniciar.onclick = () => {
+    
+    iniciar();
+}
+
+btnReset.onclick = () => {
+    resetar();
 }
 

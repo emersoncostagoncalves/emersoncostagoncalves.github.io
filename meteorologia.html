@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo - Emerson Costa Gonçalves</title>
+    <link rel="stylesheet" href="css/meteorologia.css">
+</head>
+
+<body>
+    <div class="container-border">
+        <div class="container">
+            <div class="container-header">
+                <h3 id="city-name">Nome da Cidade</h3>
+
+            </div>
+            <div class="container-main">
+                <div id="imagem">
+                    <!--<img src="/imagens/sol.png" width="200px"alt="previsão"> <-->
+                </div>
+
+                <div class="main-temp">
+
+                    <h1 id="temperatura"></h1><sup>ºC</sup>
+
+                </div>
+                <h2 id="condição">Condição</h2>
+            </div>
+            <div class="container-footer">
+                <p id="data">data</p>
+                <div class="selection">
+                    <select id="uf">
+                        <option>UF</option>
+                    </select>
+                    <select id="municipios"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/js-meteorologia.js"></script>
+</body>
+
+</html>
