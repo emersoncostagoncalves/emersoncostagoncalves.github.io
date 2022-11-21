@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas - Emerson Costa Gonçalves</title>
+    <link rel="stylesheet" href="/css/gkanban.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-header"></div>
+        <div class="container-main">
+            <div class="container-colunas">
+                <div class="coluna">
+                    <div class="column-header">
+
+                        <h2>A fazer</h2>
+
+
+
+                        <div class="header-destaque">
+                            <h1>A fazer</h1>
+                        </div>
+                    </div>
+                    <div class="column-main">
+                        <div class="card">Fazer projeto estilo Kanban</div>
+                        <div class="card">Fazer um cronômetro</div>
+
+                    </div>
+                    <div class="column-footer">
+                        <div id="btn-add-card">
+                            <p>+ Adicionar cartão</p>
+                        </div>
+                        <button class="btn-remove-coluna">X</button>
+                    </div>
+                </div>
+            </div>
+            <div class="add-coluna">
+                <p class="add-texto">+Adicionar Coluna</p>
+                <input type="text" name="inserir" id="coluna-nome" placeholder="+Inserir Coluna...">
+                <div class="add-coluna-footer">
+                    <button id="btn-add-coluna">Adicionar Coluna</button>
+                    <button id="btn-fechar-add">X</button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container-footer"></div>
+
+    </div>
+
+    <script src="js/js-gkanban.js"></script>
+</body>
+
+</html>

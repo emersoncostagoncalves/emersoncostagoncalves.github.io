@@ -30,6 +30,7 @@ header {
     border-bottom: solid 0.1px rgb(78, 78, 78);
     box-shadow: 5px 10px 20px rgb(25, 25, 25);
     backdrop-filter: blur(5px);
+    z-index: 1;
     
 
 

@@ -34,3 +34,16 @@ console.log(document.body.scrollTop, document.documentElement.scrollTop)
         document.body.scrollTop -= 100;
        }
        
+       /// animações ao rollar
+
+       let slideUp = {
+        distance: '150%',
+        origin: 'bottom',
+        opacity: 0.5
+    };
+
+       ScrollReveal().reveal('.skills',slideUp);
+       ScrollReveal().reveal('.experiencia',slideUp);
+       ScrollReveal().reveal('.educacao',slideUp);
+       ScrollReveal().reveal('.portifolio',slideUp);
+       ScrollReveal().reveal('.contato',slideUp);
