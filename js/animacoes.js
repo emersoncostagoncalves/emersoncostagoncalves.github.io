@@ -39,7 +39,19 @@ console.log(document.body.scrollTop, document.documentElement.scrollTop)
        let slideUp = {
         distance: '150%',
         origin: 'bottom',
-        opacity: 0.5
+        opacity: 0
+    };
+
+    let slideRight = {
+        distance: '150%',
+        origin: 'right',
+        opacity: 0
+    };
+
+    let slideLeft = {
+        distance: '150%',
+        origin: 'left',
+        opacity: 0
     };
 
        ScrollReveal().reveal('.skills',slideUp);
@@ -47,3 +59,6 @@ console.log(document.body.scrollTop, document.documentElement.scrollTop)
        ScrollReveal().reveal('.educacao',slideUp);
        ScrollReveal().reveal('.portifolio',slideUp);
        ScrollReveal().reveal('.contato',slideUp);
+
+       ScrollReveal().reveal('.info',slideLeft);
+       ScrollReveal().reveal('.sobre-mim > .foto',slideRight);
