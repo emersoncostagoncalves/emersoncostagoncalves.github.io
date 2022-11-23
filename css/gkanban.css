@@ -195,7 +195,7 @@ body{
     font-size: 16px;
     background: none;
     border: none;
-    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(600%) contrast(143%);
+    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(500%) contrast(143%);
 }
 
 .btn-remove-coluna:hover {
