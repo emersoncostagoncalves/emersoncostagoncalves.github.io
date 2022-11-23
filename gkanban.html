@@ -11,48 +11,39 @@
 <body>
 
     <div class="container">
-        <div class="container-header"></div>
+        <div class="container-header">
+            <p class="copyright" >© 2022. Emerson Costa Gonçalves</p>
+        </div>
         <div class="container-main">
             <div class="container-colunas">
-                <div class="coluna">
-                    <div class="column-header">
 
-                        <h2>A fazer</h2>
-
-
-
-                        <div class="header-destaque">
-                            <h1>A fazer</h1>
-                        </div>
-                    </div>
-                    <div class="column-main">
-                        <div class="card">Fazer projeto estilo Kanban</div>
-                        <div class="card">Fazer um cronômetro</div>
-
-                    </div>
-                    <div class="column-footer">
-                        <div id="btn-add-card">
-                            <p>+ Adicionar cartão</p>
-                        </div>
-                        <button class="btn-remove-coluna">X</button>
-                    </div>
-                </div>
             </div>
             <div class="add-coluna">
-                <p class="add-texto">+Adicionar Coluna</p>
+                <div class="add-coluna-text">
+                    <img src="/icones/add-line.svg" width="20px" alt="Adicionar coluna" title="Adicionar coluna">
+                    <p class="add-texto">Adicionar Coluna</p>
+                </div>
+
                 <input type="text" name="inserir" id="coluna-nome" placeholder="+Inserir Coluna...">
                 <div class="add-coluna-footer">
                     <button id="btn-add-coluna">Adicionar Coluna</button>
-                    <button id="btn-fechar-add">X</button>
+                    <div>
+                        <img id="btn-fechar-add" src="/icones/close-line.svg" width="25px" alt="Fechar" title="Fechar">
+                    </div>
+
 
                 </div>
 
             </div>
 
         </div>
-        <div class="container-footer"></div>
+        <div class="container-footer">
+            
+        </div>
 
     </div>
+
+   
 
     <script src="js/js-gkanban.js"></script>
 </body>

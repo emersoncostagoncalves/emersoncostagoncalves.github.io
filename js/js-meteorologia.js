@@ -41,7 +41,7 @@ fetch(urlFinal)
 
 
  const condicoesTempo = [
-  {code:0 , nome: "Céu Limpo", img: "/imagens/sol.png"},
+  {code: 0 , nome: "Céu Limpo", img: "/imagens/sol.png"},
   {code: 1, nome: "Principalmente Claro", img: "/imagens/sol-poucas-nuvens.png"},
   {code: 2, nome: "Parcialmente Nublado", img: "/imagens/sol-nuvens.png"},
   {code: 3, nome: "Nublado", img: "/imagens/nublado.png"},
