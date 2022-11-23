@@ -210,6 +210,7 @@ body{
     box-shadow: 0px 1px 2px rgb(190, 190, 190);
     box-sizing: border-box;
     overflow: hidden;
+    
 }
 
 .card-container:hover {
@@ -226,14 +227,16 @@ body{
     box-sizing: border-box;
     padding: 10px;
     overflow: scroll;
-
+    
 }
 
 .menu-card {
-    width: 8%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
+    
 }
 
 
