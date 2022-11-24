@@ -34,6 +34,7 @@ function cronometro() {
 
 function iniciar() {
     if (!iniciado) {
+        
         segundos++
         tempo.setHours(horas, minutos, segundos)
         segFormat = (tempo.getSeconds() < 10) ? ":0" + tempo.getSeconds() : ":" + tempo.getSeconds();
