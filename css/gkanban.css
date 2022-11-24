@@ -160,6 +160,7 @@ body {
 }
 
 .edit-input-title {
+    width: 230px;
     border: none;
     font-size: 16px;
     padding: 5px;

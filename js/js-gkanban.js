@@ -124,7 +124,7 @@ btnConfirmarColuna.onclick = e => {
                     btnCancelar.remove();
                 }else{
                     input.value = "";
-                    input.placeholder = "Insira um nome válido..."
+                    input.placeholder = "Insira um nome para a coluna..."
                 }
                     }
 
