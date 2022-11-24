@@ -23,6 +23,7 @@ function cronometro() {
     segundos += 1;
     tempo.setHours(horas, minutos, segundos)
     
+    
     segFormat = (tempo.getSeconds() < 10) ? ":0" + tempo.getSeconds() : ":" + tempo.getSeconds();
     minFormat = (tempo.getMinutes() < 10) ? ":0" + tempo.getMinutes() : ":" + tempo.getMinutes()
     hFormat = (tempo.getHours() < 10) ? "0" + tempo.getHours() : tempo.getHours()
@@ -37,8 +38,7 @@ function iniciar() {
         iniciado = true;
         btnIniciar.innerText = "Pausar"
         animation.style.animationName = "cor"
-        display.innerText = "00:00:01"
-        segundos = 1;
+        
     } else {
         clearInterval(intervalo)
         iniciado = false;

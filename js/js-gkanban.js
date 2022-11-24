@@ -279,7 +279,7 @@ btnConfirmarColuna.onclick = e => {
 
         })
 
-       
+
         // Muda a cor do Destaque
         const btnChangeColor = document.querySelectorAll(".btn-change-color")
         btnChangeColor.forEach(el => {
