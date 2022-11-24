@@ -332,9 +332,6 @@ btnConfirmarColuna.onclick = e => {
                     }
 
                 })
-
-
-
                 
                 // Botão cancelar add texto
                 const btnCancelTextCard = document.querySelector(".cancel-text-card")
@@ -412,6 +409,9 @@ btnAddColuna.onclick = e => {
     colunaNome.style.display = "flex"
     btnConfirmarColuna.style.display = "block";
     colunaNome.placeholder = "Insira o nome da coluna"
+    
+    colunaNome.select()
+    
 
     console.log("cliquei no aa")
 }
