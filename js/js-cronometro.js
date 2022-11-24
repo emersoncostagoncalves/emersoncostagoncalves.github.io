@@ -20,13 +20,13 @@ console.log(btnIniciar, btnReset, display)
 
 
 function cronometro() {
-    segundos += 1;
+    segundos ++;
     tempo.setHours(horas, minutos, segundos)
     
-    
     segFormat = (tempo.getSeconds() < 10) ? ":0" + tempo.getSeconds() : ":" + tempo.getSeconds();
-    minFormat = (tempo.getMinutes() < 10) ? ":0" + tempo.getMinutes() : ":" + tempo.getMinutes()
-    hFormat = (tempo.getHours() < 10) ? "0" + tempo.getHours() : tempo.getHours()
+        minFormat = (tempo.getMinutes() < 10) ? ":0" + tempo.getMinutes() : ":" + tempo.getMinutes()
+        hFormat = (tempo.getHours() < 10) ? "0" + tempo.getHours() : tempo.getHours()
+    
 
     display.innerText = hFormat + minFormat + segFormat
 }
@@ -34,6 +34,14 @@ function cronometro() {
 
 function iniciar() {
     if (!iniciado) {
+        segundos++
+        tempo.setHours(horas, minutos, segundos)
+        segFormat = (tempo.getSeconds() < 10) ? ":0" + tempo.getSeconds() : ":" + tempo.getSeconds();
+        minFormat = (tempo.getMinutes() < 10) ? ":0" + tempo.getMinutes() : ":" + tempo.getMinutes()
+        hFormat = (tempo.getHours() < 10) ? "0" + tempo.getHours() : tempo.getHours()
+    
+        display.innerText = hFormat + minFormat + segFormat
+
         this.intervalo = setInterval(cronometro, 1000)
         iniciado = true;
         btnIniciar.innerText = "Pausar"
