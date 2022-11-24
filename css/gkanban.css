@@ -103,13 +103,11 @@ body{
 .color-container {
     width: 15px;
     height: 15px;
-    background-color: blueviolet;
     border-radius: 50%;
     box-sizing: border-box;
     overflow: hidden;
     position: fixed;
     right: 10px;
-
 
 }
 
@@ -122,7 +120,7 @@ body{
     border-radius: 100%;
     border-color: transparent;
     border-style: hidden;
-    margin: -2px;
+    margin: -5px;
 }
 
 .btn-change-color:hover {
@@ -226,8 +224,7 @@ body{
     width: 300px;
     box-sizing: border-box;
     padding: 10px;
-    overflow: scroll;
-    
+
 }
 
 .menu-card {
@@ -240,15 +237,14 @@ body{
 }
 
 
-
 h2 {
     font-size: 18px;
     font-weight: 300;
-    color: rgb(67, 47, 80);
+    color: rgb(41, 41, 41);
 }
 
 h1 {
-    color: rgb(64, 40, 92);
+    color: rgb(41, 41, 41);
 }
 
 .add-coluna {
@@ -353,6 +349,7 @@ h1 {
     flex-direction: column;
     box-sizing: border-box;
     gap: 10px;
+    
 
 }
 
@@ -371,7 +368,7 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     resize: none;
-
+    
 }
 
 .text-card {
@@ -380,15 +377,9 @@ h1 {
     outline: none;
     border: none;
     box-sizing: border-box;
-    border-radius: 10px;
     resize: none;
     background: none;
-
-}
-
-[especial] {
-    background-color: brown;
-    z-index: 2;
+    
 }
 
 .btn-edit-card {

@@ -82,10 +82,7 @@ btnConfirmarColuna.onclick = e => {
         console.log(btnRemoveColuna)
 
 
-        // Botão Add Texto Cartão
-
-
-
+    
 
         // Botão Add Card
         const btnAddCard = document.querySelectorAll(".btn-add-card")
@@ -114,18 +111,27 @@ btnConfirmarColuna.onclick = e => {
 
                 // Formata area do texto
 
-                const textCard = document.querySelector(".input-text-card")
-                textCard.oninput = e => {
-                    textCard.style.height = "5px";
-                    textCard.style.height = (textCard.scrollHeight) + "px";
-                }
+                const textCard = document.querySelectorAll(".input-text-card")
+                textCard.forEach(el => {
+
+                    el.oninput = e => {
+                        el.style.height = "5px";
+                        el.style.height = (el.scrollHeight) + "px";
+                    }
+                })
+
+                
 
                 //Botão confirmar texto card
                 btnTextCard = document.querySelectorAll(".add-text-card")
                 console.log(btnTextCard)
 
+
+                
+
                 btnTextCard.forEach(el => {
                     el.onclick = e => {
+
                         let texto = document.getElementById(`${id}-input-text-card`).value;
                         if (texto.length != 0) {
                             console.log("cliquei no add cartao")
@@ -187,9 +193,20 @@ btnConfirmarColuna.onclick = e => {
                                 }
                             })
 
+                            //Formatar TextArea Card
+                            const textCard2 = document.querySelectorAll(".text-card")
+                            textCard2.forEach(el => {
+                        
+                                el.oninput = e => {
+                                    
+                                    //el.style.height = "5px";
+                                    el.style.height = (el.scrollHeight) + "px";
+                                }
+                            })
+
+
                             // Botão Editar Texto Card
                             const btnEditTextCard = document.querySelectorAll(".btn-edit-card")
-
 
                             cards.forEach(el => {
                                 el.onmouseover = e => {
@@ -240,15 +257,21 @@ btnConfirmarColuna.onclick = e => {
                                 }
                             })
 
-
-
-
-                            //
                         }
+                        // Remove Scroll da TextArea do Card
+                        const textCard2 = document.querySelectorAll(".text-card")
+                        textCard2.forEach(el => {
+                    
+                                el.style.height = (el.scrollHeight) + "px";
+                            
+                        })
                     }
 
                 })
 
+
+
+                
                 // Botão cancelar add texto
                 const btnCancelTextCard = document.querySelector(".cancel-text-card")
                 btnCancelTextCard.onclick = e => {
@@ -321,4 +344,4 @@ btnFecharAdd.onclick = e => {
 
     ///
 
-
+   
