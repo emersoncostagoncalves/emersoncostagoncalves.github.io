@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     height: 100vh;
     background: url("https://rare-gallery.com/uploads/posts/5410610-nature-waterfall-cliff-wallpaper-nature-wallpapers-nature-backgrounds-rainforest-rock-cascade-mountain-rocky-mountain-rocky-cliff-rocky-watrfall-low-ngle-low-angle-perspective-geen-green-green.jpg");
     background-position: center;
@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    
+
     box-sizing: border-box;
 
 }
@@ -139,13 +139,53 @@ body{
 
 .coluna .header-destaque {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 150px;
     color: white;
     background-color: rgb(127, 209, 230);
+    box-sizing: border-box;
 
+
+}
+
+.btn-edit-header-text {
+    display: none;
+    position: fixed;
+    right: 5px;
+    top: 170px;
+}
+
+.btn-edit-header-text:hover{
+    cursor: pointer;
+}
+
+.edit-input-title {
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.btn-salvar-title {
+    background-color: rgb(20, 177, 143);
+    border: none;
+    width: 60px;
+    font-size: 16px;
+    color: white;
+    height: 30px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.btn-salvar-title:hover{
+    cursor: pointer;
+    background-color: rgb(22, 192, 155);
+}
+
+.btn-cancelar-title:hover{
+    cursor: pointer;
 }
 
 .column-main {
@@ -208,7 +248,7 @@ body{
     box-shadow: 0px 1px 2px rgb(190, 190, 190);
     box-sizing: border-box;
     overflow: hidden;
-    
+
 }
 
 .card-container:hover {
@@ -233,7 +273,7 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    
+
 }
 
 
@@ -349,7 +389,7 @@ h1 {
     flex-direction: column;
     box-sizing: border-box;
     gap: 10px;
-    
+
 
 }
 
@@ -368,7 +408,7 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     resize: none;
-    
+
 }
 
 .text-card {
@@ -379,7 +419,7 @@ h1 {
     box-sizing: border-box;
     resize: none;
     background: none;
-    
+
 }
 
 .btn-edit-card {
@@ -399,6 +439,3 @@ h1 {
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
     cursor: pointer;
 }
-
-
-

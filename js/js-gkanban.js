@@ -29,13 +29,16 @@ function addColuna() {
     coluna.innerHTML = `
 <div class="column-header">
      <div>
-       <h2>${colunaNome.value}</h2>
+       <h2 id = ${contId}-text-titulo-h2>${colunaNome.value}</h2>
        <div class="color-container">
        <input type="color" name="change-color" id="${contId}-btn-change-color" class="btn-change-color">
        </div>
      </div>
      <div id= ${contId}-color-destaque class="header-destaque">
-      <h1>${colunaNome.value}</h1>
+      <h1 id = ${contId}-text-titulo>${colunaNome.value}</h1>
+      <div id="${contId}-btn-edit-header-text" class="btn-edit-header-text">
+      <img src="/icones/edit-line.svg" width="16px" alt="Editar titulo" title="Editar titulo">
+      </div>
      </div>
 </div>
 
@@ -76,6 +79,66 @@ btnConfirmarColuna.onclick = e => {
                 console.log("Cliquei em remover coluna")
                 //containerColunas.removeChild(item)
                 item.remove()
+            }
+        })
+
+        // Editar Texto Coluna
+
+        const btnEditTitulo = document.querySelectorAll(".btn-edit-header-text");
+        btnEditTitulo.forEach(el => {
+            el.onclick = e => {
+                const id = parseInt(el.id, 10);
+                const containerTitulo = document.getElementById(`${id}-color-destaque`)
+                const titulo = document.getElementById(`${id}-text-titulo`)
+                const subTitulo = document.getElementById(`${id}-text-titulo-h2`)
+
+                const input = document.createElement("input")
+                input.className = "edit-input-title"
+
+                const btnSalvar = document.createElement("button")
+                btnSalvar.className = "btn-salvar-title"
+                btnSalvar.innerText = "Salvar"
+
+                const btnCancelar = document.createElement("div")
+                btnCancelar.className = "btn-cancelar-title"
+                btnCancelar.id = `${id}-btn-cancelar-title`
+                btnCancelar.innerHTML = `
+                <img src="/icones/close-line.svg" width="25px" alt="Cancelar edição" title="Cancelar edição">`
+
+                const texto = titulo.innerText
+                input.value = texto
+                containerTitulo.appendChild(input)
+                containerTitulo.appendChild(btnSalvar)
+                containerTitulo.appendChild(btnCancelar)
+
+                titulo.remove()
+
+                btnSalvar.onclick = e => {
+                    
+                      if(input.value.replaceAll(" ","") != ""){
+                    titulo.innerText = input.value
+                    containerTitulo.insertAdjacentElement("afterbegin", titulo)
+                    subTitulo.innerText = input.value;
+                    input.remove()
+                    btnSalvar.remove(); 
+                    btnCancelar.remove();
+                }else{
+                    input.value = "";
+                    input.placeholder = "Insira um nome válido..."
+                }
+                    }
+
+                    btnCancelar.onclick = e => {
+                        console.log("cliquei em cancelar")
+                        input.remove()
+                        btnSalvar.remove(); 
+                        btnCancelar.remove();
+                        containerTitulo.insertAdjacentElement("afterbegin", titulo)
+                    } 
+
+                    input.onfocus = e => 
+                    e.preventDefault(e)
+                    input.select()
             }
         })
 
@@ -313,6 +376,22 @@ btnConfirmarColuna.onclick = e => {
                 corDestaque.style.backgroundColor = e.target.value
             }
 
+        })
+
+        // Mostra o btn editar do titulo
+        const areaTitulo = document.querySelectorAll(".header-destaque")
+        areaTitulo.forEach(el => {
+            el.onmouseover = e => {
+                const id = parseInt(el.id, 10)
+                const btn = document.getElementById(`${id}-btn-edit-header-text`)
+                btn.style.display = "flex"
+            }
+
+            el.onmouseout = e => {
+                const id = parseInt(el.id, 10)
+                const btn = document.getElementById(`${id}-btn-edit-header-text`)
+                btn.style.display = "none"
+            }
         })
 
 
