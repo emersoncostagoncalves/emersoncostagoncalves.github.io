@@ -65,7 +65,7 @@ console.log(btnRemoveColuna)
 
 
 btnConfirmarColuna.onclick = e => {
-    if (colunaNome.value != "") {
+    if (colunaNome.value.replaceAll(" ","") != "") {
 
 
         addColuna()
@@ -190,13 +190,11 @@ btnConfirmarColuna.onclick = e => {
                 console.log(btnTextCard)
 
 
-                
-
                 btnTextCard.forEach(el => {
                     el.onclick = e => {
 
-                        let texto = document.getElementById(`${id}-input-text-card`).value;
-                        if (texto.length != 0) {
+                        let texto = document.getElementById(`${id}-input-text-card`);
+                        if (texto.value.replaceAll(" ","") != "") {
                             console.log("cliquei no add cartao")
                             let id = parseInt(el.id, 10);
 
@@ -206,7 +204,7 @@ btnConfirmarColuna.onclick = e => {
                             cardContainer.id = `${cardId}-card-container`
                             cardContainer.innerHTML = `
                     <div class="card">
-                    <textarea disabled name="text-card" id="${cardId}-text-card" class="text-card" cols="30">${texto}</textarea>
+                    <textarea disabled name="text-card" id="${cardId}-text-card" class="text-card" cols="30">${texto.value}</textarea>
                     </div>
                     <div class="menu-card">
 
@@ -320,6 +318,9 @@ btnConfirmarColuna.onclick = e => {
                                 }
                             })
 
+                        }else{
+                            texto.value = "";
+                            texto.placeholder = "Insira um texto para esse cartão..."
                         }
                         // Remove Scroll da TextArea do Card
                         const textCard2 = document.querySelectorAll(".text-card")
@@ -398,6 +399,9 @@ btnConfirmarColuna.onclick = e => {
 
 
 
+    }else{
+        colunaNome.value = "";
+        colunaNome.placeholder = "Insira o nome da coluna"
     }
 }
 
