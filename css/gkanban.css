@@ -48,7 +48,6 @@ body {
     box-sizing: border-box;
 
 
-
 }
 
 .container-colunas {
@@ -61,8 +60,7 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     box-sizing: border-box;
-
-
+    
 
 }
 
@@ -439,4 +437,34 @@ h1 {
 .btn-delet-card:hover {
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
     cursor: pointer;
+}
+
+@media(max-width: 550px){
+    .container-main {
+        width: 100%;
+        min-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        gap: 10px;
+        
+    }
+
+    .container-colunas {
+        height: 100%;
+        min-width: 370px;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        
+    
+    }
 }
