@@ -87,5 +87,5 @@ console.log(document.body.scrollTop, document.documentElement.scrollTop)
        ScrollReveal().reveal('.portifolio',slideUp);
        ScrollReveal().reveal('.contato',slideUp);
 
-       ScrollReveal().reveal('.info',slideLeft);
+       //ScrollReveal().reveal('.info',slideLeft);
        ScrollReveal().reveal('.sobre-mim > .foto',slideRight);
