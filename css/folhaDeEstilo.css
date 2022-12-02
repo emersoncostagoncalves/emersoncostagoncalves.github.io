@@ -60,7 +60,7 @@ header {
 main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 800px 900px 1100px 1650px 1350px 1000px;
+    grid-template-rows: 800px 900px 1100px 1650px 1500px 1000px;
     grid-template-areas:
         "sobre-mim"
         "skills"
@@ -540,6 +540,7 @@ main {
     padding: 120px 80px;
     gap: 40px;
     box-sizing: border-box;
+    
 
 }
 
@@ -569,7 +570,7 @@ main {
     align-items: center;
     width: 32%;
     max-width: 450px;
-    height: 500px;
+    height: 550px;
     background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
     border-radius: 20px;
@@ -710,7 +711,7 @@ main {
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
     border: none;
     color: #cecece;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 
 .portifolio-info>button:hover {
@@ -883,7 +884,7 @@ form>button {
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
     border: none;
     color: #cecece;
-    transition: transform 1s;
+    transition: transform 0.5s;
     font-weight: 600;
 }
 
