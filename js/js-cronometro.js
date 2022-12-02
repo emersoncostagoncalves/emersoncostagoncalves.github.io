@@ -33,9 +33,12 @@ function cronometro() {
 
 
 function iniciar() {
-    if (!iniciado) {
+    
+    if (!iniciado){
+        if(segundos === 0){
+            segundos++
+        }
         
-        segundos++
         tempo.setHours(horas, minutos, segundos)
         segFormat = (tempo.getSeconds() < 10) ? ":0" + tempo.getSeconds() : ":" + tempo.getSeconds();
         minFormat = (tempo.getMinutes() < 10) ? ":0" + tempo.getMinutes() : ":" + tempo.getMinutes()
@@ -44,16 +47,22 @@ function iniciar() {
         display.innerText = hFormat + minFormat + segFormat
 
         this.intervalo = setInterval(cronometro, 1000)
-        iniciado = true;
+        
         btnIniciar.innerText = "Pausar"
         animation.style.animationName = "cor"
-        
-    } else {
+        iniciado = true
+        console.log(iniciado)
+    }else {
         clearInterval(intervalo)
-        iniciado = false;
         btnIniciar.innerText = "Iniciar"
         animation.style.animationName = ""
+        
+        iniciado = false
+        console.log(iniciado)
     }
+            
+        
+
 }
 
 function resetar() {
@@ -63,6 +72,7 @@ function resetar() {
         btnIniciar.innerText = "Iniciar"
         segundos = 0;
         display.innerText = "00:00:00"
+        
     } else {
         btnIniciar.innerText = "Pausar"
         segundos = 0;
@@ -71,10 +81,12 @@ function resetar() {
 }
 
 
-btnIniciar.onclick = () => {
+btnIniciar.onclick = (e) => {
+
+    iniciar()
     
-    iniciar();
 }
+
 
 btnReset.onclick = () => {
     resetar();
