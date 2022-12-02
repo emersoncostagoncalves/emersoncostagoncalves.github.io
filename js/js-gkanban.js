@@ -111,6 +111,7 @@ btnConfirmarColuna.onclick = e => {
                 containerTitulo.appendChild(btnSalvar)
                 containerTitulo.appendChild(btnCancelar)
 
+
                 titulo.remove()
 
                 btnSalvar.onclick = e => {

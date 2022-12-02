@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(19, 19, 19);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    height: 400px;
+    color: aliceblue;
+}
+
+.container-header{
+    display: flex;
+    justify-content: center;
+    height: 10%;
+   
+}
+
+.container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    background-color: rgb(26, 26, 26);
+    
+    gap: 10px
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    
+}
+
+select {
+    width: 200px;
+    height: 40px;
+    background: none;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+option {
+    background-color: black;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#valor-venda {
+    font-size: 40px;
+}
+
+#valor-compra{
+    font-size: 40px;
+}

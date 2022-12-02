@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dólar Hoje</title>
+    <link rel="stylesheet" href="css/dolarhoje.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-header"><h1>Conversor de Moeda</h1></div>
+        <div class="container-main">
+<select name="moeda-source" id="moeda-source" class="source">
+    <option value="null">Selecione uma moeda</option>
+    <option value="BRL">Real Brasileiro</option>
+    <option value="USD">Dólar Americano</option>
+    <option value="EUR">Euro</option>
+</select>
+
+<p>PARA</p>
+<select name="moeda-target" id="moeda-target" class="target">
+    <option value="null">Selecione uma moeda</option>
+</select>
+
+        </div>
+        <div class="container-footer">
+            <div class="footer-left">
+                <p>Valor de Compra</p>
+                <p id="valor-compra" >0,00</p>
+            </div>
+            <div class="footer-right">
+                <p>Valor de Venda</p>
+                <p id="valor-venda">0,00</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/js-dolar-hoje.js"></script>
+</body>
+</html>
