@@ -449,6 +449,7 @@ main {
     border-radius: 50%;
     background-color: aliceblue;
     transition: transform 0.5s;
+    box-shadow: 5px 10px 20px rgb(12, 12, 12);
 }
 
 .logo-empresa:hover {
