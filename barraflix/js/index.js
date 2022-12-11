@@ -622,9 +622,11 @@ function search(pesquisa, pageNumber = 1) {
 
 searchBar.onfocus = e => {
     e.target.select()
+    searchBar.onkeydown = e => {
+     if(e.keyCode == 13){
+        search(e.target.value)
 }
-searchBar.onchange = e => {
-    search(e.target.value)
+    }
 }
 
 // Chama a Descrição dos Cards
