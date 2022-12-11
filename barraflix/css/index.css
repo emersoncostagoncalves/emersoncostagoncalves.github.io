@@ -65,7 +65,7 @@ outline: none;
 color: rgb(240, 248, 255);
 padding-left: 50px;
 box-sizing: border-box;
-background: url("/icones/search-line.svg") no-repeat 10px center;
+background: url("/barraflix/icones/search-line.svg") no-repeat 10px center;
 transition: all 1s;
 
 }
