@@ -622,7 +622,7 @@ function search(pesquisa, pageNumber = 1) {
 
 searchBar.onfocus = e => {
     e.target.select()
-    searchBar.onkeydown = e => {
+    searchBar.onkeyup = e => {
      if(e.keyCode == 13){
         search(e.target.value)
 }
