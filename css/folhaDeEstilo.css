@@ -713,6 +713,7 @@ main {
 
 .portifolio-info>h1 {
     font-size: 1.5em;
+    text-align: center;
 }
 
 .portifolio-info>button {
@@ -992,7 +993,7 @@ h1 {
     font-size: 50px;
     color: aliceblue;
     font-weight: bold;
-    text-align: center;
+    
 }
 
 h2 {
