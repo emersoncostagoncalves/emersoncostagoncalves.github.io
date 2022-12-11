@@ -459,7 +459,7 @@ transform: scale(0);
 }
 
 .btnFechar > img{
-    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(16deg) brightness(300%) contrast(143%);
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(600%) contrast(100%);
 }
 
 .btnFechar > img:hover{

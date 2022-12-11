@@ -676,7 +676,7 @@ function info(cards) {
 
        <div class="boxHeader">
           <div class="btnFechar">
-            <img src="../icones/close-line.svg" width="50px" alt="" title="">
+            <img src="../barraflix/icones/close-line.svg" width="50px" alt="" title="">
           </div>
         </div>
 
