@@ -7,6 +7,7 @@ const btnProjeto3 = document.querySelector("#projeto-3")
 const btnProjeto4 = document.querySelector("#projeto-4")
 const btnProjeto5 = document.querySelector("#projeto-5")
 const btnProjeto6 = document.querySelector("#projeto-6")
+const btnProjeto7 = document.querySelector("#projeto-7")
     
 
 btnProjeto1.onclick = e => {
@@ -27,6 +28,10 @@ btnProjeto5.onclick = e => {
 }
 btnProjeto6.onclick = e => {
     window.open("/jogodavelha.html") 
+}
+
+btnProjeto7.onclick = e => {
+    window.open("/barraflix/index.html") 
 }
 
     const mudaTexto = document.querySelector(".animar > h1")
