@@ -107,7 +107,7 @@ function loadList(btnMenu, el, pageNumber = 1) {
                     if(el.poster_path != null){
                         poster.src = urlImagem + el.poster_path
                     }else{
-                        poster.src = "../imagens/poster_null.png"
+                        poster.src = "../barraflix/imagens/poster_null.png"
                     }
 
                    
@@ -252,7 +252,7 @@ function loadFeatures(sort, sectionContainerBox, paramBox, pageNumber = 1) {
                     if(el.poster_path != null){
                         poster.src = urlImagem + el.poster_path
                     }else{
-                        poster.src = "../imagens/poster_null.png"
+                        poster.src = "../barraflix/imagens/poster_null.png"
                     }
 
                     cardPoster.appendChild(poster);
@@ -497,7 +497,7 @@ function search(pesquisa, pageNumber = 1) {
                         if(el.poster_path != null){
                         poster.src = urlImagem + el.poster_path
                     }else{
-                        poster.src = "../imagens/poster_null.png"
+                        poster.src = "../barraflix/imagens/poster_null.png"
                     }
                         cardPoster.appendChild(poster);
 
@@ -667,7 +667,7 @@ function info(cards) {
                     if(dados.poster_path != null){
                          poster_path = `${urlImagem + dados.poster_path}`
                     }else{
-                        poster_path = "../imagens/poster_null.png"
+                        poster_path = "../barraflix/imagens/poster_null.png"
                     }
 
                     infoContainer.innerHTML = `
