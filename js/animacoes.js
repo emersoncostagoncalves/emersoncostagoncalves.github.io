@@ -8,7 +8,16 @@ const btnProjeto4 = document.querySelector("#projeto-4")
 const btnProjeto5 = document.querySelector("#projeto-5")
 const btnProjeto6 = document.querySelector("#projeto-6")
 const btnProjeto7 = document.querySelector("#projeto-7")
+const redesSociais = document.querySelectorAll(".social-link")
 
+
+redesSociais.forEach(el => {
+    el.onclick = e => {
+        e.preventDefault()
+        window.open(el.href)
+        console.log(el.href)
+    }
+})
 
 btnProjeto1.onclick = e => {
     window.open("/calculadora.html")
