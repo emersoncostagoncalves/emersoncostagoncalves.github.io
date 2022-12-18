@@ -235,8 +235,8 @@ transition: all 1s;
     width: 100%;
     height: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     font-size: 16px;
@@ -248,12 +248,20 @@ transition: all 1s;
 
 }
 
+.movieRate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
 .divRate>p {
     font-weight: 600;
 }
 
 .destaque {
-    color: rgb(175, 12, 12);
+    color: rgb(255, 255, 255);
 
 }
 
