@@ -279,7 +279,15 @@ footer {
     background-color: rgb(26, 26, 26);
     border-top: 1px solid rgb(31, 31, 31);
     color: aliceblue;
-    gap: 20px
+    gap: 2px
+}
+
+footer > img{
+    margin-bottom: 10px;
+}
+
+footer > p:nth-child(3){
+    color: rgb(78, 78, 78);
 }
 
 .msgErro {

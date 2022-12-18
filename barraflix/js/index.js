@@ -64,6 +64,7 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=b502db08defaa68db6d
 function loadList(btnMenu, el, pageNumber = 1) {
 
     window.location.hash = el.innerText.toLowerCase()
+    document.title = `${el.innerText} - Barraflix`
     cardContainer.innerHTML = ""
 
     btnMenu.forEach(el => {
@@ -470,6 +471,7 @@ function search(pesquisa, pageNumber = 1) {
     }
 
     if (pesquisa != "") {
+        document.title = `Pesquisa - Barraflix`
         cardContainer.innerHTML = "";
         window.location.hash = `pesquisa=${pesquisaFormat(pesquisa)}&pagina=${pageNumber}`
         const url = `https://api.themoviedb.org/3/search/movie?api_key=b502db08defaa68db6de86429c3ab26f&language=pt-BR&query=${pesquisa}&page=${pageNumber}&include_adult=false`
@@ -609,7 +611,7 @@ function search(pesquisa, pageNumber = 1) {
                         const totalPages = dados.total_pages
                         pageNumber--
                         search(pesquisa, pageNumber)
-                        window.location.hash = `pesquisa=${pesquisaFormat(pesquisa)}pagina=${pageNumber}`
+                        window.location.hash = `pesquisa=${pesquisaFormat(pesquisa)}&pagina=${pageNumber}`
                         console.log(totalPages)
                     }
 
