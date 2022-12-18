@@ -528,10 +528,10 @@ function search(pesquisa, pageNumber = 1) {
 
                                 let dataFormatada = [];
 
-                                dataFormatada.push(string[8], string[9]);
-                                dataFormatada.push(string[7]);
-                                dataFormatada.push(string[5], string[6]);
-                                dataFormatada.push(string[4]);
+                                //dataFormatada.push(string[8], string[9]);
+                                //dataFormatada.push(string[7]);
+                                //dataFormatada.push(string[5], string[6]);
+                                //dataFormatada.push(string[4]);
                                 dataFormatada.push(string[0], string[1], string[2], string[3]);
                                 return dataFormatada.join("")
                             }
@@ -539,8 +539,11 @@ function search(pesquisa, pageNumber = 1) {
 
 
                         divRate.innerHTML = `
-                    <p>Nota: <span class='destaque'>${el.vote_average}</span></p>
-                    <p>Ano de Lançamento: <span class='destaque'>${formatDate(el.release_date)}</span></p>
+                        <p><span class='destaque'>${formatDate(el.release_date)}</span></p>
+                        <div class="movieRate">
+                        <p><span class='destaque'>${el.vote_average}</span></p>
+                        <img src="/barraflix/icones/star-fill.svg" width="25px">
+                        </div>
 
                     `
 
