@@ -131,6 +131,7 @@ body {
     align-self: center;
     width: 80px;
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(800%) contrast(100%); 
+    cursor: pointer;
 }
 
 nav {
@@ -158,6 +159,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu-class>img {
@@ -207,6 +209,32 @@ nav {
 
 }
 
+.home-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+align-self: center;
+justify-self: center;
+}
+
+.home-infos > h1{
+    font-size: 6rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.home-infos > h2{
+    font-size: 2rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.home-infos > h3{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    max-width: 40rem;
+}
+
 .infos>h1 {
     font-size: 6rem;
     font-family: 'League Spartan', sans-serif;
@@ -217,6 +245,7 @@ nav {
     font-size: 1rem;
     font-weight: 100;
     max-width: 40rem;
+    
 
 
 }
@@ -267,6 +296,7 @@ nav {
     padding: 2px;
     background-image: linear-gradient(rgba(4, 151, 139, 0), rgba(4, 151, 139, 0.5));
     filter: brightness(60%);
+    cursor: pointer;
 }
 
 .card-rotation:hover {
@@ -366,7 +396,7 @@ nav {
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-direction: normal;
-    
+    cursor: pointer;
     
 }
 
