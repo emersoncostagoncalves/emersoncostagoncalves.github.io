@@ -6,7 +6,7 @@
     padding: 0;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    
+
 }
 
 body {
@@ -43,7 +43,7 @@ body {
     box-shadow: 5px 5px 50px black;
     border: 2px groove rgba(4, 151, 139, 0.5);
     background-color: black;
-    
+
 }
 
 .video-bg {
@@ -78,6 +78,7 @@ body {
 
 .container-header {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     top: 0px;
@@ -86,15 +87,38 @@ body {
     height: 10%;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    z-index: 1;
+    z-index: 2;
     box-sizing: border-box;
     overflow: hidden;
+    justify-items: center;
+    gap: 10px
+    
 
 }
 
-.lol-logo{
+.lol-logo {
     width: 150px;
+    justify-self: center;
+    align-self: center;
+    
 }
+
+.btn-jogar {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #03cf9c;
+    right: 20px;
+    transition: all 300ms;
+}
+
+.btn-jogar:hover{
+    background-color: #d1ca61;
+}
+
+
 
 .container-m {
     position: absolute;
@@ -126,11 +150,11 @@ body {
     padding-top: 70px;
 }
 
-.riot-logo{
+.riot-logo {
     justify-self: center;
     align-self: center;
     width: 80px;
-    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(800%) contrast(100%); 
+    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(800%) contrast(100%);
     cursor: pointer;
 }
 
@@ -172,8 +196,8 @@ nav {
     filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(0deg) brightness(800%) contrast(100%);
 }
 
-[menu-destaque]{
-    filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(0deg) brightness(100%) contrast(100%);  
+[menu-destaque] {
+    filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .menu-items:hover {
@@ -209,26 +233,26 @@ nav {
 
 }
 
-.home-infos{
+.home-infos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-align-self: center;
-justify-self: center;
+    align-self: center;
+    justify-self: center;
 }
 
-.home-infos > h1{
+.home-infos>h1 {
     font-size: 6rem;
     font-family: 'League Spartan', sans-serif;
 }
 
-.home-infos > h2{
+.home-infos>h2 {
     font-size: 2rem;
     font-family: 'League Spartan', sans-serif;
 }
 
-.home-infos > h3{
+.home-infos>h3 {
     font-size: 1rem;
     font-weight: 100;
     text-align: center;
@@ -245,7 +269,7 @@ justify-self: center;
     font-size: 1rem;
     font-weight: 100;
     max-width: 40rem;
-    
+
 
 
 }
@@ -384,7 +408,7 @@ justify-self: center;
     }
 }
 
-.champ-card{
+.champ-card {
     width: 180px;
     height: 240px;
     background-color: black;
@@ -397,19 +421,18 @@ justify-self: center;
     animation-duration: 1s;
     animation-direction: normal;
     cursor: pointer;
-    
+
 }
 
-.champ-card:not(.champ-card-footer){
-    
-}
+
 
 @keyframes fadeIn {
-    from{
+    from {
         transform: translateY(200px);
         opacity: 0;
     }
-    to{
+
+    to {
         transform: translateY(0px);
         opacity: 1;
     }
@@ -418,7 +441,7 @@ justify-self: center;
 .champ-card:hover {
     filter: brightness(110%);
     border: 1px groove rgba(204, 158, 6, 1);
-    
+
 
 }
 
@@ -428,9 +451,9 @@ justify-self: center;
     background-color: beige;
     box-sizing: border-box;
     overflow: hidden;
-    
+
     transition: all 1s;
-    
+
 }
 
 .img-champ-card {
@@ -462,7 +485,7 @@ justify-self: center;
     background-color: rgb(0, 134, 90);
     padding-left: 10px;
     transition: all 300ms;
-    
+
 }
 
 [destaqueFooter] {
@@ -477,7 +500,7 @@ justify-self: center;
 
 }
 
-.classe-titulo{
+.classe-titulo {
     color: rgb(255, 255, 255);
     animation-name: fade-titulo;
     animation-duration: 2s;
@@ -486,29 +509,247 @@ justify-self: center;
     font-weight: 800;
     text-transform: uppercase;
     font-family: 'League Spartan', sans-serif;
-    
-    
+
+
 }
 
-@keyframes fade-titulo{
-    0%{
+@keyframes fade-titulo {
+    0% {
         transform: translateX(400px);
         opacity: 0;
-        
+
     }
-    30%{
+
+    30% {
         transform: translateX(0px);
         opacity: 1;
-        
+
     }
-    70%{
+
+    70% {
         transform: translateX(0px);
         opacity: 1;
-        
+
     }
-    100%{
+
+    100% {
         transform: translateX(-400px);
         opacity: 0;
-        
+
     }
+}
+
+.container-champ-infos {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.champ-infos-main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 80%;
+    box-sizing: border-box;
+    overflow: hidden;
+    animation-name: fadeInfo;
+    animation-duration: 500ms;
+    animation-direction: normal;
+    animation-delay: 300ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+
+
+}
+
+@keyframes fadeInfo {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.btn-close-info {
+    width: 35px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(500%) contrast(143%);
+}
+
+.btn-close-info:hover {
+    width: 35px;
+    filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(170deg) brightness(200%) contrast(143%);
+}
+
+.champ-infos-header {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    z-index: 10;
+}
+
+
+.champ-infos-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgba(5, 5, 5, 0.5);
+    max-width: 1200px;
+    border: 1px groove rgb(10, 95, 63);
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+
+}
+
+.champ-infos-main-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    color: aliceblue;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.champ-infos-main-top>h1 {
+    font-size: 8rem;
+    font-family: 'League Spartan', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.champ-infos-main-top>h2 {
+    font-size: 2rem;
+    font-family: 'League Spartan', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.champ-infos-main-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    border: 1px solid rgba(187, 187, 187, 0.5);
+
+}
+
+.champ-infos-bottom-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 100px;
+    text-transform: uppercase;
+}
+
+.champ-function {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 0.9rem;
+}
+
+.img-function {
+    filter: invert(8%) sepia(100%) saturate(300%) hue-rotate(0deg) brightness(700%) contrast(100%);
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.champ-difficulty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 0.9rem
+}
+
+.difficulty-style {
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.difficulty-style>div {
+    width: 20px;
+    height: 12px;
+    background-color: rgb(75, 74, 74);
+    transform: skewX(-40deg);
+}
+
+[baixa]>div:nth-child(-n+1) {
+    background-color: rgb(0, 152, 253);
+}
+
+[moderada]>div:nth-child(-n+2) {
+    background-color: rgb(0, 152, 253);
+}
+
+[alta]>div {
+    background-color: rgb(0, 152, 253);
+}
+
+
+.champ-function>p:nth-child(2) {
+    color: rgb(238, 185, 88);
+}
+
+.champ-difficulty>p:nth-child(2) {
+    color: rgb(238, 185, 88);
+}
+
+.champ-infos-bottom-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    color: aliceblue;
+    padding: 50px;
+    box-sizing: border-box;
+
+}
+
+.img-bg-champ-infos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2px);
 }

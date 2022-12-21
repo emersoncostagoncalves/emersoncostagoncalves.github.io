@@ -7,7 +7,11 @@ const squareAssets = 'https://ddragon.leagueoflegends.com/cdn/12.23.1/img/champi
 const passiveAssets = 'https://ddragon.leagueoflegends.com/cdn/12.23.1/img/passive/';
 const splashAssets = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/';
 const urlChamp = "https://ddragon.leagueoflegends.com/cdn/12.23.1/data/pt_BR/champion/"
+const btnJogar = document.querySelector(".btn-jogar")
 
+btnJogar.onclick = e => {
+    window.open("https://signup.leagueoflegends.com/pt-br/signup/index?_gl=1*xnw3l2*_ga*MTQ2MjU1NDg3Ni4xNjcxNTk2NDQw*_ga_FXBJE5DEDD*MTY3MTU5NjQzOS4xLjEuMTY3MTU5NjU1MC42MC4wLjA.#/", "blank")
+}
 
 fetch(urlRotation)
     .then(resp => resp.json())
@@ -147,15 +151,15 @@ fetch(urlRotation)
 const menuList = document.querySelectorAll(".menu-class");
 
 menuList.forEach(el => {
-    
+
     el.onclick = e => {
         menuList.forEach(el => {
             el.removeAttribute("menu-destaque")
         })
         document.title = el.getAttribute("classe") + " - League of Legends"
         console.log(`Cliquei no menu`)
-        champClassList(el.id,el.getAttribute("classe"))
-        el.setAttribute("menu-destaque","")
+        champClassList(el.id, el.getAttribute("classe"))
+        el.setAttribute("menu-destaque", "")
     }
 })
 
@@ -163,22 +167,22 @@ menuList.forEach(el => {
 function champClassList(classe, titulo) {
     const container = document.querySelector(".container")
     const imagemBG = document.querySelector(".img-bg")
-    if(imagemBG){
+    if (imagemBG) {
         imagemBG.remove()
-    }else{
+    } else {
         const videoAtual = document.querySelector(".video-bg")
         videoAtual.remove()
     }
     const video = document.createElement("video")
     video.className = "video-bg"
-    video.setAttribute("loop","")
-    video.setAttribute("muted","")
-    video.setAttribute("autoplay","")
+    video.setAttribute("loop", "")
+    video.setAttribute("muted", "")
+    video.setAttribute("autoplay", "")
     const source = document.createElement("source")
     source.src = "/lol/videos/video_back_3.mp4"
     source.type = "video/mp4"
 
-    
+
     video.appendChild(source)
     container.insertAdjacentElement("beforeend", video)
 
@@ -194,15 +198,15 @@ function champClassList(classe, titulo) {
             classeTitulo.innerText = titulo
             containerInfo.appendChild(classeTitulo)
 
-classeTitulo.addEventListener("animationend", () => {
-    classeTitulo.style.display = "none"
-    Object.keys(dados.data).forEach(el => {
+            classeTitulo.addEventListener("animationend", () => {
+                classeTitulo.style.display = "none"
+                Object.keys(dados.data).forEach(el => {
 
-        if (dados.data[el].tags.includes(classe)) {
-            const champCard = document.createElement("div")
-            champCard.className = "champ-card"
-            champCard.id = dados.data[el].id
-            champCard.innerHTML = `
+                    if (dados.data[el].tags.includes(classe)) {
+                        const champCard = document.createElement("div")
+                        champCard.className = "champ-card"
+                        champCard.id = dados.data[el].id
+                        champCard.innerHTML = `
             <div class="img-champ-card-container">
             <img id="${dados.data[el].id}-img-champ-card" class="img-champ-card" src="${loadScreen + dados.data[el].id}_0.jpg">
             </div>
@@ -210,46 +214,162 @@ classeTitulo.addEventListener("animationend", () => {
               <h1>${dados.data[el].id}</h1>
             </div>
     `
-            containerInfo.appendChild(champCard)
+                        containerInfo.appendChild(champCard)
 
-            console.log(dados.data[el].id)
-        }
-        //console.log(dados.data[el].id)
-    })
-    // Animação Cards
-    const allChampCards = document.querySelectorAll(".champ-card");
-    console.log(allChampCards)
+                        console.log(dados.data[el].id)
+                    }
+                    //console.log(dados.data[el].id)
+                })
+                // Animação Cards
+                const allChampCards = document.querySelectorAll(".champ-card");
+                console.log(allChampCards)
 
-    allChampCards.forEach(el => {
-        el.onmouseover = e => {
+                allChampCards.forEach(el => {
+                    el.onmouseover = e => {
 
-            //const numero = (min, max) => Math.floor(Math.random() * (max - min) + min)
+                        //const numero = (min, max) => Math.floor(Math.random() * (max - min) + min)
 
-            const footerCardInfo = document.getElementById(`${el.id}-champ-card-footer`)
-            const imgChampCard = document.getElementById(`${el.id}-img-champ-card`)
-            footerCardInfo.setAttribute("destaqueFooter", "")
-            footerCardInfo.style.color = "rgb(48, 33, 12)"
-            imgChampCard.setAttribute("img-destaque", "")
-            imgChampCard.src = `${loadScreen + el.id}_1.jpg`
-            
+                        const footerCardInfo = document.getElementById(`${el.id}-champ-card-footer`)
+                        const imgChampCard = document.getElementById(`${el.id}-img-champ-card`)
+                        footerCardInfo.setAttribute("destaqueFooter", "")
+                        footerCardInfo.style.color = "rgb(48, 33, 12)"
+                        imgChampCard.setAttribute("img-destaque", "")
+                        imgChampCard.src = `${loadScreen + el.id}_1.jpg`
 
-        }
 
-        el.onmouseout = e => {
+                    }
 
-            const footerCardInfo = document.getElementById(`${el.id}-champ-card-footer`)
-            const imgChampCard = document.getElementById(`${el.id}-img-champ-card`)
-            footerCardInfo.removeAttribute("destaqueFooter")
-            footerCardInfo.style.color = "rgb(255, 255, 255)"
-            imgChampCard.removeAttribute("img-destaque")
-            imgChampCard.src = `${loadScreen + el.id}_0.jpg`
-        }
+                    el.onmouseout = e => {
 
-    })
-})
-            
-           
+                        const footerCardInfo = document.getElementById(`${el.id}-champ-card-footer`)
+                        const imgChampCard = document.getElementById(`${el.id}-img-champ-card`)
+                        footerCardInfo.removeAttribute("destaqueFooter")
+                        footerCardInfo.style.color = "rgb(255, 255, 255)"
+                        imgChampCard.removeAttribute("img-destaque")
+                        imgChampCard.src = `${loadScreen + el.id}_0.jpg`
+                    }
 
-            
+                    el.onclick = e => {
+                        champInfos(urlChamp, el.id)
+                    }
+
+
+                })
+            })
+
+
+
+
         })
+}
+
+
+// Chama as informações por campeão
+
+function champInfos(url, champName) {
+    const champUrl = `${url + champName}.json`
+
+    fetch(champUrl)
+        .then(resp => resp.json())
+        .then(champData => {
+
+            console.log(champName)
+            console.log(champData.data[champName])
+
+            const containerChampInfos = document.createElement("div")
+            containerChampInfos.className = "container-champ-infos"
+            containerChampInfos.innerHTML = `
+        
+        <div class="champ-infos-main">
+           <div class="champ-infos-header">
+              <img class="btn-close-info" src="/lol/icones/close-line.svg">
+           </div>
+        <div class="champ-infos-sub">
+        <div class="champ-infos-main-top">
+        <h2>${champData.data[champName].title}</h2>
+        <h1>${champData.data[champName].id}</h1>
+        </div>
+           <div class="champ-infos-main-bottom">
+              <div class="champ-infos-bottom-left">
+              <div class="champ-function">
+              <img class="img-function" src="/lol/icones/${champData.data[champName].tags[0].toLowerCase()}-ico.svg">
+              <p>Função</p>
+              <p>${classePtBR(champData.data[champName].tags[0])}</p>
+              </div>
+              <div class="champ-difficulty">
+             <div class="difficulty-style">
+             <div></div>
+             <div></div>
+             <div></div>
+             </div>
+              <p>dificuldade</p>
+              <p>${dificuldade(champData.data[champName].info.difficulty)}</p>
+              </div>
+              </div>
+              <div class="champ-infos-bottom-right">
+              <p>${champData.data[champName].lore}</p>
+              </div>
+           </div>
+        </div>
+        
+           <img class="img-bg-champ-infos" src="${splashAssets + champName}_0.jpg">
+        </div>
+        
+        `
+            document.body.appendChild(containerChampInfos)
+            const difficultyStyle = document.querySelector(".difficulty-style")
+            dificuldadeDisplay(dificuldade(champData.data[champName].info.difficulty), difficultyStyle)
+            const titulo = []
+            titulo.push(document.title)
+            document.title = `${champData.data[champName].id} - League of Legends`
+
+            const btnCloseInfo = document.querySelector(".btn-close-info")
+            btnCloseInfo.onclick = e => {
+                const infoContainer = document.querySelector(".container-champ-infos")
+                infoContainer.remove()
+                document.title = titulo[0]
+            }
+
+        })
+
+}
+
+
+// Função Dificuldades
+
+function dificuldade(numero) {
+    if (numero <= 3) {
+        return "baixa"
+    } else if (numero > 3 && numero < 8) {
+        return "moderada"
+    } else if (numero >= 8) {
+        return "alta"
+    }
+}
+
+// Função Dificuldade Display
+
+function dificuldadeDisplay(dificuldade, objeto) {
+
+    return objeto.setAttribute(dificuldade, "")
+
+}
+
+// Função Classe
+
+function classePtBR(classe) {
+    switch (classe) {
+        case "Assassin": return "Assassino"
+            break;
+        case "Fighter": return "Lutador"
+            break;
+        case "Mage": return "Mago"
+            break;
+        case "Marksman": return "Atirador"
+            break;
+        case "Support": return "Suporte"
+            break;
+        case "Tank": return "Tanque"
+            break;
+    }
 }
