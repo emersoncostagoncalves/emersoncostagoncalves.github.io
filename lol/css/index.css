@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Robotowght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
 
 * {
@@ -92,30 +92,32 @@ body {
     overflow: hidden;
     justify-items: center;
     gap: 10px
-    
-
 }
 
 .lol-logo {
     width: 150px;
     justify-self: center;
     align-self: center;
-    
+
 }
 
 .btn-jogar {
     position: absolute;
-    width: 120px;
-    height: 30px;
+    width: 145px;
+    height: 32px;
     border: none;
-    border-radius: 8px;
-    background-color: #03cf9c;
+    border-radius: 10px;
+
     right: 20px;
     transition: all 300ms;
+    font-weight: 600;
+    background-image: linear-gradient(90deg, #00c2f3, #00c2f3);
+    background-repeat: no-repeat;
+    background-color: azure;
 }
 
-.btn-jogar:hover{
-    background-color: #d1ca61;
+.btn-jogar:hover {
+    background-position: 145px 0px;
 }
 
 
@@ -156,6 +158,10 @@ body {
     width: 80px;
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(800%) contrast(100%);
     cursor: pointer;
+}
+
+.riot-logo:hover {
+    filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(0deg) brightness(300%) contrast(100%);
 }
 
 nav {
@@ -216,7 +222,8 @@ nav {
     height: 100%;
     padding-top: 100px;
     padding-bottom: 30px;
-
+    scrollbar-width: thin;          
+    scrollbar-color: rgb(12, 148, 96) rgb(22, 22, 22);
 }
 
 .infos {
@@ -752,4 +759,18 @@ nav {
     object-fit: cover;
     z-index: -1;
     filter: blur(2px);
+}
+
+.container-info::-webkit-scrollbar {
+    width: 3px;
+}
+
+.container-info::-webkit-scrollbar-track {
+    background: rgb(22, 22, 22);
+}
+
+.container-info::-webkit-scrollbar-thumb {
+    background-color: rgb(12, 148, 96);
+    border-radius: 20px;
+
 }
