@@ -371,7 +371,7 @@ nav {
 }
 
 .champ-card:not(.champ-card-footer){
-    filter: brightness(60%);
+    
 }
 
 @keyframes fadeIn {
@@ -399,6 +399,8 @@ nav {
     box-sizing: border-box;
     overflow: hidden;
     
+    transition: all 1s;
+    
 }
 
 .img-champ-card {
@@ -408,10 +410,12 @@ nav {
     transform: scale(1.2);
     object-position: 0px -10px;
     transition: all 500ms;
+    filter: brightness(60%);
 }
 
 [img-destaque] {
     transform: scale(1.1);
+    filter: brightness(100%);
 }
 
 .champ-card-footer {
