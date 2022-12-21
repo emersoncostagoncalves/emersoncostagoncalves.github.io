@@ -208,7 +208,8 @@ nav {
 }
 
 .infos>h1 {
-    font-size: 5rem;
+    font-size: 6rem;
+    font-family: 'League Spartan', sans-serif;
 
 }
 
@@ -316,7 +317,7 @@ nav {
 }
 
 .arrow-nav:hover {
-    filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
+    filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(0deg) brightness(200%) contrast(100%);
 }
 
 [slide-prev] {
@@ -357,7 +358,6 @@ nav {
     width: 180px;
     height: 240px;
     background-color: black;
-    filter: brightness(80%);
     box-sizing: border-box;
     overflow: hidden;
     border: 1px groove rgba(4, 151, 139, 0.5);
@@ -366,6 +366,8 @@ nav {
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-direction: normal;
+    filter: brightness(60%);
+    
 }
 
 @keyframes fadeIn {
@@ -380,7 +382,7 @@ nav {
 }
 
 .champ-card:hover {
-    filter: brightness(120%);
+    filter: brightness(110%);
     border: 1px groove rgba(204, 158, 6, 1);
     
 
@@ -392,6 +394,7 @@ nav {
     background-color: beige;
     box-sizing: border-box;
     overflow: hidden;
+    
 }
 
 .img-champ-card {
@@ -409,7 +412,7 @@ nav {
 
 .champ-card-footer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 15%;
@@ -417,18 +420,21 @@ nav {
     font-size: 0.5rem;
     font-style: italic;
     text-transform: uppercase;
-    color: rgb(48, 33, 12);
-    background-color: rgb(58, 40, 24);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 134, 90);
+    padding-left: 10px;
+    transition: all 300ms;
 }
 
 [destaqueFooter] {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 15%;
     background-color: rgb(206, 181, 97);
     font-size: 0.5rem;
+    padding-left: 30px;
 
 }
 

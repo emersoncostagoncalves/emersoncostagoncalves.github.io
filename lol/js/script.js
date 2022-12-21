@@ -6,7 +6,7 @@ const loadScreen = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/
 const squareAssets = 'http://ddragon.leagueoflegends.com/cdn/12.23.1/img/champion/';
 const passiveAssets = 'http://ddragon.leagueoflegends.com/cdn/12.23.1/img/passive/';
 const splashAssets = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/';
-const urlChamp = "http://ddragon.leagueoflegends.com/cdn/12.23.1/data/en_US/champion/"
+const urlChamp = "http://ddragon.leagueoflegends.com/cdn/12.23.1/data/pt_BR/champion/"
 
 
 fetch(urlRotation)
@@ -228,6 +228,7 @@ classeTitulo.addEventListener("animationend", () => {
             const footerCardInfo = document.getElementById(`${el.id}-champ-card-footer`)
             const imgChampCard = document.getElementById(`${el.id}-img-champ-card`)
             footerCardInfo.setAttribute("destaqueFooter", "")
+            footerCardInfo.style.color = "rgb(48, 33, 12)"
             imgChampCard.setAttribute("img-destaque", "")
             imgChampCard.src = `${loadScreen + el.id}_1.jpg`
             
@@ -239,6 +240,7 @@ classeTitulo.addEventListener("animationend", () => {
             const footerCardInfo = document.getElementById(`${el.id}-champ-card-footer`)
             const imgChampCard = document.getElementById(`${el.id}-img-champ-card`)
             footerCardInfo.removeAttribute("destaqueFooter")
+            footerCardInfo.style.color = "rgb(255, 255, 255)"
             imgChampCard.removeAttribute("img-destaque")
             imgChampCard.src = `${loadScreen + el.id}_0.jpg`
         }
