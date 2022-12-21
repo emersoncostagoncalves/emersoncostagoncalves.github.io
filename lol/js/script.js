@@ -1,12 +1,12 @@
 const cardsRotationContainer = document.querySelector(".cards-rotation-container")
 const apiKey = "RGAPI-37c25dc6-c4ce-418e-bdd7-262089907df4"
-const url = 'http://ddragon.leagueoflegends.com/cdn/12.23.1/data/pt_BR/champion.json';
+const url = 'https://ddragon.leagueoflegends.com/cdn/12.23.1/data/pt_BR/champion.json';
 const urlRotation = `https://br1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=${apiKey}`;
-const loadScreen = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
-const squareAssets = 'http://ddragon.leagueoflegends.com/cdn/12.23.1/img/champion/';
-const passiveAssets = 'http://ddragon.leagueoflegends.com/cdn/12.23.1/img/passive/';
-const splashAssets = 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/';
-const urlChamp = "http://ddragon.leagueoflegends.com/cdn/12.23.1/data/pt_BR/champion/"
+const loadScreen = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
+const squareAssets = 'https://ddragon.leagueoflegends.com/cdn/12.23.1/img/champion/';
+const passiveAssets = 'https://ddragon.leagueoflegends.com/cdn/12.23.1/img/passive/';
+const splashAssets = 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/';
+const urlChamp = "https://ddragon.leagueoflegends.com/cdn/12.23.1/data/pt_BR/champion/"
 
 
 fetch(urlRotation)
