@@ -222,7 +222,7 @@ nav {
     height: 100%;
     padding-top: 100px;
     padding-bottom: 30px;
-    scrollbar-width: thin;          
+    scrollbar-width: thin;
     scrollbar-color: rgb(12, 148, 96) rgb(22, 22, 22);
 }
 
@@ -455,12 +455,10 @@ nav {
 .img-champ-card-container {
     width: 100%;
     height: 85%;
-    background-color: beige;
     box-sizing: border-box;
     overflow: hidden;
-
     transition: all 1s;
-
+    
 }
 
 .img-champ-card {
@@ -758,7 +756,7 @@ nav {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: blur(2px);
+    filter: blur(1px);
 }
 
 .container-info::-webkit-scrollbar {
