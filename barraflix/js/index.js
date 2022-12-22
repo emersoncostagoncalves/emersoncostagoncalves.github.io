@@ -85,7 +85,7 @@ function loadList(btnMenu, el, pageNumber = 1) {
         .then(dados => {
 
 
-            console.log(dados)
+            //console.log(dados)
 
             if (dados.results.length == 0) {
                 const erro = document.createElement("h1");
@@ -192,7 +192,7 @@ function loadList(btnMenu, el, pageNumber = 1) {
                     pageNumber++
                     loadList(btnMenu, el, pageNumber)
                     window.location.hash += `&pagina=${pageNumber}`
-                    console.log(totalPages)
+                    //console.log(totalPages)
                 }
 
                 btnPagePrevious.onclick = e => {
@@ -201,7 +201,7 @@ function loadList(btnMenu, el, pageNumber = 1) {
                     pageNumber--
                     loadList(btnMenu, el, pageNumber)
                     window.location.hash += `&pagina=${pageNumber}`
-                    console.log(totalPages)
+                    //console.log(totalPages)
                 }
 
 
@@ -392,7 +392,7 @@ arrowLeft.onclick = e => {
     })
 
 
-    console.log(moviesBox)
+    //console.log(moviesBox)
 
 }
 
@@ -447,7 +447,7 @@ arrowLeft2.onclick = e => {
         })
     })
 
-    console.log(moviesBox)
+    //console.log(moviesBox)
 
 }
 
@@ -477,7 +477,7 @@ function search(pesquisa, pageNumber = 1) {
         window.location.hash = `pesquisa=${pesquisaFormat(pesquisa)}&pagina=${pageNumber}`
         const url = `https://api.themoviedb.org/3/search/movie?api_key=b502db08defaa68db6de86429c3ab26f&language=pt-BR&query=${pesquisa}&page=${pageNumber}&include_adult=false`
         const urlImagem = "https://image.tmdb.org/t/p/original/";
-        console.log(url)
+        //console.log(url)
 
 
         fetch(url)
@@ -485,7 +485,7 @@ function search(pesquisa, pageNumber = 1) {
             .then(dados => {
 
 
-                console.log(dados)
+               // console.log(dados)
 
                 if (dados.results.length == 0) {
                     const erro = document.createElement("h1");
@@ -604,7 +604,7 @@ function search(pesquisa, pageNumber = 1) {
                         pageNumber++
                         search(pesquisa, pageNumber)
                         window.location.hash = `pesquisa=${pesquisaFormat(pesquisa)}&pagina=${pageNumber}`
-                        console.log(totalPages)
+                        //console.log(totalPages)
                     }
 
                     btnPagePrevious.onclick = e => {
@@ -613,7 +613,7 @@ function search(pesquisa, pageNumber = 1) {
                         pageNumber--
                         search(pesquisa, pageNumber)
                         window.location.hash = `pesquisa=${pesquisaFormat(pesquisa)}&pagina=${pageNumber}`
-                        console.log(totalPages)
+                        //console.log(totalPages)
                     }
 
 
@@ -652,14 +652,14 @@ function info(cards) {
     cards.forEach(el => {
         el.onclick = e => {
             const movieId = el.getAttribute("movieid");
-            console.log(movieId)
+            //console.log(movieId)
             const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=b502db08defaa68db6de86429c3ab26f&language=pt-BR`
             fetch(url)
                 .then(resp => resp.json())
                 .then(dados => {
                     tituloPtBR = [];
                     tituloPtBR.push(dados.title)
-                    console.log(dados)
+                    //console.log(dados)
                     const infoContainer = document.createElement("div");
                     infoContainer.className = "infoContainer";
 
@@ -808,7 +808,7 @@ function trailer(id) {
         .then(resp => resp.json())
         .then(trailer => {
 
-            console.log(trailer.videoId)
+            console.log("Trailer id: "+trailer.videoId)
             
             const infoBox = document.querySelector(".infoBox")
             infoBox.style.display = "none"
