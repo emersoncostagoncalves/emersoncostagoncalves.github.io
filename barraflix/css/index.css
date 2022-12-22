@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: brown;
-    
+
 }
 
 header {
@@ -30,18 +30,18 @@ header {
     height: 100px;
     background-color: rgb(26, 26, 26);
     border-bottom: 1px solid black;
-    
-    
+
+
 }
 
-.logoContainer{
+.logoContainer {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
     width: 50%;
     height: 100%;
     padding-left: 10px;
-    
+
 }
 
 .searchContainer {
@@ -51,26 +51,26 @@ header {
     width: 50%;
     height: 100%;
     padding-right: 40px;
-    
-}
-
-.searchBar{
-width: 50%;
-max-width: 450px;
-height: 40px;
-border-radius: 20px;
-background-color: black;
-border: 1px solid gray;
-outline: none;
-color: rgb(240, 248, 255);
-padding-left: 50px;
-box-sizing: border-box;
-background: url("/barraflix/icones/search-line.svg") no-repeat 10px center;
-transition: all 1s;
 
 }
 
-.searchBar:focus{
+.searchBar {
+    width: 50%;
+    max-width: 450px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    border: 1px solid gray;
+    outline: none;
+    color: rgb(240, 248, 255);
+    padding-left: 50px;
+    box-sizing: border-box;
+    background: url("/barraflix/icones/search-line.svg") no-repeat 10px center;
+    transition: all 1s;
+
+}
+
+.searchBar:focus {
     border: 2px solid rgb(175, 12, 12);
     background-color: rgb(32, 32, 32);
 }
@@ -84,7 +84,7 @@ transition: all 1s;
     border-bottom: 1px solid black;
     border-top: 1px solid rgb(31, 31, 31);
     box-sizing: border-box;
-    
+
 }
 
 .menuLeft {
@@ -97,7 +97,8 @@ transition: all 1s;
     box-sizing: border-box;
 }
 
-.btnMenu, .btnMenuHome {
+.btnMenu,
+.btnMenuHome {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +112,8 @@ transition: all 1s;
 
 }
 
-.btnMenu:hover, .btnMenuHome:hover {
+.btnMenu:hover,
+.btnMenuHome:hover {
     background-color: rgb(175, 12, 12);
     cursor: pointer;
     font-weight: bold;
@@ -136,7 +138,7 @@ transition: all 1s;
     gap: 10px;
     box-sizing: border-box;
     overflow: hidden;
-    
+
 }
 
 #cardBox {
@@ -178,7 +180,7 @@ transition: all 1s;
     background-color: rgb(175, 12, 12);
     color: aliceblue;
     text-align: center;
-    
+
 
 }
 
@@ -193,7 +195,7 @@ transition: all 1s;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px 10px 0px 0px;
-   
+
 }
 
 
@@ -220,7 +222,7 @@ transition: all 1s;
     font-size: 0.6em;
     text-align: center;
     box-sizing: border-box;
-    
+
 }
 
 .titleBox {
@@ -232,7 +234,7 @@ transition: all 1s;
     padding: 10px;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(0, 0, 0);
-    
+
 }
 
 .divRate {
@@ -252,7 +254,7 @@ transition: all 1s;
 
 }
 
-.movieRate{
+.movieRate {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,11 +284,11 @@ footer {
     gap: 2px
 }
 
-footer > img{
+footer>img {
     margin-bottom: 10px;
 }
 
-footer > p:nth-child(3){
+footer>p:nth-child(3) {
     color: rgb(78, 78, 78);
 }
 
@@ -300,32 +302,32 @@ footer > p:nth-child(3){
     width: 100%;
     height: 700px;
     box-sizing: border-box;
-    
-    
+
+
 }
 
-.sectionHeader{
+.sectionHeader {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 10%;
     color: aliceblue;
-    
+
 }
 
-.sectionContainer{
+.sectionContainer {
     display: flex;
     justify-content: flex-start;
     width: 100%;
     height: 90%;
     box-sizing: border-box;
     overflow: hidden;
-    
-    
+
+
 }
 
-.navLeft{
+.navLeft {
     position: relative;
     display: flex;
     justify-content: center;
@@ -335,22 +337,20 @@ footer > p:nth-child(3){
     z-index: 2;
     background: none;
     transition: all 1s;
-    
+
 }
 
-.navLeft:hover{
-    
-    background: linear-gradient(90deg,rgba(175, 12, 12, 0.5),rgba(175, 12, 12, 0));
-    background: linear-gradient(90deg,rgba(88, 88, 88, 0.5),rgba(175, 12, 12, 0))
-    
-    
+.navLeft:hover {
+
+    background: linear-gradient(90deg, rgba(175, 12, 12, 0.5), rgba(175, 12, 12, 0));
+    background: linear-gradient(90deg, rgba(88, 88, 88, 0.5), rgba(175, 12, 12, 0))
 }
 
-.arrowLeft{
+.arrowLeft {
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
 }
 
-.sectionContainerBox{
+.sectionContainerBox {
     position: relative;
     left: -440px;
     display: flex;
@@ -360,11 +360,11 @@ footer > p:nth-child(3){
     gap: 20px;
     padding: 10px;
     box-sizing: border-box;
-    
-    
+
+
 }
 
-.navRight{
+.navRight {
     display: flex;
     position: relative;
     display: flex;
@@ -374,61 +374,62 @@ footer > p:nth-child(3){
     height: 100%;
     right: 200px;
     z-index: 2;
-    background-image: linear-gradient(90deg,rgba(88, 88, 88, 0),rgba(88, 88, 88, 0));
+    background-image: linear-gradient(90deg, rgba(88, 88, 88, 0), rgba(88, 88, 88, 0));
     transition: all 1s;
-    
+
 }
 
-.navRight:hover{
-    background-image: linear-gradient(90deg,rgba(88, 88, 88, 0),rgba(88, 88, 88, 0.5));
-    
+.navRight:hover {
+    background-image: linear-gradient(90deg, rgba(88, 88, 88, 0), rgba(88, 88, 88, 0.5));
+
 }
 
-.arrowRight{
+.arrowRight {
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
 }
 
-[slide-next]{
+[slide-next] {
     transition: all 1s;
     animation-name: slide-next;
     animation-duration: 0.5s;
     animation-direction: normal;
-    
+
 }
 
 @keyframes slide-next {
-    from{
+    from {
         transform: translateX(0px)
     }
+
     to {
         transform: translateX(340px);
     }
 }
 
-[slide-prev]{
+[slide-prev] {
     transition: all 1s;
     animation-name: slide-prev;
     animation-duration: 0.5s;
     animation-direction: normal;
-    
+
 }
 
-.infoContainer{
+.infoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background-color: rgba(2, 2, 2, 0.8);
     z-index: 10;
     backdrop-filter: blur(5px);
- 
+
 }
 
-.infoBox{
+.infoBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -443,24 +444,25 @@ footer > p:nth-child(3){
     background-repeat: none;
     overflow: hidden;
     border-radius: 20px;
-    border: 3px  rgb(36, 36, 36);
-    border-style:outset;
+    border: 3px rgb(36, 36, 36);
+    border-style: outset;
     animation-name: zoom;
     animation-duration: 0.5s;
     animation-direction: alternate;
 }
 
 @keyframes zoom {
-    from{
-transform: scale(0);
+    from {
+        transform: scale(0);
 
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
 
-.boxHeader{
+.boxHeader {
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -470,7 +472,7 @@ transform: scale(0);
     background-color: rgba(2, 2, 2, 0.8);
 }
 
-.btnFechar{
+.btnFechar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -478,15 +480,15 @@ transform: scale(0);
     height: 35px;
 }
 
-.btnFechar > img{
+.btnFechar>img {
     filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(600%) contrast(100%);
 }
 
-.btnFechar > img:hover{
+.btnFechar>img:hover {
     filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
-.boxMain{
+.boxMain {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,20 +498,20 @@ transform: scale(0);
     box-sizing: border-box;
 }
 
-.posterInfo{
+.posterInfo {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     width: 30%;
     height: 100%;
     box-sizing: border-box;
     overflow: hidden;
     padding: 20px;
-    
-    
+
+
 }
 
-.textInfo{
+.textInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -517,17 +519,17 @@ transform: scale(0);
     width: 70%;
     height: 100%;
     color: aliceblue;
-    
+
 }
 
-.boxFooter{
-    width:100%;
+.boxFooter {
+    width: 100%;
     height: 10%;
     background-color: rgba(2, 2, 2, 0.8);
 }
 
 
-.posterInfo > img{
+.posterInfo>img {
     border-radius: 20px;
     animation-name: cardRotate;
     animation-duration: 1s;
@@ -536,21 +538,22 @@ transform: scale(0);
 }
 
 
-   
 
 
-@keyframes cardRotate{
-    from{
-transform: rotate3d(0,0,0,0deg);
-opacity: 0;
+
+@keyframes cardRotate {
+    from {
+        transform: rotate3d(0, 0, 0, 0deg);
+        opacity: 0;
     }
-    to{
-        transform: rotate3d(0,1,0,360deg);
+
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
         opacity: 1;
     }
 }
 
-.textInfoHeader{
+.textInfoHeader {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -559,24 +562,24 @@ opacity: 0;
     height: 20%;
     box-sizing: border-box;
     padding: 20px;
-    
+
 }
 
-.textInfoHeaderDesc{
+.textInfoHeaderDesc {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 7px;
 }
 
-.ballList{
+.ballList {
     width: 7px;
     height: 7px;
     border-radius: 50%;
     background-color: aliceblue;
 }
 
-.textInfoMain{
+.textInfoMain {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -586,10 +589,99 @@ opacity: 0;
     box-sizing: border-box;
     gap: 10px;
     padding: 20px;
-    
+
 }
 
-.textInfoFooter{
+.btn-trailer {
+    position: relative;
+    width: 120px;
+    height: 35px;
+    background-color: rgb(175, 12, 12);
+    border: none;
+    color: aliceblue;
+    border-radius: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+    transition: all 300ms;
+}
+
+.btn-close-trailer {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(600%) contrast(100%);
+}
+
+.btn-close-trailer:hover {
+    filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.trailer-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+    overflow: hidden;
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+}
+
+.trailer-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3%;
+    padding: 2px;
+
+}
+
+.trailer-container-header>h1 {
+    color: aliceblue;
+    padding-left: 25px;
+    font-size: 1.5rem;
+
+}
+
+.trailer-container-movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 97%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+
+
+.trailer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px groove rgb(31, 31, 31);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+
+
+.btn-trailer:hover {
+    background-color: rgb(212, 24, 24);
+    transform: scale(1.1);
+}
+
+.textInfoFooter {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -598,49 +690,49 @@ opacity: 0;
     box-sizing: border-box;
     padding: 20px 30px;
     gap: 10px;
-   ;
 }
 
-.textInfoFooter > img{
+.textInfoFooter>img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(100%) contrast(100%);
 }
 
 
 @keyframes slide-prev {
-    from{
+    from {
         transform: translateX(0px)
     }
+
     to {
         transform: translateX(-340px);
     }
 }
 
-#btnPrevious{
+#btnPrevious {
     transition: all 300ms;
     font-size: 1em;
-    background-color:rgb(24, 24, 24);
+    background-color: rgb(24, 24, 24);
     box-shadow: -5px 10px 20px rgb(22, 22, 22);
-    background-color:rgba(175, 12, 12, 1);
+    background-color: rgba(175, 12, 12, 1);
 }
 
-#btnPrevious:hover{
+#btnPrevious:hover {
     font-size: 1.1em;
-    background-color:rgba(175, 12, 12, 1);
-    background-color:rgb(24, 24, 24);
-    
+    background-color: rgba(175, 12, 12, 1);
+    background-color: rgb(24, 24, 24);
+
 }
 
-#btnNext{
+#btnNext {
     transition: all 300ms;
     font-size: 1em;
-    background-color:rgb(24, 24, 24);
+    background-color: rgb(24, 24, 24);
     box-shadow: -5px 10px 20px rgb(22, 22, 22);
-    background-color:rgba(175, 12, 12, 1);
+    background-color: rgba(175, 12, 12, 1);
 }
 
-#btnNext:hover{
+#btnNext:hover {
     font-size: 1.1em;
-    background-color:rgba(175, 12, 12, 1);
-    background-color:rgb(24, 24, 24);
-    
+    background-color: rgba(175, 12, 12, 1);
+    background-color: rgb(24, 24, 24);
+
 }

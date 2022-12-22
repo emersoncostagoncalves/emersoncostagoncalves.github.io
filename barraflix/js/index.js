@@ -9,6 +9,7 @@ const btnHome = document.querySelector(".btnMenuHome")
 btnHome.setAttribute("btndestaque", "")
 const searchBar = document.querySelector(".searchBar")
 let pageNumber = 0;
+let tituloPtBR = [];
 
 btnHome.onclick = () => {
     window.location.href = "index.html"
@@ -105,13 +106,13 @@ function loadList(btnMenu, el, pageNumber = 1) {
                     const poster = document.createElement("img");
                     poster.className = "poster"
 
-                    if(el.poster_path != null){
+                    if (el.poster_path != null) {
                         poster.src = urlImagem + el.poster_path
-                    }else{
+                    } else {
                         poster.src = "../barraflix/imagens/poster_null.png"
                     }
 
-                   
+
                     cardPoster.appendChild(poster);
 
                     const cardInfo = document.createElement("div");
@@ -128,10 +129,10 @@ function loadList(btnMenu, el, pageNumber = 1) {
                     function formatDate(string) {
                         let dataFormatada = [];
 
-                       // dataFormatada.push(string[8], string[9]);
+                        // dataFormatada.push(string[8], string[9]);
                         //dataFormatada.push(string[7]);
-                       // dataFormatada.push(string[5], string[6]);
-                       // dataFormatada.push(string[4]);
+                        // dataFormatada.push(string[5], string[6]);
+                        // dataFormatada.push(string[4]);
                         dataFormatada.push(string[0], string[1], string[2], string[3]);
                         return dataFormatada.join("")
                     }
@@ -205,9 +206,9 @@ function loadList(btnMenu, el, pageNumber = 1) {
 
 
             }
- // Card infos
- const todosCards = document.querySelectorAll("#cardBox")
- info(todosCards)
+            // Card infos
+            const todosCards = document.querySelectorAll("#cardBox")
+            info(todosCards)
         })
         .catch(err => {
             console.log(err)
@@ -255,9 +256,9 @@ function loadFeatures(sort, sectionContainerBox, paramBox, pageNumber = 1) {
                     const poster = document.createElement("img");
                     poster.className = "poster"
 
-                    if(el.poster_path != null){
+                    if (el.poster_path != null) {
                         poster.src = urlImagem + el.poster_path
-                    }else{
+                    } else {
                         poster.src = "../barraflix/imagens/poster_null.png"
                     }
 
@@ -283,9 +284,9 @@ function loadFeatures(sort, sectionContainerBox, paramBox, pageNumber = 1) {
                             let dataFormatada = [];
 
                             //dataFormatada.push(string[8], string[9]);
-                           // dataFormatada.push(string[7]);
-                           // dataFormatada.push(string[5], string[6]);
-                           // dataFormatada.push(string[4]);
+                            // dataFormatada.push(string[7]);
+                            // dataFormatada.push(string[5], string[6]);
+                            // dataFormatada.push(string[4]);
                             dataFormatada.push(string[0], string[1], string[2], string[3]);
                             return dataFormatada.join("")
                         }
@@ -504,11 +505,11 @@ function search(pesquisa, pageNumber = 1) {
                         cardPoster.id = "cardPoster";
                         const poster = document.createElement("img");
                         poster.className = "poster"
-                        if(el.poster_path != null){
-                        poster.src = urlImagem + el.poster_path
-                    }else{
-                        poster.src = "../barraflix/imagens/poster_null.png"
-                    }
+                        if (el.poster_path != null) {
+                            poster.src = urlImagem + el.poster_path
+                        } else {
+                            poster.src = "../barraflix/imagens/poster_null.png"
+                        }
                         cardPoster.appendChild(poster);
 
                         const cardInfo = document.createElement("div");
@@ -636,9 +637,9 @@ function search(pesquisa, pageNumber = 1) {
 searchBar.onfocus = e => {
     e.target.select()
     searchBar.onkeyup = e => {
-     if(e.keyCode == 13){
-        search(e.target.value)
-}
+        if (e.keyCode == 13) {
+            search(e.target.value)
+        }
     }
 }
 
@@ -656,7 +657,8 @@ function info(cards) {
             fetch(url)
                 .then(resp => resp.json())
                 .then(dados => {
-
+                    tituloPtBR = [];
+                    tituloPtBR.push(dados.title)
                     console.log(dados)
                     const infoContainer = document.createElement("div");
                     infoContainer.className = "infoContainer";
@@ -679,9 +681,9 @@ function info(cards) {
                     }
 
                     let poster_path = "";
-                    if(dados.poster_path != null){
-                         poster_path = `${urlImagem + dados.poster_path}`
-                    }else{
+                    if (dados.poster_path != null) {
+                        poster_path = `${urlImagem + dados.poster_path}`
+                    } else {
                         poster_path = "../barraflix/imagens/poster_null.png"
                     }
 
@@ -712,6 +714,7 @@ function info(cards) {
                <div class="textInfoMain">
                   <h2>Sinopse</h2>
                   <p>${dados.overview}</p>
+                  <button class="btn-trailer" imdb="${dados.imdb_id}" >Assistir Trailer</button>
               </div>
 
               <div class="textInfoFooter">
@@ -725,7 +728,7 @@ function info(cards) {
 
     </div>
     `
-    
+
 
                     document.body.insertAdjacentElement("afterbegin", infoContainer)
                     const infoBox = document.querySelector(".infoBox")
@@ -740,27 +743,27 @@ function info(cards) {
                     // Add company logos
                     const textInfoFooter = document.querySelector(".textInfoFooter");
                     dados.production_companies.forEach(el => {
-                        if(el.logo_path != null){
-                        const img = document.createElement("img")
-                        img.src = `${urlImagem+el.logo_path}`
-                        img.style.width = "80px"
-                        img.title = el.name
+                        if (el.logo_path != null) {
+                            const img = document.createElement("img")
+                            img.src = `${urlImagem + el.logo_path}`
+                            img.style.width = "80px"
+                            img.title = el.name
 
-                        textInfoFooter.appendChild(img)
+                            textInfoFooter.appendChild(img)
                         }
                     })
                     //Add Genres
                     const textInfoHeader = document.querySelector(".textInfoHeader");
                     const textInfoHeaderDesc = document.querySelector(".textInfoHeaderDesc")
                     dados.genres.forEach(el => {
-                        if(el.name != null){
-                        const h3 = document.createElement("h3")
-                        h3.innerText = el.name
-                        const ball = document.createElement("div")
-                        ball.className = "ballList"
-                        textInfoHeaderDesc.appendChild(ball)
-                        textInfoHeaderDesc.appendChild(h3)
-                        textInfoHeader.appendChild(textInfoHeaderDesc)
+                        if (el.name != null) {
+                            const h3 = document.createElement("h3")
+                            h3.innerText = el.name
+                            const ball = document.createElement("div")
+                            ball.className = "ballList"
+                            textInfoHeaderDesc.appendChild(ball)
+                            textInfoHeaderDesc.appendChild(h3)
+                            textInfoHeader.appendChild(textInfoHeaderDesc)
                         }
                     })
                     // Add tempo
@@ -770,14 +773,70 @@ function info(cards) {
                     const h3 = document.createElement("h3")
                     h3.innerText = `${runtime.getHours()}h ${runtime.getMinutes()}m`
                     const ball = document.createElement("div")
-                        ball.className = "ballList"
-                        textInfoHeaderDesc.appendChild(ball)
-                    
+                    ball.className = "ballList"
+                    textInfoHeaderDesc.appendChild(ball)
+
                     textInfoHeaderDesc.appendChild(h3)
+
+
+                    // Trailer
+
+                    const btnTrailer = document.querySelectorAll(".btn-trailer")
+
+                    btnTrailer.forEach(el => {
+                        el.onclick = e => {
+                            const imdbId = el.getAttribute("imdb")
+                            trailer(imdbId)
+
+                        }
+                    })
 
                 })
 
 
         }
     })
+}
+
+
+// Função busca trailer
+
+function trailer(id) {
+    const url = `https://imdb-api.com/API/YouTubeTrailer/k_fuw7a83q/${id}`
+
+    fetch(url)
+        .then(resp => resp.json())
+        .then(trailer => {
+
+            console.log(trailer.videoId)
+            
+            const infoBox = document.querySelector(".infoBox")
+            infoBox.style.display = "none"
+            const infoContainer = document.querySelector(".infoContainer")
+            const trailerContainer = document.createElement("div")
+            trailerContainer.className = "trailer-container"
+
+            trailerContainer.innerHTML = `
+            <div class="trailer-container-header">
+               <h1>Trailer ${tituloPtBR[0]}</h1>
+               <img id="btn-close-trailer" class="btn-close-trailer" width="35px" src="/barraflix/icones/close-line.svg" title="Fechar Trailer">
+            </div>
+            <div class="trailer-container-movie">
+               <iframe class="trailer" width="90%" height="90%" src="https://www.youtube.com/embed/${trailer.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            
+            `
+
+
+
+            infoContainer.insertAdjacentElement("afterbegin", trailerContainer)
+
+            const btnFechaTrailer = document.querySelector("#btn-close-trailer")
+
+            btnFechaTrailer.onclick = e => {
+                trailerContainer.remove()
+                infoBox.style.display = "flex"
+            }
+        })
 }
