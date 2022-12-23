@@ -1274,7 +1274,7 @@ nav {
         animation-name: fade-titulo;
         animation-duration: 2s;
         animation-direction: normal;
-        font-size: 10rem;
+        font-size: 4rem;
         font-weight: 800;
         text-transform: uppercase;
         font-family: 'League Spartan', sans-serif;
@@ -1328,9 +1328,9 @@ nav {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 90%;
+        width: 100%;
         max-width: 1200px;
-        height: 80%;
+        height: 100%;
         box-sizing: border-box;
         overflow: hidden;
         animation-name: fadeInfo;
@@ -1438,7 +1438,7 @@ nav {
         align-items: center;
         width: 50%;
         height: 100%;
-        gap: 100px;
+        gap: 10%;
         text-transform: uppercase;
     }
     
@@ -1510,8 +1510,9 @@ nav {
         width: 50%;
         height: 100%;
         color: aliceblue;
-        padding: 50px;
+        padding: 5px;
         box-sizing: border-box;
+        font-size: 0.8rem;
     
     }
     
