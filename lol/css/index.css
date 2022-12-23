@@ -1180,8 +1180,8 @@ nav {
     }
     
     .champ-card {
-        width: 180px;
-        height: 240px;
+        width: 150px;
+        height: 200px;
         background-color: black;
         box-sizing: border-box;
         overflow: hidden;
