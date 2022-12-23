@@ -1055,11 +1055,12 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 5%;
         height: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     
     }
-    
+
     .cards-rotation-container {
         width: 90%;
         height: 100%;
@@ -1085,7 +1086,7 @@ nav {
         box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.2);
         transition: filter 300ms;
         border-radius: 10px;
-        left: -225px;
+        left: -205px;
         padding: 2px;
         background-image: linear-gradient(rgba(4, 151, 139, 0), rgba(4, 151, 139, 0.5));
         filter: brightness(60%);
@@ -1130,11 +1131,13 @@ nav {
         align-items: center;
         width: 5%;
         height: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     
     }
     
     .arrow-nav {
-        width: 80px;
+        width: 35px;
         filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(180deg) brightness(160%) contrast(143%);
     }
     
@@ -1155,7 +1158,7 @@ nav {
         }
     
         to {
-            transform: translateX(-215px);
+            transform: translateX(-205px);
         }
     }
     
@@ -1172,7 +1175,7 @@ nav {
         }
     
         to {
-            transform: translateX(215px);
+            transform: translateX(205px);
         }
     }
     
