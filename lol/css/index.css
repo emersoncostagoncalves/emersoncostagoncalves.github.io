@@ -1391,7 +1391,7 @@ nav {
         background-color: rgba(5, 5, 5, 0.5);
         max-width: 1200px;
         border: 1px groove rgb(10, 95, 63);
-        padding: 20px;
+        padding: 10px;
         background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
     
     }
@@ -1409,14 +1409,14 @@ nav {
     }
     
     .champ-infos-main-top>h1 {
-        font-size: 8rem;
+        font-size: 5rem;
         font-family: 'League Spartan', sans-serif;
         font-style: italic;
         text-transform: uppercase;
     }
     
     .champ-infos-main-top>h2 {
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: 'League Spartan', sans-serif;
         font-style: italic;
         text-transform: uppercase;
