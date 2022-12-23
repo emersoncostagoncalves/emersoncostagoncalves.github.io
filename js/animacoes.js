@@ -43,25 +43,25 @@ btnProjeto7.onclick = e => {
     window.open("/barraflix/index.html")
 }
 
-const mudaTexto = document.querySelector(".animar > h1")
-
-
-console.log(animacao, mudaTexto.innerText, bntTopo, document.body.scrollTop)
 
 
 
 
-setInterval(() => {
-    if (mudaTexto.innerText == "Desenvolvedor.") {
-        mudaTexto.innerText = "Designer Gráfico."
-    } else {
-        mudaTexto.innerText = "Desenvolvedor."
+
+animacao.addEventListener("animationiteration", (e) => {
+    
+    const mudaTexto = document.querySelector(".animar > h1")
+    if(e.animationName == "animar-texto"){
+        if (mudaTexto.innerText == "Desenvolvedor.") {
+            mudaTexto.innerText = "Designer Gráfico."
+        } else {
+            mudaTexto.innerText = "Desenvolvedor."
+        }
     }
+    
+})
 
 
-
-    console.log(document.body.scrollTop, document.documentElement.scrollTop)
-}, 4000)
 
 window.onscroll = () => {
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
