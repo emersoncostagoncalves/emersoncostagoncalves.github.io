@@ -772,3 +772,767 @@ nav {
     border-radius: 20px;
 
 }
+
+
+@media screen and (max-width: 767px){
+
+    .container-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0);
+        box-sizing: border-box;
+        overflow: hidden;
+        backdrop-filter: blur(5px);
+    
+    
+    }
+    
+    .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        box-shadow: 5px 5px 50px black;
+        border: 2px groove rgba(4, 151, 139, 0.5);
+        background-color: black;
+    
+    }
+    
+    .video-bg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    
+    
+    }
+    
+    .img-bg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation-name: fadein;
+        animation-duration: 1s;
+        animation-direction: normal;
+    
+    }
+    
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .container-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        z-index: 2;
+        box-sizing: border-box;
+        overflow: hidden;
+        justify-items: center;
+        gap: 10px
+    }
+    
+    .lol-logo {
+        width: 150px;
+        justify-self: center;
+        align-self: center;
+    
+    }
+    
+    .btn-jogar {
+        position: absolute;
+        width: 145px;
+        height: 32px;
+        border: none;
+        border-radius: 10px;
+        right: 10px;
+        transition: all 300ms;
+        font-weight: 600;
+        background-image: linear-gradient(90deg, #00c2f3, #00c2f3);
+        background-repeat: no-repeat;
+        background-color: azure;
+    }
+    
+    .btn-jogar:hover {
+        background-position: 145px 0px;
+    }
+    
+    
+    
+    .container-m {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+        background-color: rgba(2, 2, 2, 0.5);
+        z-index: 1;
+        bottom: 0px;
+    
+    }
+    
+    .container-menu {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(2px);
+        z-index: 2;
+        top: 0px;
+        gap: 0px;
+        padding-top: 0px;
+    }
+    
+    .riot-logo {
+        justify-self: center;
+        align-self: center;
+        width: 80px;
+        filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(800%) contrast(100%);
+        cursor: pointer;
+        padding-left: 10px;
+    }
+    
+    .riot-logo:hover {
+        filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(0deg) brightness(300%) contrast(100%);
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-right: 10px;
+    }
+    
+    .menu-items {
+        display: none;
+        background-image: linear-gradient(#6e32a7, #6e32a7);
+        background-position: bottom -27px right 100px;
+        background-repeat: no-repeat;
+        padding: 5px;
+        transition: all 0.3s;
+        color: rgb(190, 195, 199);
+        font-weight: 500;
+        font-size: 0.9rem;
+    
+    }
+    
+    .menu-class {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .menu-class>img {
+        transition: all 300ms;
+        filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(100deg) brightness(600%) contrast(100%);
+    }
+    
+    .menu-class>img:hover {
+        transform: scale(1.1);
+        filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(0deg) brightness(800%) contrast(100%);
+    }
+    
+    [menu-destaque] {
+        filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    }
+    
+    .menu-items:hover {
+        background-repeat: no-repeat;
+        cursor: pointer;
+        color: aliceblue;
+    }
+    
+    .container-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(12, 148, 96) rgb(22, 22, 22);
+    }
+    
+    .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 75%;
+        color: aliceblue;
+        padding: 100px 50px;
+        box-sizing: border-box;
+        overflow: hidden;
+    
+    }
+    
+    .home-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .home-infos>h1 {
+        font-size: 5rem;
+        font-family: 'League Spartan', sans-serif;
+    }
+    
+    .home-infos>h2 {
+        font-size: 2rem;
+        font-family: 'League Spartan', sans-serif;
+    }
+    
+    .home-infos>h3 {
+        font-size: 1rem;
+        font-weight: 100;
+        text-align: center;
+        max-width: 40rem;
+    }
+    
+    .infos>h1 {
+        font-size: 6rem;
+        font-family: 'League Spartan', sans-serif;
+    
+    }
+    
+    .infos>h3 {
+        font-size: 1rem;
+        font-weight: 100;
+        max-width: 40rem;
+    
+    
+    
+    }
+    
+    .cards-rotation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 25%;
+    }
+    
+    .nav-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5%;
+        height: 100%;
+    
+    }
+    
+    .cards-rotation-container {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    
+    }
+    
+    .card-rotation {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 200px;
+        height: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.2);
+        transition: filter 300ms;
+        border-radius: 20px;
+        left: -225px;
+        padding: 2px;
+        background-image: linear-gradient(rgba(4, 151, 139, 0), rgba(4, 151, 139, 0.5));
+        filter: brightness(60%);
+        cursor: pointer;
+    }
+    
+    .card-rotation:hover {
+        filter: brightness(100%);
+        background-image: linear-gradient(rgba(4, 151, 139, 0), rgba(151, 136, 4, 0.5));
+    }
+    
+    .card-rotation>div {
+        width: 100%;
+        height: 100%;
+    
+    }
+    
+    .champ-rotation-name {
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: absolute;
+        color: aliceblue;
+        font-size: 0.7rem;
+        left: 15px;
+        bottom: 10px;
+        text-shadow: 1px 5px 5px black;
+    
+    }
+    
+    .img-rotation {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 18px;
+    
+    }
+    
+    .nav-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5%;
+        height: 100%;
+    
+    }
+    
+    .arrow-nav {
+        width: 80px;
+        filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(180deg) brightness(160%) contrast(143%);
+    }
+    
+    .arrow-nav:hover {
+        filter: invert(8%) sepia(100%) saturate(200%) hue-rotate(0deg) brightness(200%) contrast(100%);
+    }
+    
+    [slide-prev] {
+        animation-name: slideLeft;
+        animation-duration: 1s;
+        animation-direction: normal;
+        transition: all 1s;
+    }
+    
+    @keyframes slideLeft {
+        from {
+            transform: translateX(0px);
+        }
+    
+        to {
+            transform: translateX(-215px);
+        }
+    }
+    
+    [slide-next] {
+        animation-name: slideRight;
+        animation-duration: 1s;
+        animation-direction: normal;
+        transition: all 1s;
+    }
+    
+    @keyframes slideRight {
+        from {
+            transform: translateX(0px);
+        }
+    
+        to {
+            transform: translateX(215px);
+        }
+    }
+    
+    .champ-card {
+        width: 180px;
+        height: 240px;
+        background-color: black;
+        box-sizing: border-box;
+        overflow: hidden;
+        border: 1px groove rgba(4, 151, 139, 0.5);
+        transition: all 300ms;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-direction: normal;
+        cursor: pointer;
+    
+    }
+    
+    
+    
+    @keyframes fadeIn {
+        from {
+            transform: translateY(220px);
+            opacity: 0;
+        }
+    
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    
+    .champ-card:hover {
+        filter: brightness(110%);
+        border: 1px groove rgba(204, 158, 6, 1);
+    
+    
+    }
+    
+    .img-champ-card-container {
+        width: 100%;
+        height: 85%;
+        box-sizing: border-box;
+        overflow: hidden;
+        transition: all 1s;
+        
+    }
+    
+    .img-champ-card {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.2);
+        object-position: 0px -10px;
+        transition: all 500ms;
+        filter: brightness(60%);
+    }
+    
+    [img-destaque] {
+        transform: scale(1.1);
+        filter: brightness(100%);
+    }
+    
+    .champ-card-footer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 15%;
+        background-color: rgba(4, 151, 139, 1);
+        font-size: 0.5rem;
+        font-style: italic;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 134, 90);
+        padding-left: 10px;
+        transition: all 300ms;
+    
+    }
+    
+    [destaqueFooter] {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 15%;
+        background-color: rgb(206, 181, 97);
+        font-size: 0.5rem;
+        padding-left: 30px;
+    
+    }
+    
+    .classe-titulo {
+        color: rgb(255, 255, 255);
+        animation-name: fade-titulo;
+        animation-duration: 2s;
+        animation-direction: normal;
+        font-size: 10rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-family: 'League Spartan', sans-serif;
+    
+    
+    }
+    
+    @keyframes fade-titulo {
+        0% {
+            transform: translateX(400px);
+            opacity: 0;
+    
+        }
+    
+        30% {
+            transform: translateX(0px);
+            opacity: 1;
+    
+        }
+    
+        70% {
+            transform: translateX(0px);
+            opacity: 1;
+    
+        }
+    
+        100% {
+            transform: translateX(-400px);
+            opacity: 0;
+    
+        }
+    }
+    
+    .container-champ-infos {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 10;
+        backdrop-filter: blur(10px);
+    }
+    
+    .champ-infos-main {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        height: 80%;
+        box-sizing: border-box;
+        overflow: hidden;
+        animation-name: fadeInfo;
+        animation-duration: 500ms;
+        animation-direction: normal;
+        animation-delay: 300ms;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    
+    
+    
+    }
+    
+    @keyframes fadeInfo {
+        from {
+            opacity: 0;
+            transform: scale(0);
+        }
+    
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    
+    .btn-close-info {
+        width: 35px;
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(500%) contrast(143%);
+    }
+    
+    .btn-close-info:hover {
+        width: 35px;
+        filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(170deg) brightness(200%) contrast(143%);
+    }
+    
+    .champ-infos-header {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 5%;
+        z-index: 10;
+    }
+    
+    
+    .champ-infos-sub {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: rgba(5, 5, 5, 0.5);
+        max-width: 1200px;
+        border: 1px groove rgb(10, 95, 63);
+        padding: 20px;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    
+    }
+    
+    .champ-infos-main-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        color: aliceblue;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    
+    }
+    
+    .champ-infos-main-top>h1 {
+        font-size: 8rem;
+        font-family: 'League Spartan', sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    
+    .champ-infos-main-top>h2 {
+        font-size: 2rem;
+        font-family: 'League Spartan', sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    
+    .champ-infos-main-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        border: 1px solid rgba(187, 187, 187, 0.5);
+    
+    }
+    
+    .champ-infos-bottom-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        gap: 100px;
+        text-transform: uppercase;
+    }
+    
+    .champ-function {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        font-size: 0.9rem;
+    }
+    
+    .img-function {
+        filter: invert(8%) sepia(100%) saturate(300%) hue-rotate(0deg) brightness(700%) contrast(100%);
+        width: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .champ-difficulty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        font-size: 0.9rem
+    }
+    
+    .difficulty-style {
+        width: 90px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+    
+    .difficulty-style>div {
+        width: 20px;
+        height: 12px;
+        background-color: rgb(75, 74, 74);
+        transform: skewX(-40deg);
+    }
+    
+    [baixa]>div:nth-child(-n+1) {
+        background-color: rgb(0, 152, 253);
+    }
+    
+    [moderada]>div:nth-child(-n+2) {
+        background-color: rgb(0, 152, 253);
+    }
+    
+    [alta]>div {
+        background-color: rgb(0, 152, 253);
+    }
+    
+    
+    .champ-function>p:nth-child(2) {
+        color: rgb(238, 185, 88);
+    }
+    
+    .champ-difficulty>p:nth-child(2) {
+        color: rgb(238, 185, 88);
+    }
+    
+    .champ-infos-bottom-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        color: aliceblue;
+        padding: 50px;
+        box-sizing: border-box;
+    
+    }
+    
+    .img-bg-champ-infos {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: blur(1px);
+    }
+    
+    .container-info::-webkit-scrollbar {
+        width: 3px;
+    }
+    
+    .container-info::-webkit-scrollbar-track {
+        background: rgb(22, 22, 22);
+    }
+    
+    .container-info::-webkit-scrollbar-thumb {
+        background-color: rgb(12, 148, 96);
+        border-radius: 20px;
+    
+    }
+    
+}
