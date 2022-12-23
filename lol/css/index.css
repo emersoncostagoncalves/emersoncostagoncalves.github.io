@@ -839,36 +839,35 @@ nav {
     
     .container-header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         top: 0px;
         position: absolute;
         width: 100%;
-        height: 10%;
+        height: 20%;
         background-color: rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         z-index: 2;
         box-sizing: border-box;
         overflow: hidden;
-        justify-items: center;
-        gap: 10px
+        gap: 5px;
+        
     }
     
     .lol-logo {
         width: 150px;
-        justify-self: center;
-        align-self: center;
+        
     
     }
     
     .btn-jogar {
-        position: absolute;
+        position: relative;
         width: 145px;
         height: 32px;
         border: none;
+        left: 0px;
         border-radius: 10px;
-        right: 10px;
         transition: all 300ms;
         font-weight: 600;
         background-image: linear-gradient(90deg, #00c2f3, #00c2f3);
