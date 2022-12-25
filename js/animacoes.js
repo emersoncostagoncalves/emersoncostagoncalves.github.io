@@ -15,6 +15,7 @@ const btnMenu = document.querySelectorAll("nav > a")
 const menuLateral = document.querySelector(".menu")
 console.log(btnMenu)
 let btnCheckd = false
+let animationend = true;
 
 
 
@@ -36,27 +37,35 @@ let btnCheckd = false
 
 
     btnMenuMobile.onclick = () => {
-    
+    if(animationend){
         const menuLateral = document.querySelector(".menu")
-        
-        
+       
         if(btnCheckd){
             btnCheckd = false;
         }else{
             btnCheckd = true;
         }
-        console.log(btnCheckd)
+        
         
 
         if(btnCheckd){
-            
             menuLateral.style.display = "flex"
-            console.log(menuLateral.getAnimations())
+            animationend = false;
+            menuLateral.addEventListener("animationend", (e) => {
+                if(e.animationName == "menu-slide"){
+                    animationend = true;
+                    
+                }
+                
+            })
+        
         }else{
             menuLateral.setAttribute("fadeout-menu","")
+            animationend = false;
             
             menuLateral.addEventListener("animationend", (e) => {
                 if(e.animationName == "out-slide"){
+                    animationend = true;
                     menuLateral.style.display = "none"
                     menuLateral.removeAttribute("fadeout-menu")
                 }
@@ -65,6 +74,10 @@ let btnCheckd = false
         
     }
     }
+        
+    }
+
+    
 
 
 redesSociais.forEach(el => {
