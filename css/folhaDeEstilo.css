@@ -1245,10 +1245,10 @@ p {
     }
 
     .menu {
+        display: none;
         top: 0px;
         width: 30%;
         height: 100vh;
-        display: none;
         justify-content: center;
         flex-direction: column;
         align-items: flex-end;
@@ -1260,9 +1260,28 @@ p {
         backdrop-filter: blur(10px);
         animation-name: menu-slide;
         animation-duration: 1s;
-        animation-direction: alternate;
-        
+        animation-direction: normal;
+        animation-iteration-count: 1;
+    }
 
+    [fadeout-menu]{
+        
+        animation-name: out-slide;
+        animation-duration: 1s;
+        animation-direction: normal;
+        
+        
+    }
+
+
+    @keyframes out-slide {
+        from {
+            transform: translateX(0px);
+        }
+
+        to {
+            transform: translateX(320px);
+        }
     }
 
     @keyframes menu-slide {
@@ -2361,8 +2380,8 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
-        bottom: 40px;
-        left: 40px;
+        bottom: 20px;
+        left: 20px;
         width: 60px;
         height: 60px;
         background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));

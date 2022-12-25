@@ -33,17 +33,29 @@ let btnCheckd = false
 
 
 btnMenuMobile.onclick = () => {
+    
+    const menuLateral = document.querySelector(".menu")
+    
     if(btnCheckd){
         btnCheckd = false;
     }else{
         btnCheckd = true;
     }
+    console.log(btnCheckd)
     
-    const menuLateral = document.querySelector(".menu")
     if(btnCheckd){
         menuLateral.style.display = "flex"
     }else{
-    menuLateral.style.display = "none"
+        menuLateral.setAttribute("fadeout-menu","")
+        
+        menuLateral.addEventListener("animationend", (e) => {
+            if(e.animationName == "out-slide"){
+                menuLateral.style.display = "none"
+                menuLateral.removeAttribute("fadeout-menu")
+            }
+            
+        })
+    
 }
 }
 
