@@ -15,7 +15,7 @@ let btnRemoveColuna = document.querySelectorAll(".btn-remove-coluna")
 let contId = 0;
 let cardId = 0;
 
-console.log(colunas, btnFecharAdd)
+//console.log(colunas, btnFecharAdd)
 
 colunaNome.style.display = "none";
 btnConfirmarColuna.style.display = "none";
@@ -31,7 +31,7 @@ function addColuna() {
      <div>
        <h2 id = ${contId}-text-titulo-h2>${colunaNome.value}</h2>
        <div class="color-container">
-       <input type="color" name="change-color" id="${contId}-btn-change-color" class="btn-change-color">
+       <input title="Mudar cor da coluna" type="color" name="change-color" id="${contId}-btn-change-color" class="btn-change-color">
        </div>
      </div>
      <div id= ${contId}-color-destaque class="header-destaque">
@@ -58,10 +58,14 @@ function addColuna() {
 `
     containerColunas.insertAdjacentElement("beforeend", coluna)
 
+    const btnColor = document.querySelectorAll(".btn-change-color");
+    btnColor[btnColor.length-1].value = "#fffd8f"
+    
+
 }
 
 
-console.log(btnRemoveColuna)
+//console.log(btnRemoveColuna)
 
 
 btnConfirmarColuna.onclick = e => {
@@ -76,7 +80,7 @@ btnConfirmarColuna.onclick = e => {
         btnRemoveColuna.forEach(el => {
             el.onclick = e => {
                 const item = document.getElementById(`${parseInt(el.id, 10)}-coluna`)
-                console.log("Cliquei em remover coluna")
+                //console.log("Cliquei em remover coluna")
                 //containerColunas.removeChild(item)
                 item.remove()
             }
@@ -130,7 +134,7 @@ btnConfirmarColuna.onclick = e => {
                     }
 
                     btnCancelar.onclick = e => {
-                        console.log("cliquei em cancelar")
+                        //console.log("cliquei em cancelar")
                         input.remove()
                         btnSalvar.remove(); 
                         btnCancelar.remove();
@@ -143,14 +147,14 @@ btnConfirmarColuna.onclick = e => {
             }
         })
 
-        console.log(btnRemoveColuna)
+       // console.log(btnRemoveColuna)
 
 
     
 
         // Botão Add Card
         const btnAddCard = document.querySelectorAll(".btn-add-card")
-        console.log(btnAddCard)
+        //console.log(btnAddCard)
 
         btnAddCard.forEach(el => {
 
@@ -188,7 +192,7 @@ btnConfirmarColuna.onclick = e => {
 
                 //Botão confirmar texto card
                 btnTextCard = document.querySelectorAll(".add-text-card")
-                console.log(btnTextCard)
+                //console.log(btnTextCard)
 
 
                 btnTextCard.forEach(el => {
@@ -196,7 +200,7 @@ btnConfirmarColuna.onclick = e => {
 
                         let texto = document.getElementById(`${id}-input-text-card`);
                         if (texto.value.replaceAll(" ","") != "") {
-                            console.log("cliquei no add cartao")
+                            //console.log("cliquei no add cartao")
                             let id = parseInt(el.id, 10);
 
                             const colunmContainer = document.getElementById(`${id}-Dropzone`)
@@ -222,12 +226,12 @@ btnConfirmarColuna.onclick = e => {
 
                             colunmContainer.appendChild(cardContainer)
                             cardId++
-                            console.log("cliquei no add card")
+                            //console.log("cliquei no add card")
 
                             document.querySelector(".container-text-card").remove()
 
                             cards = document.querySelectorAll(".card-container")
-                            console.log(cards)
+                            //console.log(cards)
 
                             //Drag e Drop
                             if (!salvar) {
@@ -292,7 +296,7 @@ btnConfirmarColuna.onclick = e => {
                                 el.onclick = e => {
 
 
-                                    console.log("Cliquei no edite")
+                                   // console.log("Cliquei no edite")
                                     const id = parseInt(el.id, 10)
                                     const item = document.getElementById(`${id}-text-card`)
                                     const cardDrag = document.getElementById(`${id}-card-container`)
@@ -355,7 +359,7 @@ btnConfirmarColuna.onclick = e => {
                     const id = e.dataTransfer.getData("item-id")
                     const item = document.getElementById(id)
 
-                    console.log(item)
+                    //console.log(item)
                     e.target.appendChild(item)
                 }
 
@@ -414,7 +418,7 @@ btnAddColuna.onclick = e => {
     colunaNome.select()
     
 
-    console.log("cliquei no aa")
+    //console.log("cliquei no aa")
 }
 
 ///
