@@ -1283,6 +1283,10 @@ p {
 
     }
 
+    .icons-header > p {
+        display: none;
+    }
+
     .instagram-icon:hover {
         filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
     }
