@@ -9,6 +9,43 @@ const btnProjeto5 = document.querySelector("#projeto-5")
 const btnProjeto6 = document.querySelector("#projeto-6")
 const btnProjeto7 = document.querySelector("#projeto-7")
 const redesSociais = document.querySelectorAll(".social-link")
+const btnMenuMobile = document.querySelector(".btn-menu")
+const checkMenuMobile = document.querySelector("#check-menu")
+let btnCheckd = false
+
+
+
+
+
+    window.onresize = e => {
+        const menuLateral = document.querySelector(".menu")
+       if(window.innerWidth <= 767){
+        menuLateral.style.display = "none";
+        if(btnCheckd){
+            menuLateral.style.display = "flex"
+        }else{
+        menuLateral.style.display = "none"
+    }
+       }else{
+        menuLateral.style.display = "flex";
+       }
+    }
+
+
+btnMenuMobile.onclick = () => {
+    if(btnCheckd){
+        btnCheckd = false;
+    }else{
+        btnCheckd = true;
+    }
+    
+    const menuLateral = document.querySelector(".menu")
+    if(btnCheckd){
+        menuLateral.style.display = "flex"
+    }else{
+    menuLateral.style.display = "none"
+}
+}
 
 
 redesSociais.forEach(el => {
