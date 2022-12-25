@@ -11,6 +11,9 @@ const btnProjeto7 = document.querySelector("#projeto-7")
 const redesSociais = document.querySelectorAll(".social-link")
 const btnMenuMobile = document.querySelector(".btn-menu")
 const checkMenuMobile = document.querySelector("#check-menu")
+const btnMenu = document.querySelectorAll("nav > a")
+const menuLateral = document.querySelector(".menu")
+console.log(btnMenu)
 let btnCheckd = false
 
 
@@ -32,32 +35,36 @@ let btnCheckd = false
     }
 
 
-btnMenuMobile.onclick = () => {
+    btnMenuMobile.onclick = () => {
     
-    const menuLateral = document.querySelector(".menu")
-    
-    if(btnCheckd){
-        btnCheckd = false;
-    }else{
-        btnCheckd = true;
-    }
-    console.log(btnCheckd)
-    
-    if(btnCheckd){
-        menuLateral.style.display = "flex"
-    }else{
-        menuLateral.setAttribute("fadeout-menu","")
+        const menuLateral = document.querySelector(".menu")
         
-        menuLateral.addEventListener("animationend", (e) => {
-            if(e.animationName == "out-slide"){
-                menuLateral.style.display = "none"
-                menuLateral.removeAttribute("fadeout-menu")
-            }
+        
+        if(btnCheckd){
+            btnCheckd = false;
+        }else{
+            btnCheckd = true;
+        }
+        console.log(btnCheckd)
+        
+
+        if(btnCheckd){
             
-        })
-    
-}
-}
+            menuLateral.style.display = "flex"
+            console.log(menuLateral.getAnimations())
+        }else{
+            menuLateral.setAttribute("fadeout-menu","")
+            
+            menuLateral.addEventListener("animationend", (e) => {
+                if(e.animationName == "out-slide"){
+                    menuLateral.style.display = "none"
+                    menuLateral.removeAttribute("fadeout-menu")
+                }
+                
+            })
+        
+    }
+    }
 
 
 redesSociais.forEach(el => {
