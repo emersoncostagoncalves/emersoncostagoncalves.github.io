@@ -21,63 +21,80 @@ let animationend = true;
 
 
 
-    window.onresize = e => {
-        const menuLateral = document.querySelector(".menu")
-       if(window.innerWidth <= 767){
+window.onresize = e => {
+    const menuLateral = document.querySelector(".menu")
+    if (window.innerWidth <= 767) {
         menuLateral.style.display = "none";
-        if(btnCheckd){
+        if (btnCheckd) {
             menuLateral.style.display = "flex"
-        }else{
-        menuLateral.style.display = "none"
-    }
-       }else{
+        } else {
+            menuLateral.style.display = "none"
+        }
+    } else {
         menuLateral.style.display = "flex";
-       }
     }
+}
 
 
-    btnMenuMobile.onclick = () => {
-    if(animationend){
+btnMenuMobile.onclick = () => {
+    checkMenuMobile.checked = true;
+    checkMenuMobile.disabled = true;
+
+    if (animationend) {
         const menuLateral = document.querySelector(".menu")
-       
-        if(btnCheckd){
+
+        if (btnCheckd) {
             btnCheckd = false;
-        }else{
+        } else {
             btnCheckd = true;
         }
-        
-        
 
-        if(btnCheckd){
+
+
+        if (btnCheckd) {
+
             menuLateral.style.display = "flex"
             animationend = false;
+
             menuLateral.addEventListener("animationend", (e) => {
-                if(e.animationName == "menu-slide"){
+                if (e.animationName == "menu-slide") {
                     animationend = true;
-                    
+                    //checkMenuMobile.checked = true;
+                    console.log(checkMenuMobile.checked)
+                    checkMenuMobile.checked = true;
+                    checkMenuMobile.disabled = false;
+
                 }
-                
+
             })
-        
-        }else{
-            menuLateral.setAttribute("fadeout-menu","")
-            animationend = false;
+
+        } else {
             
+            checkMenuMobile.checked = false;
+            checkMenuMobile.disabled = true;
+            menuLateral.setAttribute("fadeout-menu", "")
+            animationend = false;
+
             menuLateral.addEventListener("animationend", (e) => {
-                if(e.animationName == "out-slide"){
+                if (e.animationName == "out-slide") {
                     animationend = true;
                     menuLateral.style.display = "none"
                     menuLateral.removeAttribute("fadeout-menu")
+                    //checkMenuMobile.checked = false
+                    console.log(checkMenuMobile.checked)
+                    checkMenuMobile.checked = false;
+                    checkMenuMobile.disabled = false;
+
                 }
-                
+
             })
-        
-    }
-    }
-        
+
+        }
     }
 
-    
+}
+
+
 
 
 redesSociais.forEach(el => {
@@ -118,16 +135,16 @@ btnProjeto7.onclick = e => {
 
 
 animacao.addEventListener("animationiteration", (e) => {
-    
+
     const mudaTexto = document.querySelector(".animar > h1")
-    if(e.animationName == "animar-texto"){
+    if (e.animationName == "animar-texto") {
         if (mudaTexto.innerText == "Desenvolvedor.") {
             mudaTexto.innerText = "Designer Gráfico."
         } else {
             mudaTexto.innerText = "Desenvolvedor."
         }
     }
-    
+
 })
 
 
