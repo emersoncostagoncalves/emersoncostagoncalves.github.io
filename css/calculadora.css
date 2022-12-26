@@ -224,7 +224,7 @@
     background-color: brown;
     color: aliceblue;
     transition: transform 1s;
-    box-shadow: 0px 5px 20px rgb(122, 21, 34);
+    
 }
 
 .mensagens button:hover {
