@@ -101,6 +101,10 @@ body {
 
 }
 
+.lol-logo::selection{
+    background-color: none;
+}
+
 .btn-jogar {
     position: absolute;
     width: 145px;
@@ -863,8 +867,10 @@ nav {
     
     .lol-logo {
         width: 150px;
-        
-    
+    }
+
+    .lol-logo::selection{
+        background-color: none;
     }
     
     .btn-jogar {
