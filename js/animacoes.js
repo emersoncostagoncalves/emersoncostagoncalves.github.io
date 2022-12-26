@@ -14,8 +14,9 @@ const checkMenuMobile = document.querySelector("#check-menu")
 const btnMenu = document.querySelectorAll("nav > a")
 const menuLateral = document.querySelector(".menu")
 console.log(btnMenu)
-let btnCheckd = false
-let animationend = true;
+
+let animationEnd = true;
+
 
 
 
@@ -25,7 +26,7 @@ window.onresize = e => {
     const menuLateral = document.querySelector(".menu")
     if (window.innerWidth <= 767) {
         menuLateral.style.display = "none";
-        if (btnCheckd) {
+        if (checkMenuMobile.checked) {
             menuLateral.style.display = "flex"
         } else {
             menuLateral.style.display = "none"
@@ -36,63 +37,52 @@ window.onresize = e => {
 }
 
 
+
+
 btnMenuMobile.onclick = () => {
-    checkMenuMobile.checked = true;
-    checkMenuMobile.disabled = true;
+    if(!animationEnd){
+checkMenuMobile.disabled = true
+    }else{
+        checkMenuMobile.disabled = false 
+    }
+    if(animationEnd){
+    const menuLateral = document.querySelector(".menu")
 
-    if (animationend) {
-        const menuLateral = document.querySelector(".menu")
-
-        if (btnCheckd) {
-            btnCheckd = false;
-        } else {
-            btnCheckd = true;
-        }
-
-
-
-        if (btnCheckd) {
-
-            menuLateral.style.display = "flex"
-            animationend = false;
-
-            menuLateral.addEventListener("animationend", (e) => {
-                if (e.animationName == "menu-slide") {
-                    animationend = true;
-                    //checkMenuMobile.checked = true;
-                    console.log(checkMenuMobile.checked)
-                    checkMenuMobile.checked = true;
-                    checkMenuMobile.disabled = false;
-
-                }
-
-            })
-
-        } else {
+    if (!checkMenuMobile.checked) {
+        animationEnd = false;
+        menuLateral.style.display = "flex"
+        menuLateral.addEventListener("animationend", (e) => {
             
-            checkMenuMobile.checked = false;
-            checkMenuMobile.disabled = true;
-            menuLateral.setAttribute("fadeout-menu", "")
-            animationend = false;
+            if (e.animationName == "menu-slide") {
+                checkMenuMobile.checked = true
+                animationEnd = true;
+                
+            }
+        })
 
-            menuLateral.addEventListener("animationend", (e) => {
-                if (e.animationName == "out-slide") {
-                    animationend = true;
-                    menuLateral.style.display = "none"
-                    menuLateral.removeAttribute("fadeout-menu")
-                    //checkMenuMobile.checked = false
-                    console.log(checkMenuMobile.checked)
-                    checkMenuMobile.checked = false;
-                    checkMenuMobile.disabled = false;
+    } else {
+        animationEnd = false;
+        menuLateral.setAttribute("fadeout-menu", "")
 
-                }
+        menuLateral.addEventListener("animationend", (e) => {
+            if (e.animationName == "out-slide") {
 
-            })
+                menuLateral.style.display = "none"
+                menuLateral.removeAttribute("fadeout-menu")
+                checkMenuMobile.checked = false
+                animationEnd = true;
 
-        }
+
+
+            }
+
+        })
+
     }
 
 }
+}
+
 
 
 
