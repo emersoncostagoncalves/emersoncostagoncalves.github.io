@@ -146,6 +146,11 @@ fetch(urlRotation)
     })
     .catch(error => {
         console.log(`erro: ${error}`)
+        const cardsRotatioContainer = document.querySelector(".cards-rotation-container")
+        const msgErro = document.createElement("h4")
+        msgErro.className = "msgErro"
+        msgErro.innerText = "ROTAÇÃO DE CAMPEÕES NÃO DISPONÍVEL"
+        cardsRotatioContainer.appendChild(msgErro)
     })
 
 const menuList = document.querySelectorAll(".menu-class");

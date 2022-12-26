@@ -106,14 +106,14 @@ body {
     width: 145px;
     height: 32px;
     border: none;
-    border-radius: 10px;
-
+    border-radius: 15px;
     right: 20px;
     transition: all 300ms;
     font-weight: 600;
     background-image: linear-gradient(90deg, #00c2f3, #00c2f3);
     background-repeat: no-repeat;
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .btn-jogar:hover {
@@ -771,6 +771,11 @@ nav {
     background-color: rgb(12, 148, 96);
     border-radius: 20px;
 
+}
+
+.msgErro{
+    color: aliceblue;
+    font-family: 'League Spartan', sans-serif;
 }
 
 
@@ -1535,5 +1540,10 @@ z-index: 20;
         border-radius: 20px;
     
     }
-    
+    .msgErro{
+        color: aliceblue;
+        font-size: 0.8em;
+        font-family: 'League Spartan', sans-serif;
+    }
 }
+
