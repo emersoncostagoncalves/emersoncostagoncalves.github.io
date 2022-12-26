@@ -1201,11 +1201,15 @@ p {
 
     }
 
+    .menu-mobile:hover label span{
+        background-color: rgb(255, 255, 255)
+    }
+
     label>span:nth-child(1) {
         position: relative;
         width: 100%;
         height: 4px;
-        background-color: #ffffff;
+        background-color: rgb(255, 1, 79);
         border-radius: 20px;
         transition: all 300ms ease-in-out;
     }
@@ -1214,16 +1218,16 @@ p {
         width: 100%;
         position: relative;
         height: 4px;
-        background-color: #ffffff;
+        background-color: rgb(255, 1, 79);
         border-radius: 20px;
-        transition: all 100ms ease-in-out;
+        transition: all 300ms ease-in-out;
     }
 
     label>span:nth-child(3) {
         width: 100%;
         position: relative;
         height: 4px;
-        background-color: #ffffff;
+        background-color: rgb(255, 1, 79);
         border-radius: 20px;
         transition: all 300ms ease-in-out;
     }
