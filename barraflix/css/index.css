@@ -189,6 +189,11 @@ header {
 
 }
 
+#cardBox:hover .cardPoster .poster {
+    transform: scale(1.1);
+
+}
+
 .cardPoster {
     width: 100%;
     height: 80%;
@@ -204,10 +209,6 @@ header {
     width: 100%;
     transition: all 0.5s;
     box-sizing: border-box;
-}
-
-.poster:hover {
-    transform: scale(1.1);
 }
 
 .cardInfo {
