@@ -224,6 +224,7 @@ nav {
     padding-bottom: 30px;
     scrollbar-width: thin;
     scrollbar-color: rgb(12, 148, 96) rgb(22, 22, 22);
+    overflow-x: hidden;
 }
 
 .infos {
@@ -990,6 +991,7 @@ nav {
         padding-bottom: 20px;
         scrollbar-width: thin;
         scrollbar-color: rgb(12, 148, 96) rgb(22, 22, 22);
+        overflow-x: hidden;
     }
     
     .infos {
