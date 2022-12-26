@@ -33,9 +33,9 @@
     border-radius: 15px;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: -0px 0px 50px rgba(0,0,0,30%);
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 30%);
     border: outset 1px rgb(240, 80, 101);
-    
+
 }
 
 .tela {
@@ -48,7 +48,7 @@
 }
 
 .historico {
-    box-sizing: border-box ;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -59,27 +59,33 @@
     overflow-y: scroll;
     gap: 10px;
     padding-top: 10px;
-    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
     scrollbar-color: brown rgb(22, 22, 22);
-    
+
 }
 
 .historico::-webkit-scrollbar {
-    width: 3px;               /* width of the entire scrollbar */
-  }
-  
-  .historico::-webkit-scrollbar-track {
-    background: rgb(22, 22, 22);        /* color of the tracking area */
-  }
-  
-  .historico::-webkit-scrollbar-thumb {
-    background-color: brown;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    /*border: 3px solid orange;*/  /* creates padding around scroll thumb */
-  }
-  
+    width: 3px;
+    /* width of the entire scrollbar */
+}
 
-.result-historico{
+.historico::-webkit-scrollbar-track {
+    background: rgb(22, 22, 22);
+    /* color of the tracking area */
+}
+
+.historico::-webkit-scrollbar-thumb {
+    background-color: brown;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    /*border: 3px solid orange;*/
+    /* creates padding around scroll thumb */
+}
+
+
+.result-historico {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +102,7 @@
     font-size: 2.5em;
 }
 
-.visor-main{
+.visor-main {
     display: flex;
     align-items: center;
     width: 100%;
@@ -110,9 +116,9 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    
-    
-   
+
+
+
 }
 
 .bnt-historico {
@@ -121,14 +127,14 @@
     align-items: center;
     width: 20px;
     height: 20px;
-    border-radius: 100%; 
+    border-radius: 100%;
     color: aliceblue;
 }
 
 .bnt-historico:hover {
     color: brown;
     cursor: pointer;
-    
+
 }
 
 .operacao {
@@ -163,7 +169,7 @@
     width: 50px;
     height: 50px;
     color: aliceblue;
-    cursor: pointer ;
+    cursor: pointer;
 
 
 }
@@ -189,7 +195,7 @@
     width: 48px;
     height: 48px;
     font-size: 1em;
-    
+
 }
 
 .mensagens {
@@ -205,12 +211,12 @@
     border-radius: 15px;
     gap: 50px;
     backdrop-filter: blur(5px);
-    background-color: rgba(240, 80, 101,0.7);
+    background-color: rgba(240, 80, 101, 0.7);
     color: aliceblue;
-    
+
 }
 
-.mensagens button{
+.mensagens button {
     width: 80px;
     height: 40px;
     border: none;
@@ -221,14 +227,15 @@
     box-shadow: 0px 5px 20px rgb(122, 21, 34);
 }
 
-.mensagens button:hover{
-    background-color: aliceblue;;
+.mensagens button:hover {
+    background-color: aliceblue;
+    ;
     color: rgb(0, 0, 0);
-    
+
 }
 
 
-.mensagens div{
+.mensagens div {
     display: flex;
     gap: 20px;
 }
@@ -239,7 +246,7 @@
     color: rgb(29, 18, 18);
 }
 
-@media screen and (max-width: 767px){ 
+@media screen and (max-width: 767px) {
     .calculadora {
         display: flex;
         flex-direction: column;
@@ -251,9 +258,9 @@
         border-radius: 0px;
         box-sizing: border-box;
         overflow: hidden;
-        box-shadow: -0px 0px 50px rgba(0,0,0,30%);
+        box-shadow: -0px 0px 50px rgba(0, 0, 0, 30%);
         border: outset 1px rgb(240, 80, 101);
-        
+
     }
 
     .botoes-container {
@@ -271,7 +278,7 @@
         background-color: rgb(24, 22, 22);
         padding: 10px;
         font-size: 1.4em;
-    
+
     }
-    
+
 }
