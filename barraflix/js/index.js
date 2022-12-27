@@ -861,11 +861,12 @@ let animationEnd = true;
 const checkbox = document.querySelector("#checkbox")
 const menu = document.querySelector(".menu-label")
 
-menu.onclick = e => {
 
-    if (animationEnd) {
-        if (!checkbox.checked) {
-            checkbox.readOnly = true
+
+
+checkbox.onchange = e => {
+    
+        if (checkbox.checked && animationEnd) {
             animationEnd = false;
             const menu = document.querySelector(".menuLeft")
             menu.style.display = "flex"
@@ -873,12 +874,12 @@ menu.onclick = e => {
                 if (e.animationName == "menu-start") {
                     checkbox.checked = true
                     animationEnd = true
-                    checkbox.readOnly = false
+                    
                 }
             }
 
         } else {
-            checkbox.readOnly = true
+            
             animationEnd = false;
             const menu = document.querySelector(".menuLeft")
             menu.setAttribute("menu-close", "")
@@ -888,14 +889,11 @@ menu.onclick = e => {
                     menu.removeAttribute("menu-close")
                     checkbox.checked = false
                     animationEnd = true
-                    checkbox.readOnly = false
+                    
                 }
             }
         }
-    }
 
-
-}
 
 // Menu display screen maior que 767px
 
@@ -917,4 +915,5 @@ window.onresize = e => {
         const menu = document.querySelector(".menuLeft")
         menu.style.display = "flex"
     }
+}
 }

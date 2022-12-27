@@ -912,7 +912,7 @@ footer>p:nth-child(3) {
 
     @keyframes menu-start {
         from {
-            transform: translateX(300px);
+            transform: translateX(400px);
         }
 
         to {
