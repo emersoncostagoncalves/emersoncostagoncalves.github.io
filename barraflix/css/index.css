@@ -935,6 +935,86 @@ footer>p:nth-child(3) {
         
     }
 
+.containerCards{
+    padding: 0px;
+}
+
+.sectionHeader{
+    padding-left: 10px;
+}
+    .sectionContainer {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 90%;
+        box-sizing: border-box;
+        overflow: hidden;
+    
+    
+    }
+    
+    .navLeft {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 100%;
+        z-index: 2;
+        background: none;
+        transition: all 1s;
+    
+    }
+    
+    .navLeft:hover {
+    
+        background: linear-gradient(90deg, rgba(175, 12, 12, 0.5), rgba(175, 12, 12, 0));
+        background: linear-gradient(90deg, rgba(88, 88, 88, 0.5), rgba(175, 12, 12, 0))
+    }
+    
+    .arrowLeft {
+        filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
+    }
+    
+    .sectionContainerBox {
+        position: relative;
+        justify-content: flex-start;
+        left: -440px;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+    
+    
+    }
+    
+    .navRight {
+        display: flex;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 100%;
+        right: 160px;
+        z-index: 2;
+        background-image: linear-gradient(90deg, rgba(88, 88, 88, 0), rgba(88, 88, 88, 0));
+        transition: all 1s;
+    
+    }
+    
+    .navRight:hover {
+        background-image: linear-gradient(90deg, rgba(88, 88, 88, 0), rgba(88, 88, 88, 0.5));
+    
+    }
+    
+    .arrowRight {
+        filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
+    }
+
     .infoContainer {
         display: flex;
         justify-content: center;
@@ -955,8 +1035,8 @@ footer>p:nth-child(3) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 1200px;
-        max-height: 700px;
+        max-width: none;
+        max-height: none;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
