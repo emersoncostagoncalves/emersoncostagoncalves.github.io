@@ -859,7 +859,7 @@ header.appendChild(menuMobile)
 // Interação Menu mobile
 let animationEnd = true;
 const checkbox = document.querySelector("#checkbox")
-const menu = document.querySelector(".menu-label")
+const menuLabel = document.querySelector(".menu-label")
 
 
 
