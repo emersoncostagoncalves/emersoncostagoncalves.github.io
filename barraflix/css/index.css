@@ -737,3 +737,168 @@ footer>p:nth-child(3) {
     background-color: rgb(24, 24, 24);
 
 }
+
+@media screen and (max-width: 767px) {
+
+    header {
+        top: 0px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(26, 26, 26);
+        border-bottom: 1px solid black;
+z-index: 10;
+
+    }
+
+    .logoContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+        padding-left: 15px;
+
+
+    }
+
+    .logoContainer>img {
+        width: 100px;
+    }
+
+    .searchContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 100%;
+        padding-right: 40px;
+
+    }
+
+    .searchBar {
+        width: 90%;
+        max-width: 450px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: black;
+        border: 1px solid gray;
+        outline: none;
+        color: rgb(240, 248, 255);
+        padding-left: 50px;
+        box-sizing: border-box;
+        background: url("/barraflix/icones/search-line.svg") no-repeat 10px center;
+        transition: all 1s;
+
+    }
+
+
+    .menu-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: 100%;
+    }
+
+    #checkbox {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .menu-label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        
+    }
+
+    .menu-label > span{
+        position: relative;
+        width: 100%;
+        height: 5px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        transition: all 300ms;
+    }
+
+    #checkbox:checked + .menu-label span:nth-child(1){
+        background-color: rgba(175, 12, 12, 1);
+        transform: rotate(-45deg);
+        top: 12px
+    }
+
+    #checkbox:checked + .menu-label span:nth-child(2){
+        background-color: rgba(175, 12, 12, 1);
+        opacity: 0;
+    }
+
+    #checkbox:checked + .menu-label span:nth-child(3){
+        background-color: rgba(175, 12, 12, 1);
+        transform: rotate(45deg);
+        top: -11px
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        background-color: rgb(20, 20, 20);
+        border-bottom: 1px solid black;
+        border-top: 1px solid rgb(31, 31, 31);
+        box-sizing: border-box;
+
+    }
+
+    .menuLeft {
+        position: fixed;
+        right: 0px;
+        top: 100px;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        background-color: rgb(26, 26, 26);
+        box-sizing: border-box;
+        z-index: 10;
+        animation-name: menu-start;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+    }
+
+    @keyframes menu-start {
+        from{
+            transform: translateX(300px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+
+    @keyframes menu-close {
+        from{
+            transform: translateX(0px);
+        }
+        to{
+            transform: translateX(300px);
+        }
+    }
+
+    [menu-close]{
+        animation-name: menu-close;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+    }
+}

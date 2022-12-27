@@ -485,7 +485,7 @@ function search(pesquisa, pageNumber = 1) {
             .then(dados => {
 
 
-               // console.log(dados)
+                // console.log(dados)
 
                 if (dados.results.length == 0) {
                     const erro = document.createElement("h1");
@@ -808,8 +808,8 @@ function trailer(id) {
         .then(resp => resp.json())
         .then(trailer => {
 
-            console.log("Trailer id: "+trailer.videoId)
-            
+            console.log("Trailer id: " + trailer.videoId)
+
             const infoBox = document.querySelector(".infoBox")
             infoBox.style.display = "none"
             const infoContainer = document.querySelector(".infoContainer")
@@ -839,4 +839,69 @@ function trailer(id) {
                 infoBox.style.display = "flex"
             }
         })
+}
+
+// Menu Hamburguer
+
+const header = document.querySelector("#topo")
+const menuMobile = document.createElement("div")
+menuMobile.className = "menu-mobile"
+menuMobile.innerHTML = `
+<input id="checkbox" type="checkbox"></input>
+<label class="menu-label" for="checkbox">
+<span></span>
+<span></span>
+<span></span>
+</label>
+`
+header.appendChild(menuMobile)
+
+// Interação Menu mobile
+let animationEnd = true;
+const checkbox = document.querySelector("#checkbox")
+const menu = document.querySelector(".menu-label")
+
+menu.onclick = e => {
+
+    if (animationEnd) {
+        if (!checkbox.checked) {
+
+            animationEnd = false;
+            const menu = document.querySelector(".menuLeft")
+            menu.style.display = "flex"
+            menu.onanimationend = e => {
+                if (e.animationName == "menu-start") {
+                    checkbox.checked = true
+                    animationEnd = true
+                }
+            }
+
+        } else {
+            animationEnd = false;
+            const menu = document.querySelector(".menuLeft")
+            menu.setAttribute("menu-close", "")
+            menu.onanimationend = e => {
+                if (e.animationName == "menu-close") {
+                    menu.style.display = "none"
+                    menu.removeAttribute("menu-close")
+                    checkbox.checked = false
+                    animationEnd = true
+                }
+            }
+        }
+    }
+
+
+}
+
+// Menu display screen maior que 767px
+
+window.onresize = e => {
+    if(window.innerWidth > 767){
+        const menu = document.querySelector(".menuLeft")
+        menu.style.display = "flex"
+    }else if(window.innerWidth <= 767 && !checkbox.checked){
+        const menu = document.querySelector(".menuLeft")
+        menu.style.display = "none"
+    }
 }
