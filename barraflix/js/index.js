@@ -64,7 +64,7 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=b502db08defaa68db6d
 
 function loadList(btnMenu, el, pageNumber = 1) {
 
-    window.location.hash = el.innerText.toLowerCase()
+    window.location.hash = el.innerText.toLowerCase().replaceAll(" ","")
     document.title = `${el.innerText} - Barraflix`
     cardContainer.innerHTML = ""
 
