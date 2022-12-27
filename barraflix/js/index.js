@@ -874,7 +874,6 @@ checkbox.onchange = e => {
                 if (e.animationName == "menu-start") {
                     checkbox.checked = true
                     animationEnd = true
-                    
                 }
             }
 
