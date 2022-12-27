@@ -826,7 +826,6 @@ footer>p:nth-child(3) {
         width: 40px;
         height: 40px;
         cursor: pointer;
-        
     }
 
     .menu-label>span {
@@ -842,9 +841,6 @@ footer>p:nth-child(3) {
         background-color: rgba(175, 12, 12, 1);  
         cursor: pointer;
     }
-
-    
-
 
     #checkbox:checked+.menu-label span:nth-child(1) {
         background-color: rgba(175, 12, 12, 1);
@@ -962,8 +958,6 @@ footer>p:nth-child(3) {
         height: 90%;
         box-sizing: border-box;
         overflow: hidden;
-
-
     }
 
     .navLeft {
@@ -976,7 +970,6 @@ footer>p:nth-child(3) {
         z-index: 2;
         background: none;
         transition: all 1s;
-
     }
 
     .navLeft:hover {
