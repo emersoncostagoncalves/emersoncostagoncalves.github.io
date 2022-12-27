@@ -940,6 +940,7 @@ footer>p:nth-child(3) {
 }
 
 .sectionHeader{
+    justify-content: center;
     padding-left: 10px;
 }
     .sectionContainer {
