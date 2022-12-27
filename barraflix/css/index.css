@@ -855,6 +855,7 @@ z-index: 10;
         border-bottom: 1px solid black;
         border-top: 1px solid rgb(31, 31, 31);
         box-sizing: border-box;
+        padding-top: 100px;
 
     }
 
@@ -870,6 +871,7 @@ z-index: 10;
         height: 100%;
         background-color: rgb(26, 26, 26);
         box-sizing: border-box;
+        overflow-y: scroll;
         z-index: 10;
         animation-name: menu-start;
         animation-duration: 1s;
