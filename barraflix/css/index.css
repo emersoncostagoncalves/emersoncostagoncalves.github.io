@@ -756,7 +756,7 @@ z-index: 10;
 
     .logoContainer {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         width: 20%;
         height: 100%;
@@ -767,6 +767,8 @@ z-index: 10;
 
     .logoContainer>img {
         width: 100px;
+        height: 100px;
+        object-fit: contain;
     }
 
     .searchContainer {
@@ -870,7 +872,7 @@ z-index: 10;
         width: 30%;
         height: 100%;
         background-color: rgb(26, 26, 26);
-        box-sizing: border-box;
+        box-sizing: content-box;
         z-index: 10;
         animation-name: menu-start;
         animation-duration: 1s;
