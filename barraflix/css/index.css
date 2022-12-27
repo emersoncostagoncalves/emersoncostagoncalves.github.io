@@ -813,7 +813,9 @@ footer>p:nth-child(3) {
 
     #checkbox {
         position: absolute;
-        opacity: 0;
+        display: none;
+        opacity: 1;
+        z-index: -10;
     }
 
     .menu-label {
@@ -823,7 +825,7 @@ footer>p:nth-child(3) {
         align-items: center;
         width: 40px;
         height: 40px;
-
+        cursor: pointer;
     }
 
     .menu-label>span {
@@ -834,6 +836,14 @@ footer>p:nth-child(3) {
         border-radius: 10px;
         transition: all 300ms;
     }
+
+    .menu-label:hover span{
+        background-color: rgba(175, 12, 12, 1);  
+        cursor: pointer;
+    }
+
+    
+
 
     #checkbox:checked+.menu-label span:nth-child(1) {
         background-color: rgba(175, 12, 12, 1);
