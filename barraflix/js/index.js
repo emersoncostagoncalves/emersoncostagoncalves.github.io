@@ -896,12 +896,22 @@ menu.onclick = e => {
 
 // Menu display screen maior que 767px
 
+if(window.innerWidth > 767){
+    const menu = document.querySelector(".menuLeft")
+    menu.style.display = "flex"
+}
+
 window.onresize = e => {
+    if(window.innerWidth <= 767 && checkbox.checked){
+        const menu = document.querySelector(".menuLeft")
+        menu.style.display = "flex"
+    }else{
+        const menu = document.querySelector(".menuLeft")
+        menu.style.display = "none" 
+    }
+
     if(window.innerWidth > 767){
         const menu = document.querySelector(".menuLeft")
         menu.style.display = "flex"
-    }else if(window.innerWidth <= 767 && !checkbox.checked){
-        const menu = document.querySelector(".menuLeft")
-        menu.style.display = "none"
     }
 }

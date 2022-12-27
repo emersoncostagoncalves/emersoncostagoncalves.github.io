@@ -871,7 +871,6 @@ z-index: 10;
         height: 100%;
         background-color: rgb(26, 26, 26);
         box-sizing: border-box;
-        overflow-y: scroll;
         z-index: 10;
         animation-name: menu-start;
         animation-duration: 1s;
