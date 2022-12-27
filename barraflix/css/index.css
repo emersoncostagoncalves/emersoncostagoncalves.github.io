@@ -75,6 +75,10 @@ header {
     background-color: rgb(32, 32, 32);
 }
 
+.menu-mobile {
+    display: none;
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -750,7 +754,7 @@ footer>p:nth-child(3) {
         height: 100px;
         background-color: rgb(26, 26, 26);
         border-bottom: 1px solid black;
-z-index: 10;
+        z-index: 10;
 
     }
 
@@ -760,14 +764,14 @@ z-index: 10;
         align-items: center;
         width: 20%;
         height: 100%;
-        padding-left: 15px;
+        
 
 
     }
 
     .logoContainer>img {
-        width: 100px;
-        height: 100px;
+        width: 90%;
+        height: 90%;
         object-fit: contain;
     }
 
@@ -775,14 +779,14 @@ z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60%;
+        width: 70%;
         height: 100%;
-        padding-right: 40px;
+        padding-right: 0px;
 
     }
 
     .searchBar {
-        width: 90%;
+        width: 95%;
         max-width: 450px;
         height: 40px;
         border-radius: 20px;
@@ -802,7 +806,7 @@ z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20%;
+        width: 15%;
         height: 100%;
     }
 
@@ -818,10 +822,10 @@ z-index: 10;
         align-items: center;
         width: 40px;
         height: 40px;
-        
+
     }
 
-    .menu-label > span{
+    .menu-label>span {
         position: relative;
         width: 100%;
         height: 5px;
@@ -830,18 +834,18 @@ z-index: 10;
         transition: all 300ms;
     }
 
-    #checkbox:checked + .menu-label span:nth-child(1){
+    #checkbox:checked+.menu-label span:nth-child(1) {
         background-color: rgba(175, 12, 12, 1);
         transform: rotate(-45deg);
         top: 12px
     }
 
-    #checkbox:checked + .menu-label span:nth-child(2){
+    #checkbox:checked+.menu-label span:nth-child(2) {
         background-color: rgba(175, 12, 12, 1);
         opacity: 0;
     }
 
-    #checkbox:checked + .menu-label span:nth-child(3){
+    #checkbox:checked+.menu-label span:nth-child(3) {
         background-color: rgba(175, 12, 12, 1);
         transform: rotate(45deg);
         top: -11px
@@ -869,38 +873,59 @@ z-index: 10;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 30%;
+        width: 35%;
         height: 100%;
+        box-sizing: border-box;
+        overflow: scroll;
         background-color: rgb(26, 26, 26);
-        box-sizing: content-box;
+        scroll-snap-type: y mandatory;
         z-index: 10;
         animation-name: menu-start;
-        animation-duration: 1s;
+        animation-duration: 500ms;
         animation-iteration-count: 1;
         animation-direction: normal;
     }
 
+    .btnMenu,
+    .btnMenuHome {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+        scroll-snap-align: start;
+        border: none;
+        border-bottom: solid 1px rgb(7, 7, 7);
+        border-top: 1px solid rgb(31, 31, 31);
+        background-color: rgb(20, 20, 20);
+        color: rgb(255, 255, 255);
+
+    }
+
+
     @keyframes menu-start {
-        from{
+        from {
             transform: translateX(300px);
         }
-        to{
+
+        to {
             transform: translateX(0px);
         }
     }
 
     @keyframes menu-close {
-        from{
+        from {
             transform: translateX(0px);
         }
-        to{
+
+        to {
             transform: translateX(300px);
         }
     }
 
-    [menu-close]{
+    [menu-close] {
         animation-name: menu-close;
-        animation-duration: 1s;
+        animation-duration: 500ms;
         animation-iteration-count: 1;
         animation-direction: normal;
     }
@@ -918,11 +943,11 @@ z-index: 10;
         gap: 2px;
         text-align: center;
     }
-    
+
     footer>img {
         margin-bottom: 10px;
     }
-    
+
     footer>p:nth-child(3) {
         color: rgb(78, 78, 78);
     }
