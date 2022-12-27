@@ -38,17 +38,21 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
+    width: 60%;
     height: 100%;
     padding-left: 10px;
 
+}
+
+.logoContainer>img {
+    cursor: pointer;
 }
 
 .searchContainer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 50%;
+    width: 40%;
     height: 100%;
     padding-right: 40px;
 
@@ -184,7 +188,7 @@ header {
     background-color: rgb(175, 12, 12);
     color: aliceblue;
     text-align: center;
-
+    
 
 }
 
@@ -352,6 +356,7 @@ footer>p:nth-child(3) {
 }
 
 .arrowLeft {
+    cursor: pointer;
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
 }
 
@@ -390,6 +395,7 @@ footer>p:nth-child(3) {
 }
 
 .arrowRight {
+    cursor: pointer;
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
 }
 
@@ -771,6 +777,7 @@ footer>p:nth-child(3) {
         width: 90%;
         height: 90%;
         object-fit: contain;
+        cursor: pointer;
     }
 
     .searchContainer {
@@ -837,8 +844,8 @@ footer>p:nth-child(3) {
         transition: all 300ms;
     }
 
-    .menu-label:hover span{
-        background-color: rgba(175, 12, 12, 1);  
+    .menu-label:hover span {
+        background-color: rgba(175, 12, 12, 1);
         cursor: pointer;
     }
 
