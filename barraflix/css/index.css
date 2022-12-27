@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: rgb(20, 20, 20);
 
 }
 
@@ -926,7 +926,7 @@ footer>p:nth-child(3) {
         }
 
         to {
-            transform: translateX(300px);
+            transform: translateX(400px);
         }
     }
 
