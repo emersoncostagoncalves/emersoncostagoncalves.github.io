@@ -754,7 +754,7 @@ footer>p:nth-child(3) {
         height: 100px;
         background-color: rgb(26, 26, 26);
         border-bottom: 1px solid black;
-        z-index: 10;
+        z-index: 20;
 
     }
 
@@ -803,11 +803,14 @@ footer>p:nth-child(3) {
 
 
     .menu-mobile {
+        right: 0;
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 15%;
         height: 100%;
+        z-index: 200;
     }
 
     #checkbox {
@@ -867,23 +870,26 @@ footer>p:nth-child(3) {
 
     .menuLeft {
         position: fixed;
+        flex-wrap: wrap;
         right: 0px;
-        top: 100px;
+        top: 0px;
         display: none;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        width: 35%;
-        height: 100%;
+        width: 50%;
+        height: 100vh;
         box-sizing: border-box;
-        overflow: scroll;
+        overflow: hidden;
         background-color: rgb(26, 26, 26);
-        scroll-snap-type: y mandatory;
         z-index: 10;
         animation-name: menu-start;
-        animation-duration: 500ms;
-        animation-iteration-count: 1;
+        animation-duration: 1s;
         animation-direction: normal;
+        padding-top: 100px;
+        transition: all 1s;
+
+        
     }
 
     .btnMenu,
@@ -891,14 +897,15 @@ footer>p:nth-child(3) {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        
+        width: 50%;
+        height: 10%;
         scroll-snap-align: start;
         border: none;
         border-bottom: solid 1px rgb(7, 7, 7);
         border-top: 1px solid rgb(31, 31, 31);
         background-color: rgb(20, 20, 20);
         color: rgb(255, 255, 255);
+        box-sizing: border-box;
 
     }
 
@@ -925,9 +932,9 @@ footer>p:nth-child(3) {
 
     [menu-close] {
         animation-name: menu-close;
-        animation-duration: 500ms;
-        animation-iteration-count: 1;
+        animation-duration: 1s;
         animation-direction: normal;
+        
     }
 
     footer {
