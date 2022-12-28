@@ -86,12 +86,14 @@ main {
 
 .sobre-mim {
     width: 80%;
+    max-width: 1400px;
     display: flex;
     justify-content: center;
     align-items: center;
     grid-area: sobre-mim;
     background-color: #212428;
     border-bottom: solid 0.1px rgb(0, 0, 0);
+    
 
 
 }
@@ -104,7 +106,7 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    width: 40%;
+    width: 50%;
     height: 100%;
     border-radius: 15px;
     padding: 20px 20px;
@@ -167,7 +169,7 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    width: 60%;
+    width: 50%;
     height: 100%;
     border-radius: 15px;
     padding: 20px 20px;
@@ -542,6 +544,8 @@ main {
 }
 
 .contato {
+    width: 80%;
+    max-width: 1400px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -549,8 +553,8 @@ main {
     grid-area: contato;
     background-color: #212428;
     border-bottom: solid 0.1px rgb(0, 0, 0);
-    padding: 120px 80px;
-    gap: 40px
+    padding: 120px 20px;
+    gap: 40px;
 }
 
 .cabecalho-contato {
@@ -562,7 +566,7 @@ main {
 }
 
 .contato-container {
-    width: 95%;
+    width: 100%;
     max-width: 1400px;
     box-sizing: border-box;
     display: flex;
