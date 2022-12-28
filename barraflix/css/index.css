@@ -993,6 +993,7 @@ footer>p:nth-child(3) {
         position: relative;
         justify-content: flex-start;
         left: -440px;
+        left: -360px;
         display: flex;
         flex-wrap: nowrap;
         width: 100%;
