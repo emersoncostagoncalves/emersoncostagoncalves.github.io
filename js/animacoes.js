@@ -13,13 +13,9 @@ const btnMenuMobile = document.querySelector(".btn-menu")
 const checkMenuMobile = document.querySelector("#check-menu")
 const btnMenu = document.querySelectorAll("nav > a")
 const menuLateral = document.querySelector(".menu")
-console.log(btnMenu)
+//console.log(btnMenu)
 
 let animationEnd = true;
-
-
-
-
 
 
 window.onresize = e => {
@@ -40,47 +36,47 @@ window.onresize = e => {
 
 
 btnMenuMobile.onclick = () => {
-    if(!animationEnd){
-checkMenuMobile.disabled = true
-    }else{
-        checkMenuMobile.disabled = false 
-    }
-    if(animationEnd){
-    const menuLateral = document.querySelector(".menu")
-
-    if (!checkMenuMobile.checked) {
-        animationEnd = false;
-        menuLateral.style.display = "flex"
-        menuLateral.addEventListener("animationend", (e) => {
-            
-            if (e.animationName == "menu-slide") {
-                checkMenuMobile.checked = true
-                animationEnd = true;
-                
-            }
-        })
-
+    if (!animationEnd) {
+        checkMenuMobile.disabled = true
     } else {
-        animationEnd = false;
-        menuLateral.setAttribute("fadeout-menu", "")
+        checkMenuMobile.disabled = false
+    }
+    if (animationEnd) {
+        const menuLateral = document.querySelector(".menu")
 
-        menuLateral.addEventListener("animationend", (e) => {
-            if (e.animationName == "out-slide") {
+        if (!checkMenuMobile.checked) {
+            animationEnd = false;
+            menuLateral.style.display = "flex"
+            menuLateral.addEventListener("animationend", (e) => {
 
-                menuLateral.style.display = "none"
-                menuLateral.removeAttribute("fadeout-menu")
-                checkMenuMobile.checked = false
-                animationEnd = true;
+                if (e.animationName == "menu-slide") {
+                    checkMenuMobile.checked = true
+                    animationEnd = true;
+
+                }
+            })
+
+        } else {
+            animationEnd = false;
+            menuLateral.setAttribute("fadeout-menu", "")
+
+            menuLateral.addEventListener("animationend", (e) => {
+                if (e.animationName == "out-slide") {
+
+                    menuLateral.style.display = "none"
+                    menuLateral.removeAttribute("fadeout-menu")
+                    checkMenuMobile.checked = false
+                    animationEnd = true;
 
 
 
-            }
+                }
 
-        })
+            })
+
+        }
 
     }
-
-}
 }
 
 
@@ -91,37 +87,9 @@ redesSociais.forEach(el => {
     el.onclick = e => {
         e.preventDefault()
         window.open(el.href)
-        console.log(el.href)
+        //console.log(el.href)
     }
 })
-
-btnProjeto1.onclick = e => {
-    window.open("/calculadora.html")
-}
-
-btnProjeto2.onclick = e => {
-    window.open("/meteorologia.html")
-}
-btnProjeto3.onclick = e => {
-    window.open("/gkanban.html")
-}
-btnProjeto4.onclick = e => {
-    window.open("/cronometro.html")
-}
-btnProjeto5.onclick = e => {
-    window.open("/geradordesenha.html")
-}
-btnProjeto6.onclick = e => {
-    window.open("/jogodavelha.html")
-}
-
-btnProjeto7.onclick = e => {
-    window.open("/barraflix/index.html")
-}
-
-
-
-
 
 
 animacao.addEventListener("animationiteration", (e) => {
@@ -138,7 +106,6 @@ animacao.addEventListener("animationiteration", (e) => {
 })
 
 
-
 window.onscroll = () => {
     if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
         bntTopo.style.display = "flex"
@@ -150,4 +117,103 @@ window.onscroll = () => {
 if (window.location.hash == "#sobre") {
     document.body.scrollTop -= 100;
 }
+
+// Chamada Design Skills 
+
+fetch("../json/skills.json")
+    .then(resp => resp.json())
+    .then(dados => {
+        //console.log(dados)
+        const designContainer = document.querySelector(".left")
+        dados.forEach(el => {
+            Object.keys(el.Design).forEach(key => {
+                const titulo = document.createElement("p")
+                titulo.innerText = key
+                const barraSkill = document.createElement("div")
+                barraSkill.className = "barra"
+                barraSkill.innerHTML = `
+    <div class="skill-design" style="width: ${el.Design[key]}">
+    ${el.Design[key]}
+    </div>
+    `
+                designContainer.appendChild(titulo)
+                designContainer.appendChild(barraSkill)
+            })
+
+
+            //console.log(Object.keys(el.Design))
+        }
+        )
+    })
+
+
+// Chamada Dev Skills 
+
+fetch("../json/skills.json")
+    .then(resp => resp.json())
+    .then(dados => {
+        //console.log(dados)
+        const devContainer = document.querySelector(".right")
+        dados.forEach(el => {
+            Object.keys(el.Developer).forEach(key => {
+                const titulo = document.createElement("p")
+                titulo.innerText = key
+                const barraSkill = document.createElement("div")
+                barraSkill.className = "barra"
+                barraSkill.innerHTML = `
+<div class="skill-dev" style="width: ${el.Developer[key]}">
+${el.Developer[key]}
+</div>
+`
+                devContainer.appendChild(titulo)
+                devContainer.appendChild(barraSkill)
+            })
+
+
+            //console.log(Object.keys(el.Design))
+        }
+        )
+        
+    })
+
+// Call Portifolio
+
+fetch("../json/portifolio.json")
+    .then(resp => resp.json())
+    .then(dados => {
+        const portifolioContainer = document.querySelector(".portifolio-container")
+        dados.forEach(el => {
+            const portifolioBox = document.createElement("div")
+            portifolioBox.className = "portifolio-box"
+            portifolioBox.innerHTML = `
+        
+        <div class="box-header">
+             <div class="portifolio-image">
+                 <div class="imagem-thumb">
+                 <img src="${el.img}">
+                 </div>
+            </div>
+         </div>
+         <div class="box-main">
+            <div class="portifolio-info">
+                 <h2>${el.tecnologias}</h2>
+                <h1>${el.name}</h1>
+                 <button id="btn-projeto" link="${el.link}">Ver Projeto</button>
+             </div>
+         </div>
+        
+        `
+            portifolioContainer.appendChild(portifolioBox)
+            //console.log(el)
+        })
+
+        // Link Projeto
+        const btnProjeto = document.querySelectorAll("#btn-projeto")
+        btnProjeto.forEach(el => {
+            el.onclick = () => {
+                const link = el.getAttribute("link")
+                window.open(link, "blank")
+            }
+        })
+    })
 

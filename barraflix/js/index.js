@@ -49,6 +49,9 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=b502db08defaa68db6d
         btnMenu.forEach(el => {
 
             el.onclick = e => {
+                // JQuery
+
+                
                 loadList(btnMenu, el);
 
 
@@ -64,7 +67,7 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=b502db08defaa68db6d
 
 function loadList(btnMenu, el, pageNumber = 1) {
 
-    window.location.hash = el.innerText.toLowerCase().replaceAll(" ","")
+    window.location.hash = el.innerText.toLowerCase().replaceAll(" ", "")
     document.title = `${el.innerText} - Barraflix`
     cardContainer.innerHTML = ""
 
@@ -204,11 +207,12 @@ function loadList(btnMenu, el, pageNumber = 1) {
                     //console.log(totalPages)
                 }
 
-
+                
             }
             // Card infos
             const todosCards = document.querySelectorAll("#cardBox")
             info(todosCards)
+            
         })
         .catch(err => {
             console.log(err)
@@ -865,54 +869,56 @@ const menuLabel = document.querySelector(".menu-label")
 
 
 checkbox.onchange = e => {
-    
-        if (checkbox.checked && animationEnd) {
-            animationEnd = false;
-            const menu = document.querySelector(".menuLeft")
-            menu.style.display = "flex"
-            menu.onanimationend = e => {
-                if (e.animationName == "menu-start") {
-                    checkbox.checked = true
-                    animationEnd = true
-                }
-            }
 
-        } else {
-            
-            animationEnd = false;
-            const menu = document.querySelector(".menuLeft")
-            menu.setAttribute("menu-close", "")
-            menu.onanimationend = e => {
-                if (e.animationName == "menu-close") {
-                    menu.style.display = "none"
-                    menu.removeAttribute("menu-close")
-                    checkbox.checked = false
-                    animationEnd = true
-                    
-                }
+    if (checkbox.checked && animationEnd) {
+        animationEnd = false;
+        const menu = document.querySelector(".menuLeft")
+        menu.style.display = "flex"
+        menu.onanimationend = e => {
+            if (e.animationName == "menu-start") {
+                checkbox.checked = true
+                animationEnd = true
             }
         }
 
+    } else {
 
-// Menu display screen maior que 767px
-
-if(window.innerWidth > 767){
-    const menu = document.querySelector(".menuLeft")
-    menu.style.display = "flex"
-}
-
-window.onresize = e => {
-    if(window.innerWidth <= 767 && checkbox.checked){
+        animationEnd = false;
         const menu = document.querySelector(".menuLeft")
-        menu.style.display = "flex"
-    }else{
-        const menu = document.querySelector(".menuLeft")
-        menu.style.display = "none" 
+        menu.setAttribute("menu-close", "")
+        menu.onanimationend = e => {
+            if (e.animationName == "menu-close") {
+                menu.style.display = "none"
+                menu.removeAttribute("menu-close")
+                checkbox.checked = false
+                animationEnd = true
+
+            }
+        }
     }
 
-    if(window.innerWidth > 767){
+
+    // Menu display screen maior que 767px
+
+    if (window.innerWidth > 767) {
         const menu = document.querySelector(".menuLeft")
         menu.style.display = "flex"
     }
+
+    window.onresize = e => {
+        if (window.innerWidth <= 767 && checkbox.checked) {
+            const menu = document.querySelector(".menuLeft")
+            menu.style.display = "flex"
+        } else {
+            const menu = document.querySelector(".menuLeft")
+            menu.style.display = "none"
+        }
+
+        if (window.innerWidth > 767) {
+            const menu = document.querySelector(".menuLeft")
+            menu.style.display = "flex"
+        }
+    }
 }
-}
+
+

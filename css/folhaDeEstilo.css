@@ -251,12 +251,11 @@ main {
 
 
 
-.skill1 {
+.skill-design {
     box-sizing: border-box;
     display: flex;
     justify-content: right;
     align-items: center;
-    width: 95%;
     height: 20px;
     background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
     border-radius: 20px;
@@ -264,142 +263,13 @@ main {
     padding: 10px;
 }
 
-.skill2 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 100%;
-    height: 20px;
-    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
-    border-radius: 20px;
-    color: aliceblue;
-    padding: 10px;
-}
 
-.skill3 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 80%;
-    height: 20px;
-    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
-    border-radius: 20px;
-    color: aliceblue;
-    padding: 10px;
-}
-
-.skill4 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 75%;
-    height: 20px;
-    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
-    border-radius: 20px;
-    color: aliceblue;
-    padding: 10px;
-}
-
-.skill5 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 95%;
-    height: 20px;
-    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
-    border-radius: 20px;
-    color: aliceblue;
-    padding: 10px;
-}
-
-.skill6 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 70%;
-    height: 20px;
-    background: linear-gradient(-45deg, #f3407c, rgb(143, 67, 194));
-    border-radius: 20px;
-    color: aliceblue;
-    padding: 10px;
-}
-
-.skill7 {
+.skill-dev {
     box-sizing: border-box;
     display: flex;
     justify-content: right;
     align-items: center;
     width: 98%;
-    height: 20px;
-    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-.skill8 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 96%;
-    height: 20px;
-    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-.skill9 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 87%;
-    height: 20px;
-    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-.skill10 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 80%;
-    height: 20px;
-    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-.skill11 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 95%;
-    height: 20px;
-    background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-.skill12 {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 75%;
     height: 20px;
     background: linear-gradient(-45deg, #00ffd5, rgb(0, 140, 255));
     border-radius: 20px;
@@ -623,94 +493,19 @@ main {
 
 }
 
-.imagem-thumb-1 {
+.imagem-thumb {
     width: 100%;
     height: 100%;
-    background-image: url("../imagens/calculadora-thumb.png");
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
 }
 
-.imagem-thumb-1:hover {
-    transform: scale(1.1);
-}
-
-.imagem-thumb-2 {
+.imagem-thumb > img {
     width: 100%;
     height: 100%;
-    background-image: url("../imagens/meteorologia-thumb.png");
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
+    object-fit: cover;
+    transition: all 500ms;
 }
 
-.imagem-thumb-2:hover {
-    transform: scale(1.1);
-}
-
-.imagem-thumb-3 {
-    width: 100%;
-    height: 100%;
-    background-image: url("../imagens/kanban-thumb.png");
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
-}
-
-.imagem-thumb-3:hover {
-    transform: scale(1.1);
-}
-
-.imagem-thumb-4 {
-    width: 100%;
-    height: 100%;
-    background-image: url("../imagens/cronometro-thumb.png");
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
-}
-
-.imagem-thumb-4:hover {
-    transform: scale(1.1);
-}
-
-.imagem-thumb-5 {
-    width: 100%;
-    height: 100%;
-    background-image: url("../imagens/gerador-senha-thumb.png");
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
-}
-
-.imagem-thumb-5:hover {
-    transform: scale(1.1);
-}
-
-.imagem-thumb-6 {
-    width: 100%;
-    height: 100%;
-    background-image: url("../imagens/jogo-da-velha-thumb.png");
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
-}
-
-.imagem-thumb-6:hover {
-    transform: scale(1.1);
-}
-
-.imagem-thumb-7 {
-    width: 100%;
-    height: 100%;
-    background-image: url("../imagens/barraflix-thumb.png");
-    background-size: cover;
-    background-position: center;
-    transition: all 1s;
-}
-
-.imagem-thumb-7:hover {
+.portifolio-box:hover .imagem-thumb > img {
     transform: scale(1.1);
 }
 

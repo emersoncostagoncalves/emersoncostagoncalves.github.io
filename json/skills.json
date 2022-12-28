@@ -1,0 +1,22 @@
+[
+    {
+        "Design": {
+            "Adobe Photoshop": "95%",
+            "Corel Draw": "99%",
+            "Adobe Premiere Pro": "99%",
+            "Adobe after Effects": "75%",
+            "Adobe Lightroom": "96%",
+            "Maxon Cinema 4D": "70%",
+            "Figma": "80%"
+        },
+        "Developer": {
+            "HTML5": "97%",
+            "CSS3": "95%",
+            "JavaScript": "92%",
+            "JQuery": "80%",
+            "React": "75%",
+            "VueJs": "72%",
+            "PHP": "80%"
+        }
+    }
+]
