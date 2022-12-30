@@ -332,10 +332,13 @@ main {
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
 }
 
-.logo-empresa:hover {
-    transform: scale(1.02)
+.caixa-exp:hover .logo-empresa img{
+    transform: scale(1.1)
 }
 
+.logo-empresa img{
+    transition: all 300ms;
+}
 .caixa-exp-center {
     display: flex;
     flex-direction: column;
