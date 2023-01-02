@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-
 }
 
 body {
     height: 100vh;
     background-color: rgb(33, 36, 40);
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -31,9 +31,6 @@ header {
     box-shadow: 5px 10px 20px rgb(25, 25, 25);
     backdrop-filter: blur(5px);
     z-index: 1;
-
-
-
 }
 
 .menu-mobile {
@@ -44,7 +41,6 @@ header {
     height: 35px;
     box-sizing: border-box;
     overflow: hidden;
-
 }
 
 .icons-header {
@@ -52,7 +48,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
 
 .instagram-icon:hover {
@@ -67,12 +62,11 @@ header {
     filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
 }
 
-
 main {
     display: grid;
     justify-items: center;
     grid-template-columns: 100%;
-    grid-template-rows: 800px 900px 1100px 1650px 2200px 1000px;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas:
         "sobre-mim"
         "skills"
@@ -85,7 +79,7 @@ main {
 }
 
 .sobre-mim {
-    width: 80%;
+    width: 90%;
     max-width: 1400px;
     display: flex;
     justify-content: center;
@@ -93,12 +87,8 @@ main {
     grid-area: sobre-mim;
     background-color: #212428;
     border-bottom: solid 0.1px rgb(0, 0, 0);
-    
-
-
+    padding-top: 100px;
 }
-
-
 
 .info {
     box-sizing: border-box;
@@ -112,15 +102,11 @@ main {
     padding: 20px 20px;
     font-size: 1.2em;
     gap: 20px;
-
-
 }
 
 .info-cabecalho {
     box-sizing: border-box;
     line-height: 55px;
-
-
 }
 
 .animar {
@@ -131,13 +117,11 @@ main {
 
 .info-descricao {
     display: flex;
-
 }
 
 .info-contato {
     display: flex;
     flex-direction: column;
-
 }
 
 .info-contato div {
@@ -146,7 +130,6 @@ main {
     align-items: center;
     gap: 10px;
     padding: 10px;
-
 }
 
 .info-redes-sociais {
@@ -156,10 +139,9 @@ main {
     justify-content: flex-start;
     margin-top: 20px;
     gap: 20px;
-
 }
 
-.sobre-mim>.foto {
+.sobre-mim > .foto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,19 +155,20 @@ main {
     height: 100%;
     border-radius: 15px;
     padding: 20px 20px;
-
 }
 
-
 .skills {
+    width: 90%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: skills;
     background-color: #212428;
-    padding: 120px 20px;
+    padding: 120px 0px;
     gap: 20px;
     border-bottom: solid 0.1px rgb(0, 0, 0);
+    border-top: solid 0.1px rgb(49, 49, 49);
 }
 
 .skills-header {
@@ -202,25 +185,22 @@ main {
     align-items: flex-start;
     width: 100%;
     gap: 60px;
-
 }
 
-.cont-skills>.left {
+.cont-skills > .left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 450px;
     gap: 10px;
-
 }
 
-.cont-skills>.right {
+.cont-skills > .right {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 450px;
     gap: 10px;
-
 }
 
 .photoshop {
@@ -245,12 +225,7 @@ main {
     background: linear-gradient(175deg, #0f1113, #212428);
     border-radius: 20px;
     padding: 5px;
-
-
 }
-
-
-
 
 .skill-design {
     box-sizing: border-box;
@@ -263,7 +238,6 @@ main {
     color: rgb(240, 248, 255);
     padding: 10px;
 }
-
 
 .skill-dev {
     box-sizing: border-box;
@@ -279,15 +253,17 @@ main {
 }
 
 .experiencia {
+    width: 90%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: experiencia;
     background-color: rgb(33, 36, 40);
     border-bottom: solid 0.1px rgb(0, 0, 0);
-    padding: 120px 80px;
+    border-top: solid 0.1px rgb(49, 49, 49);
+    padding: 120px 0px;
     gap: 40px;
-
 }
 
 .cabecalho-exp {
@@ -300,11 +276,11 @@ main {
     display: flex;
     justify-content: center;
     width: 1100px;
-    height: 400px;
+    height: 250px;
     background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
     border-radius: 10px;
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
-
+                
 }
 
 .caixa-exp:hover {
@@ -316,7 +292,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 20%;
-    padding: 20px 40px;
+    padding: 20px;
     border-right: 1px solid #0f1113;
 }
 
@@ -332,11 +308,11 @@ main {
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
 }
 
-.caixa-exp:hover .logo-empresa img{
-    transform: scale(1.1)
+.caixa-exp:hover .logo-empresa img {
+    transform: scale(1.1);
 }
 
-.logo-empresa img{
+.logo-empresa img {
     transition: all 300ms;
 }
 .caixa-exp-center {
@@ -350,7 +326,7 @@ main {
     border-left: 1px solid #2c2f33;
 }
 
-.caixa-exp-center>h1 {
+.caixa-exp-center > h1 {
     font-weight: 200;
     font-size: 2em;
     color: aliceblue;
@@ -372,7 +348,6 @@ main {
     align-items: center;
     width: 20%;
     padding-right: 40px;
-
 }
 
 .btn-contact {
@@ -395,16 +370,17 @@ main {
 }
 
 .educacao {
-
+    width: 90%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: educacao;
     background-color: #212428;
     border-bottom: solid 0.1px rgb(0, 0, 0);
-    padding: 120px 80px;
+    border-top: solid 0.1px rgb(49, 49, 49);
+    padding: 120px 0px;
     gap: 40px;
-
 }
 
 .educacao-header {
@@ -415,19 +391,19 @@ main {
 }
 
 .portifolio {
-    width: 100%;
+    width: 90%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     grid-area: portifolio;
     background-color: #212428;
     border-bottom: solid 0.1px rgb(0, 0, 0);
-    padding: 120px 80px;
+    border-top: solid 0.1px rgb(49, 49, 49);
+    padding: 120px 0px;
     gap: 40px;
-    box-sizing: border-box;
-
-
+    
 }
 
 .portifolio-header {
@@ -438,16 +414,13 @@ main {
 }
 
 .portifolio-container {
-    width: 95%;
-    max-width: 1400px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    box-sizing: border-box;
-
+    gap: 15px;
 }
 
 .portifolio-box {
@@ -456,6 +429,7 @@ main {
     align-items: center;
     width: 32%;
     max-width: 450px;
+    min-width: 320px;
     height: 600px;
     background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
@@ -482,7 +456,6 @@ main {
     border-top: 1px solid #2c2f33;
     box-sizing: border-box;
     padding: 20px;
-
 }
 
 .portifolio-box:hover {
@@ -494,7 +467,6 @@ main {
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
-
 }
 
 .imagem-thumb {
@@ -520,15 +492,14 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
 }
 
-.portifolio-info>h1 {
+.portifolio-info > h1 {
     font-size: 1.5em;
     text-align: center;
 }
 
-.portifolio-info>button {
+.portifolio-info > button {
     width: 100%;
     height: 50px;
     border-radius: 10px;
@@ -539,14 +510,14 @@ main {
     transition: transform 0.5s;
 }
 
-.portifolio-info>button:hover {
+.portifolio-info > button:hover {
     background: rgb(255, 1, 79);
     color: black;
     transform: translateY(-5px);
 }
 
 .contato {
-    width: 80%;
+    width: 90%;
     max-width: 1400px;
     box-sizing: border-box;
     display: flex;
@@ -555,7 +526,8 @@ main {
     grid-area: contato;
     background-color: #212428;
     border-bottom: solid 0.1px rgb(0, 0, 0);
-    padding: 120px 20px;
+    border-top: solid 0.1px rgb(49, 49, 49);
+    padding: 120px 5%;
     gap: 40px;
 }
 
@@ -564,19 +536,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .contato-container {
     width: 100%;
-    max-width: 1400px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     gap: 40px;
-
 }
 
 .contato-info {
@@ -593,17 +561,13 @@ main {
     padding: 40px;
     font-size: 1em;
     flex-wrap: wrap;
-
 }
-
-
 
 .redes-sociais {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .instagram {
@@ -612,7 +576,6 @@ main {
     background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
     box-shadow: 5px 10px 20px rgb(12, 12, 12);
     border-radius: 5px;
-
 }
 
 .facebook {
@@ -640,10 +603,10 @@ main {
 
 .bnt-midias:hover {
     background: rgb(26, 26, 26);
-    transform: translateY(-10px)
+    transform: translateY(-10px);
 }
 
-.contato-container>.form {
+.contato-container > .form {
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -657,10 +620,6 @@ main {
     font-size: 1em;
     box-sizing: border-box;
     gap: 0px;
-
-
-
-
 }
 
 input {
@@ -673,8 +632,7 @@ input {
     padding: 5px;
     color: aliceblue;
     border: outset 2px #222222;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
-
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
 }
 
 input:focus {
@@ -682,7 +640,6 @@ input:focus {
     outline: 0;
     background-color: #1b1b1b;
 }
-
 
 #form-msg {
     height: 260px;
@@ -693,7 +650,7 @@ input:focus {
     padding: 5px;
     color: aliceblue;
     border: outset 2px #222222;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
 }
 
 #form-msg:focus {
@@ -702,7 +659,7 @@ input:focus {
     background-color: #1b1b1b;
 }
 
-form>button {
+form > button {
     width: 100%;
     height: 50px;
     margin-top: 20px;
@@ -715,12 +672,10 @@ form>button {
     font-weight: 600;
 }
 
-form>button:hover {
+form > button:hover {
     background: rgb(255, 1, 79);
     color: black;
     transform: translateY(-5px);
-
-
 }
 
 .contato-campo1-2 {
@@ -728,7 +683,6 @@ form>button:hover {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-
 }
 
 .contato-campo1 {
@@ -736,8 +690,6 @@ form>button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-
 }
 
 .contato-campo2 {
@@ -745,8 +697,6 @@ form>button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-
 }
 
 .contato-campo3 {
@@ -755,21 +705,32 @@ form>button:hover {
     flex-direction: column;
     gap: 10px;
     margin-top: 10px;
-
 }
 
 footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #212428;
+    
+    
+}
+
+.rodape-container{
+    max-width: 1400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    background-color: #212428;
+    width: 90%;
+    border-top: solid 0.1px rgb(49, 49, 49);
     gap: 10px;
 }
 
-
-.cabecalho>.foto {
+.cabecalho > .foto {
     width: 70px;
     height: 70px;
     background-color: rgb(224, 224, 224);
@@ -777,7 +738,6 @@ footer {
     background-image: url("../imagens/perfil.png");
     background-size: cover;
     border: solid 4px rgb(70, 70, 70);
-
 }
 
 .menu {
@@ -785,13 +745,10 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 40px;
-
-
 }
 
 a {
     color: rgb(203, 214, 223);
-
 }
 
 a:visited {
@@ -800,14 +757,12 @@ a:visited {
 
 a:hover {
     color: rgb(255, 1, 79);
-
 }
 
 h1 {
     font-size: 50px;
     color: aliceblue;
     font-weight: bold;
-
 }
 
 h2 {
@@ -834,7 +789,7 @@ p {
     color: rgb(255, 1, 79);
 }
 
-.rodape>.foto {
+.rodape-container > .foto {
     width: 70px;
     height: 70px;
     background-color: rgb(224, 224, 224);
@@ -842,10 +797,7 @@ p {
     background-image: url("../imagens/perfil.png");
     background-size: cover;
     border: solid 4px rgb(70, 70, 70);
-
 }
-
-
 
 .animar {
     display: flex;
@@ -858,9 +810,6 @@ p {
     overflow: hidden;
     white-space: nowrap;
 }
-
-
-
 
 .bnt-topo {
     position: fixed;
@@ -881,22 +830,21 @@ p {
 
 @keyframes animar-texto {
     0% {
-        width: 0px
+        width: 0px;
     }
 
     40% {
-        width: 110%
+        width: 110%;
     }
 
     60% {
-        width: 110%
+        width: 110%;
     }
 
     100% {
-        width: 0%
+        width: 0%;
     }
 }
-
 
 @keyframes display-bar {
     from {
@@ -907,7 +855,6 @@ p {
         border-right: 2px solid rgb(255, 1, 79);
     }
 }
-
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
     main {
@@ -934,8 +881,6 @@ p {
         grid-area: sobre-mim;
         background-color: #212428;
         border-bottom: solid 0.1px rgb(0, 0, 0);
-
-
     }
 
     .menu-mobile {
@@ -946,13 +891,10 @@ p {
         height: 35px;
         box-sizing: border-box;
         overflow: hidden;
-
     }
-
 }
 
 @media screen and (max-width: 767px) {
-
     header {
         box-sizing: border-box;
         display: flex;
@@ -967,7 +909,6 @@ p {
         box-shadow: 5px 10px 20px rgb(25, 25, 25);
         backdrop-filter: blur(5px);
         z-index: 1;
-
     }
 
     .menu-mobile {
@@ -978,10 +919,7 @@ p {
         height: 35px;
         box-sizing: border-box;
         overflow: hidden;
-        
     }
-
-
 
     #check-menu {
         width: 100%;
@@ -998,14 +936,13 @@ p {
         width: 100%;
         height: 100%;
         transition: all 300ms ease-in-out;
-
     }
 
-    .menu-mobile:hover label span{
-        background-color: rgb(255, 255, 255)
+    .menu-mobile:hover label span {
+        background-color: rgb(255, 255, 255);
     }
 
-    label>span:nth-child(1) {
+    label > span:nth-child(1) {
         position: relative;
         width: 100%;
         height: 4px;
@@ -1014,7 +951,7 @@ p {
         transition: all 300ms ease-in-out;
     }
 
-    label>span:nth-child(2) {
+    label > span:nth-child(2) {
         width: 100%;
         position: relative;
         height: 4px;
@@ -1023,7 +960,7 @@ p {
         transition: all 300ms ease-in-out;
     }
 
-    label>span:nth-child(3) {
+    label > span:nth-child(3) {
         width: 100%;
         position: relative;
         height: 4px;
@@ -1032,17 +969,17 @@ p {
         transition: all 300ms ease-in-out;
     }
 
-    #check-menu:checked+label>span:nth-child(1) {
+    #check-menu:checked + label > span:nth-child(1) {
         transform: rotate(-45deg);
         top: 10px;
         background-color: rgb(255, 1, 79);
     }
 
-    #check-menu:checked+label>span:nth-child(2) {
+    #check-menu:checked + label > span:nth-child(2) {
         opacity: 0;
     }
 
-    #check-menu:checked+label>span:nth-child(3) {
+    #check-menu:checked + label > span:nth-child(3) {
         top: -9px;
         transform: rotate(45deg);
         background-color: rgb(255, 1, 79);
@@ -1068,15 +1005,11 @@ p {
         animation-iteration-count: 1;
     }
 
-    [fadeout-menu]{
-        
+    [fadeout-menu] {
         animation-name: out-slide;
         animation-duration: 1s;
         animation-direction: normal;
-        
-        
     }
-
 
     @keyframes out-slide {
         from {
@@ -1103,7 +1036,6 @@ p {
         justify-content: center;
         align-items: center;
         gap: 20px;
-
     }
 
     .icons-header > p {
@@ -1121,7 +1053,6 @@ p {
     .linkedin-icon:hover {
         filter: invert(8%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(300%) contrast(143%);
     }
-
 
     main {
         display: grid;
@@ -1147,8 +1078,6 @@ p {
         grid-area: sobre-mim;
         background-color: #212428;
         border-bottom: solid 0.1px rgb(0, 0, 0);
-
-
     }
 
     .info {
@@ -1164,8 +1093,6 @@ p {
         padding: 20px 20px;
         font-size: 1.2em;
         gap: 20px;
-
-
     }
 
     .info-cabecalho {
@@ -1173,7 +1100,6 @@ p {
         box-sizing: border-box;
         line-height: 55px;
         text-align: center;
-
     }
 
     .animar {
@@ -1184,13 +1110,11 @@ p {
 
     .info-descricao {
         display: flex;
-
     }
 
     .info-contato {
         display: flex;
         flex-direction: column;
-
     }
 
     .info-contato div {
@@ -1199,7 +1123,6 @@ p {
         align-items: center;
         gap: 10px;
         padding: 10px;
-
     }
 
     .info-redes-sociais {
@@ -1209,10 +1132,9 @@ p {
         justify-content: flex-start;
         margin-top: 20px;
         gap: 20px;
-
     }
 
-    .sobre-mim>.foto {
+    .sobre-mim > .foto {
         display: none;
         justify-content: center;
         align-items: center;
@@ -1225,9 +1147,7 @@ p {
         height: 100%;
         border-radius: 15px;
         padding: 20px 20px;
-
     }
-
 
     .skills {
         width: 100%;
@@ -1251,7 +1171,6 @@ p {
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-
     }
 
     .cont-skills {
@@ -1262,10 +1181,9 @@ p {
         justify-content: center;
         align-items: center;
         gap: 20px;
-
     }
 
-    .cont-skills>.left {
+    .cont-skills > .left {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -1274,10 +1192,9 @@ p {
         gap: 10px;
         padding: 15px;
         box-sizing: border-box;
-
     }
 
-    .cont-skills>.right {
+    .cont-skills > .right {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -1286,7 +1203,6 @@ p {
         gap: 10px;
         padding: 15px;
         box-sizing: border-box;
-
     }
 
     .right-header {
@@ -1325,8 +1241,6 @@ p {
         background: linear-gradient(175deg, #0f1113, #212428);
         border-radius: 20px;
         padding: 5px;
-
-
     }
 
     .skill1 {
@@ -1510,7 +1424,6 @@ p {
         padding: 15px;
         gap: 20px;
         box-sizing: border-box;
-
     }
 
     .cabecalho-exp {
@@ -1531,7 +1444,6 @@ p {
         box-shadow: 5px 10px 20px rgb(12, 12, 12);
         box-sizing: border-box;
         overflow: hidden;
-
     }
 
     .caixa-exp:hover {
@@ -1539,17 +1451,16 @@ p {
     }
 
     .caixa-exp-left {
+        width: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 15%;
-        padding: 15px;
+        padding: 0px;
         border-right: 1px solid #0f1113;
         background-color: aliceblue;
     }
 
     .logo-empresa {
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1558,19 +1469,17 @@ p {
         transition: transform 0.5s;
         box-shadow: none;
         box-sizing: border-box;
-
     }
 
-    .logo-empresa>img {
-        width: 90%;
-        height: 90%;
+    .logo-empresa > img {
+        width: 85%;
+        height: 85%;
         object-fit: contain;
         object-position: center;
-
     }
 
     .logo-empresa:hover {
-        transform: scale(1.02)
+        transform: scale(1.02);
     }
 
     .caixa-exp-center {
@@ -1584,17 +1493,17 @@ p {
         border-left: 1px solid #2c2f33;
     }
 
-    .caixa-exp-center>h1 {
+    .caixa-exp-center > h1 {
         font-weight: 200;
         font-size: 1em;
         color: aliceblue;
     }
 
-    .caixa-exp-center>h2 {
+    .caixa-exp-center > h2 {
         font-size: 0.8em;
     }
 
-    .caixa-exp-center>h4 {
+    .caixa-exp-center > h4 {
         font-size: 0.8em;
     }
 
@@ -1614,7 +1523,6 @@ p {
         align-items: center;
         width: 15%;
         padding-right: 40px;
-
     }
 
     .btn-contact {
@@ -1647,8 +1555,6 @@ p {
         border-bottom: solid 0.1px rgb(0, 0, 0);
         gap: 15px;
         box-sizing: border-box;
-
-
     }
 
     .educacao-header {
@@ -1672,9 +1578,6 @@ p {
         padding: 15px;
         gap: 40px;
         box-sizing: border-box;
-
-
-
     }
 
     .portifolio-header {
@@ -1695,7 +1598,6 @@ p {
         flex-wrap: wrap;
         gap: 10px;
         box-sizing: border-box;
-
     }
 
     .portifolio-box {
@@ -1731,7 +1633,6 @@ p {
         border-top: 1px solid #2c2f33;
         box-sizing: border-box;
         padding: 20px;
-
     }
 
     .portifolio-box:hover {
@@ -1743,7 +1644,6 @@ p {
         height: 100%;
         border-radius: 20px;
         overflow: hidden;
-
     }
 
     .imagem-thumb-1 {
@@ -1844,15 +1744,14 @@ p {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-
     }
 
-    .portifolio-info>h1 {
+    .portifolio-info > h1 {
         font-size: 1.5em;
         text-align: center;
     }
 
-    .portifolio-info>button {
+    .portifolio-info > button {
         width: 100%;
         height: 50px;
         border-radius: 10px;
@@ -1863,7 +1762,7 @@ p {
         transition: transform 0.5s;
     }
 
-    .portifolio-info>button:hover {
+    .portifolio-info > button:hover {
         background: rgb(255, 1, 79);
         color: black;
         transform: translateY(-5px);
@@ -1879,7 +1778,7 @@ p {
         background-color: #212428;
         border-bottom: solid 0.1px rgb(0, 0, 0);
         padding: 15px;
-        gap: 40px
+        gap: 40px;
     }
 
     .cabecalho-contato {
@@ -1888,7 +1787,6 @@ p {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     .contato-container {
@@ -1900,7 +1798,6 @@ p {
         justify-content: center;
         width: 100%;
         gap: 40px;
-
     }
 
     .contato-info {
@@ -1917,17 +1814,13 @@ p {
         padding: 20px;
         font-size: 1em;
         flex-wrap: wrap;
-
     }
-
-
 
     .redes-sociais {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-
     }
 
     .instagram {
@@ -1936,7 +1829,6 @@ p {
         background: linear-gradient(-45deg, #212428, rgb(43, 43, 43));
         box-shadow: 5px 10px 20px rgb(12, 12, 12);
         border-radius: 5px;
-
     }
 
     .facebook {
@@ -1964,10 +1856,10 @@ p {
 
     .bnt-midias:hover {
         background: rgb(26, 26, 26);
-        transform: translateY(-10px)
+        transform: translateY(-10px);
     }
 
-    .contato-container>.form {
+    .contato-container > .form {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -1981,10 +1873,6 @@ p {
         font-size: 1em;
         box-sizing: border-box;
         gap: 0px;
-
-
-
-
     }
 
     input {
@@ -1997,8 +1885,7 @@ p {
         padding: 5px;
         color: aliceblue;
         border: outset 2px #222222;
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, .39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
-
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
     }
 
     input:focus {
@@ -2006,7 +1893,6 @@ p {
         outline: 0;
         background-color: #1b1b1b;
     }
-
 
     #form-msg {
         height: 260px;
@@ -2017,7 +1903,7 @@ p {
         padding: 5px;
         color: aliceblue;
         border: outset 2px #222222;
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, .39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px rgb(43, 43, 43), 0 1px 0 rgb(92, 92, 92);
     }
 
     #form-msg:focus {
@@ -2026,7 +1912,7 @@ p {
         background-color: #1b1b1b;
     }
 
-    form>button {
+    form > button {
         width: 100%;
         height: 50px;
         margin-top: 20px;
@@ -2039,12 +1925,10 @@ p {
         font-weight: 600;
     }
 
-    form>button:hover {
+    form > button:hover {
         background: rgb(255, 1, 79);
         color: black;
         transform: translateY(-5px);
-
-
     }
 
     .contato-campo1-2 {
@@ -2052,7 +1936,6 @@ p {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
-
     }
 
     .contato-campo1 {
@@ -2060,8 +1943,6 @@ p {
         display: flex;
         flex-direction: column;
         gap: 10px;
-
-
     }
 
     .contato-campo2 {
@@ -2069,8 +1950,6 @@ p {
         display: flex;
         flex-direction: column;
         gap: 10px;
-
-
     }
 
     .contato-campo3 {
@@ -2079,7 +1958,6 @@ p {
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
-
     }
 
     footer {
@@ -2092,8 +1970,7 @@ p {
         gap: 10px;
     }
 
-
-    .cabecalho>.foto {
+    .cabecalho > .foto {
         width: 70px;
         height: 70px;
         background-color: rgb(224, 224, 224);
@@ -2101,14 +1978,10 @@ p {
         background-image: url("../imagens/perfil.png");
         background-size: cover;
         border: solid 4px rgb(70, 70, 70);
-
     }
-
-
 
     a {
         color: rgb(203, 214, 223);
-
     }
 
     a:visited {
@@ -2117,14 +1990,12 @@ p {
 
     a:hover {
         color: rgb(255, 1, 79);
-
     }
 
     h1 {
         font-size: 2.5rem;
         color: aliceblue;
         font-weight: bold;
-
     }
 
     h2 {
@@ -2151,7 +2022,7 @@ p {
         color: rgb(255, 1, 79);
     }
 
-    .rodape>.foto {
+    .rodape > .foto {
         width: 70px;
         height: 70px;
         background-color: rgb(224, 224, 224);
@@ -2159,10 +2030,7 @@ p {
         background-image: url("../imagens/perfil.png");
         background-size: cover;
         border: solid 4px rgb(70, 70, 70);
-
     }
-
-
 
     .animar {
         display: inline;
@@ -2175,9 +2043,6 @@ p {
         white-space: nowrap;
         padding: 0px;
     }
-
-
-
 
     .bnt-topo {
         position: fixed;
@@ -2198,22 +2063,19 @@ p {
 
     @keyframes animar-texto {
         0% {
-            width: 0px
+            width: 0px;
         }
 
         40% {
-            width: 100%
+            width: 100%;
         }
 
         60% {
-            width: 100%
+            width: 100%;
         }
 
         100% {
-            width: 0%
+            width: 0%;
         }
     }
-
-
-
 }
