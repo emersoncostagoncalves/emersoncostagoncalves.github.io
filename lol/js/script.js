@@ -1,5 +1,5 @@
 const cardsRotationContainer = document.querySelector(".cards-rotation-container")
-const apiKey = "RGAPI-61598129-6d69-4956-a7bc-87e4468d4e6d"
+const apiKey = "RGAPI-1ef20c02-59c8-40e8-a9eb-6d294fa93b17"
 const url = 'https://ddragon.leagueoflegends.com/cdn/12.23.1/data/pt_BR/champion.json';
 const urlRotation = `https://br1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=${apiKey}`;
 const loadScreen = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
