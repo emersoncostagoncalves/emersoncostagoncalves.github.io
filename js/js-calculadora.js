@@ -389,3 +389,8 @@ console.log("Copiar: "+chaveCopiar)
 
 
 
+// Ano atual rodapé
+
+const data = new Date()
+const ano = document.querySelector(".ano")
+ano.innerText = data.getFullYear()

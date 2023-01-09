@@ -430,6 +430,10 @@ btnFecharAdd.onclick = e => {
 
 }
 
-    ///
+    /// Ano atual header
+
+    const data = new Date();
+    const ano = document.querySelector(".ano")
+    ano.innerText = data.getFullYear()
 
    
