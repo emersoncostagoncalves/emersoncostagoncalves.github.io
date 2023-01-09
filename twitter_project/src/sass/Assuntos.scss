@@ -1,0 +1,76 @@
+@import "_variables";
+@import "_mixins";
+
+.assuntos {
+    background-color: rgb(247, 247, 247);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+}
+
+.assuntos-titulo {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+.assuntos-card {
+    @include center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 40px;
+    transition: background-color 300ms;
+}
+
+.assuntos-card:hover,
+.assuntos-footer:hover {
+    background-color: $bg-secundary-color;
+    cursor: pointer;
+}
+
+.assuntos-footer {
+    height: 25px;
+    padding: 1rem;
+    color: $destaque-color;
+    transition: background-color 300ms;
+}
+
+.icon-mais {
+    position: relative;
+    top: -15px;
+    left: 10px;
+    @include center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    img {
+        width: 15px;
+        filter: saturate(0%);
+    }
+}
+
+.icon-mais:hover {
+    background-color: rgb(229, 243, 253);
+    img {
+        width: 15px;
+        filter: saturate(100%);
+    }
+}
+
+.assuntos-info {
+    h1 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    h3 {
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+}

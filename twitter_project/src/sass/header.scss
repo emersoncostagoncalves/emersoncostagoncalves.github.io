@@ -1,0 +1,91 @@
+@import "_variables";
+@import "_mixins";
+
+.header {
+    @include center;
+    width: 100%;
+    height: 6%;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    
+}
+
+.header-left {
+    box-sizing: border-box;
+    overflow: hidden;
+    @include center;
+    justify-content: flex-start;
+    width: 20%;
+    height: 100%;
+    padding: 1.2rem;
+
+    .logo-container {
+        @include center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .logo-container:hover {
+        background-color: rgb(219, 242, 255);
+    }
+    .twitter-logo {
+        width: 30px;
+    }
+}
+
+.header-center {
+    box-sizing: border-box;
+    overflow: hidden;
+    @include center;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid rgb(228, 228, 228);
+    border-right: 1px solid rgb(228, 228, 228);
+    padding: 1rem;
+    
+}
+
+.top-tweets {
+    width: 20px;
+}
+
+.header-right {
+    box-sizing: border-box;
+    overflow: hidden;
+    @include center;
+    width: 30%;
+    height: 100%;
+}
+
+.search-bar {
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 1rem;
+    padding: 1.2rem 3rem;
+    background-color: rgb(246, 246, 247);
+    border: none;
+    border-radius: $border-radius;
+    width: 88%;
+    height: 20px;
+    
+}
+
+.search-icon {
+    position: relative;
+    left: 32px;
+    width: 16px;
+    filter: saturate(0%) brightness(50%);
+}
+
+.search-bar:focus {
+    background-color: white;
+    border: 1px solid $destaque-color;
+    outline: none;
+}
+
+[focus] {
+    filter: saturate(100%) brightness(100%);
+}

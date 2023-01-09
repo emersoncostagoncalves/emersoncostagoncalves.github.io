@@ -1,0 +1,27 @@
+@import "_variables";
+@import "_mixins";
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+    
+}
+
+#root{
+    @include center;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+}

@@ -1,0 +1,133 @@
+@import "_variables";
+@import "_mixins";
+
+.tweetar-container {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    border-bottom: 5px solid $bg-secundary-color; 
+   
+}
+
+.tweetar-img-perfil-container {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.tweetar-img-perfil {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: $border-radius;
+    img {
+        width: 105%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.tweetar-input-tools {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+    .input-container {
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+        background-color: aquamarine;
+    }
+    .tools-container {
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 1rem 1rem 1rem 0rem;
+        border-top: 1px solid $bg-secundary-color;
+        
+    }
+}
+
+.tools-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    .btn-tools, .btn-tools-local {
+        img {
+            width: 20px;
+        }
+    }
+}
+
+.btn-tweetar {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(138, 204, 248);
+    font-weight: 600;
+}
+
+[btn-active]{
+    background-color: $btn-bg-color;
+}
+
+[btn-active]:hover{
+    background-color: $btn-bg-hover-color;
+}
+
+.input-tweetar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    padding: 2rem 1rem 1rem 0rem;
+}
+
+.input-tweetar::-webkit-scrollbar {
+    display: none;
+}
+
+.input-tweetar:focus {
+    border: none;
+    outline: none;
+}
+
+.btn-tools {
+    @include center;
+    width: 30px;
+    height: 30px;
+    border-radius: $border-radius;
+}
+
+.btn-tools:hover {
+    background-color: rgb(221, 241, 255);
+}
+
+.btn-tools-local{
+    @include center;
+    width: 30px;
+    height: 30px;
+    border-radius: $border-radius;
+    img{
+        filter:opacity(50%)
+    }
+}

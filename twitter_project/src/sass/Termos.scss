@@ -1,0 +1,37 @@
+@import "_variables";
+@import "_mixins";
+
+.termos-container {
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+    div{
+        display: flex;
+        justify-items: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        
+    }
+    a {
+        margin-right: 0.5rem;
+        font-size: 0.8rem;
+        color: $text-secondary-color;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    img {
+        width: 10px;
+        filter: saturate(0%)
+    }
+    p {
+        font-size: 0.8rem;
+        color: $text-secondary-color;
+    }
+    .link-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2rem;
+    }
+}

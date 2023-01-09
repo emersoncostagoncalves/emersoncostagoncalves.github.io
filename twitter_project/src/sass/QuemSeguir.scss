@@ -1,0 +1,96 @@
+@import "_variables";
+@import "mixins";
+
+.segestao-container {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(247, 247, 247);
+    border-radius: 20px;
+    height: auto;
+    overflow: hidden;
+}
+
+.segestao-container-titulo {
+    padding: 1rem;
+}
+
+.segestao-container-card {
+    box-sizing: border-box;
+    overflow: hidden;
+    @include center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    height: 80px;
+    transition: background-color 300ms;
+
+    .segestao-container-card-main {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .titulo-id {
+        @include center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titulo {
+        @include center;
+        gap: 0.2rem;
+    }
+    .img-perfil {
+        background-color: $destaque-color;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    h1 {
+        font-size: 0.9rem;
+    }
+    h1:hover {
+        text-decoration: underline;
+    }
+    .icon-verificado {
+        width: 16px;
+    }
+    .btn-seguir {
+        @include center;
+        width: 80px;
+        height: 35px;
+        background-color: black;
+        border: none;
+        color: white;
+        border-radius: $border-radius;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
+.seguidores-footer {
+    padding: 1rem;
+    color: $destaque-color;
+}
+
+.seguidores-footer:hover {
+    background-color: $bg-secundary-color;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.segestao-container-card:hover {
+    background-color: $bg-secundary-color;
+    cursor: pointer;
+}
+
+.img-perfil:hover {
+    filter: brightness(80%);
+}
+
+.btn-seguir:hover {
+    background-color: rgb(36, 36, 36);
+    cursor: pointer;
+}

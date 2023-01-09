@@ -1,0 +1,20 @@
+@import "_variables";
+@import "_mixins";
+
+.container-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid rgb(228, 228, 228);
+    border-right: 1px solid rgb(228, 228, 228);
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.container-center::-webkit-scrollbar{
+    display: none;
+}

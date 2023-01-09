@@ -1,0 +1,97 @@
+@import "_variables";
+@import "_mixins";
+
+.scrap-container {
+    @include center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-bottom: 1px solid $bg-secundary-color; 
+    transition: background-color 300ms;
+}
+
+.scrap-container:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.scrap-img-perfil-container {
+    width: 10%;
+    .scrap-img-perfil {
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        border-radius: $border-radius;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.scrap-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    .scrap-info-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        h1 {
+            font-size: 1rem;
+        }
+        p {
+            color: $text-secondary-color;
+        }
+    }
+    .scrap-info-center {
+    }
+    .scrap-info-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .scrap-icons {
+            @include center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            img {
+                width: 20px;
+                filter: saturate(0%);
+            }
+        }
+        .scrap-icons:hover {
+            background-color: rgb(218, 240, 255);
+            img {
+                width: 20px;
+                filter: saturate(100%);
+            }
+        }
+    }
+}
+
+.scrap-options {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+    height: 100%;
+    .scrap-icon-more {
+        @include center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        img {
+            width: 15px;
+            filter: saturate(0%);
+        }
+    }
+    .scrap-icon-more:hover {
+        background-color: rgb(218, 240, 255);
+        img {
+            width: 15px;
+            filter: saturate(100%);
+        }
+    }
+
+}
