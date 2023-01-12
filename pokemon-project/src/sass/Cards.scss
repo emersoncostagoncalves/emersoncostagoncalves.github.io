@@ -1,0 +1,182 @@
+.card {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    min-width: 280px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.01);
+    padding: 1rem;
+    animation-name: fadeInCard;
+    animation-duration: 300ms;
+    animation-direction: normal;
+    transition: all 300ms;
+    
+    &:hover{
+        transform: scale(1.02);
+    }
+    &:not(:hover){
+        filter: brightness(98%);
+    }
+}
+
+
+
+@keyframes fadeInCard {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+.card-img {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+        object-position: center;
+        
+    }
+}
+
+.card-id {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    text-transform: capitalize;
+    > h1 {
+        font-size: 1.2rem;
+        color: rgb(39, 39, 39);
+    }
+    > img{
+        width: 18px
+        
+    }
+    > .water{
+        width: 14px
+        
+    }
+}
+
+
+
+.normal, #normal:hover, #normal[actived]{
+    filter: invert(27%) sepia(50%) saturate(2878%) hue-rotate(145deg) brightness(150%) contrast(97%)  
+}
+
+
+.fire , #fire:hover, #fire[actived] {
+    filter: invert(27%) sepia(100%) saturate(2878%) hue-rotate(360deg) brightness(200%) contrast(97%)
+}
+
+.grass, #grass:hover, #grass[actived] {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(60deg) brightness(150%) contrast(97%)
+}
+
+.water, #water:hover, #water[actived] {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(160deg) brightness(150%) contrast(97%);
+    
+}
+
+.bug, #bug:hover, #bug[actived]  {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(40deg) brightness(180%) contrast(97%);
+    
+}
+
+.fighting, #fighting:hover, #fighting[actived]  {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(310deg) brightness(130%) contrast(97%);
+    
+}
+
+.dragon, #dragon:hover, #dragon[actived]  {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(200deg) brightness(130%) contrast(97%);
+    
+}
+
+.ground, #ground:hover, #ground[actived]  {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(370deg) brightness(130%) contrast(97%);
+    
+}
+
+.poison, #poison:hover, #poison[actived]  {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(250deg) brightness(130%) contrast(97%);
+    
+}
+
+.ghost, #ghost:hover, #ghost[actived]  {
+    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(210deg) brightness(130%) contrast(97%);
+    
+}
+
+.dark, #dark:hover, #dark[actived]  {
+    filter: invert(27%) sepia(0%) saturate(800%) hue-rotate(210deg) brightness(130%) contrast(97%);
+}
+
+.rock, #rock:hover, #rock[actived]  {
+    filter: invert(27%) sepia(100%) saturate(900%) hue-rotate(140deg) brightness(150%) contrast(97%);
+}
+
+.flying, #flying:hover, #flying[actived]  {
+    filter: invert(27%) sepia(100%) saturate(1000%) hue-rotate(210deg) brightness(180%) contrast(100%);
+}
+
+.fairy, #fairy:hover, #fairy[actived]  {
+    filter: invert(27%) sepia(100%) saturate(500%) hue-rotate(300deg) brightness(180%) contrast(100%);
+}
+
+.ice, #ice:hover, #ice[actived]  {
+    filter: invert(27%) sepia(100%) saturate(500%) hue-rotate(140deg) brightness(180%) contrast(100%);
+}
+
+.electric, #electric:hover, #electric[actived]  {
+    filter: invert(27%) sepia(100%) saturate(500%) hue-rotate(370deg) brightness(250%) contrast(100%);
+}
+
+.psychic, #psychic:hover, #psychic[actived]  {
+    filter: invert(27%) sepia(100%) saturate(500%) hue-rotate(320deg) brightness(250%) contrast(100%);
+}
+
+.steel, #steel:hover, #steel[actived]  {
+    filter: invert(27%) sepia(100%) saturate(500%) hue-rotate(140deg) brightness(150%) contrast(100%);
+}
+
+.unknown, #unknown:hover, #unknown[actived]  {
+    filter: invert(27%) sepia(0%) saturate(500%) hue-rotate(140deg) brightness(150%) contrast(100%);
+}
+
+.shadow, #shadow:hover, #shadow[actived]  {
+    filter: invert(27%) sepia(0%) saturate(500%) hue-rotate(140deg) brightness(150%) contrast(100%);
+}
+
+#todos:hover, #todos[actived]  {
+    filter: invert(27%) sepia(100%) saturate(500%) hue-rotate(190deg) brightness(150%) contrast(100%); 
+}
+
+
+
