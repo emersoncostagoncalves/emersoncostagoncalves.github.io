@@ -1,10 +1,11 @@
 [
     {"name": "Projeto Catálago de Filmes", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_1.png", "link" : "/barraflix/index.html"},
+    {"name": "Projeto Pokédex", "tecnologias": "React | SASS | JavaScript | API", "img": "../imagens/pokemon-thumb.png", "link" : "https://pokedex-gules-six.vercel.app/"},
     {"name": "Projeto League of Legends", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_2.png", "link" : "/lol/index.html"},
     {"name": "Projeto Gerenciador Kanban", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_3.png", "link" : "/gkanban.html"},
     {"name": "Projeto Previsão do Tempo", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_4.png", "link" : "/meteorologia.html"},
     {"name": "Projeto Calculadora", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_5.png", "link" : "/calculadora.html"},
     {"name": "Projeto Cronômetro", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_6.png", "link" : "/cronometro.html"},
     {"name": "Projeto Gerador de Senhas", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_7.png", "link" : "/geradordesenha.html"},
-    {"name": "Projeto Twitter", "tecnologias": "React | Sass | JavaScript", "img": "../imagens/thumb_8.png", "link" : "https://emersoncostagoncalves-twitter.vercel.app/"}
+    {"name": "Projeto Twitter", "tecnologias": "React | SASS | JavaScript", "img": "../imagens/thumb_8.png", "link" : "https://emersoncostagoncalves-twitter.vercel.app/"}
 ]
