@@ -65,7 +65,7 @@ export default function Cards({ name, image, id, type, imgType }) {
         fetch(url)
             .then(resp => resp.json())
             .then(dados => {
-
+                document.title = `${dados.name.charAt(0).toUpperCase()}${dados.name.slice(1,dados.name.lenght)} - Pokédex`
                 arr.push(<InfoPokemon type={dados.types[0].type.name} imgType={iconPokemons(dados.types[0].type.name)} func={removerInfoCard} abilities= {dados.abilities} weight={dados.weight} height={dados.height} speedStat={dados.stats[5].base_stat} spDefensekStat={dados.stats[4].base_stat} spAttackStat={dados.stats[3].base_stat} defenseStat={dados.stats[2].base_stat} attackStat={dados.stats[1].base_stat} hpStat={dados.stats[0].base_stat} name={dados.name} id={dados.id} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
                 setArr(arr)
                 console.log(dados.stats[0].base_stat)
@@ -78,6 +78,8 @@ export default function Cards({ name, image, id, type, imgType }) {
     }
 
     function removerInfoCard(){
+        const tag = document.querySelector("[actived='']")
+        document.title = `${tag.innerText?? "Início"} - Pokédex`
         if(arr.length === 0){
             return
         }

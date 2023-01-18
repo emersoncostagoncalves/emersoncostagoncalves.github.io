@@ -80,7 +80,7 @@ export default class ContainerItems extends Component {
 
                 //console.log(dados.next)
 
-                this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next} >Carregar Mais Pokémons</button>)
+                this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next} ><img src={pokebalRedIcon} alt="icon pokebola" />Carregar Mais Pokémons</button>)
                 this.setState({ btn: this.state.btn })
 
 
@@ -110,6 +110,7 @@ export default class ContainerItems extends Component {
 
 
     callAllPokemons(e) {
+        document.title = `${e.target.innerText} - Pokédex`
         const allBtns = document.querySelectorAll(".btn-menu")
         allBtns.forEach(el => {
             el.removeAttribute("actived")
@@ -123,7 +124,7 @@ export default class ContainerItems extends Component {
 
             //console.log(dados.next)
 
-            this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next} >Carregar Mais Pokémons</button>)
+            this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next}><img src={pokebalRedIcon} alt="icon pokebola" />Carregar mais Pokémons</button>)
             this.setState({ btn: this.state.btn })
 
 
@@ -152,6 +153,8 @@ export default class ContainerItems extends Component {
 
 
     saudacao(e) {
+        document.title = `${e.target.innerText} - Pokédex`
+
         const allBtns = document.querySelectorAll(".btn-menu")
         allBtns.forEach(el => {
             el.removeAttribute("actived")
@@ -214,7 +217,7 @@ export default class ContainerItems extends Component {
             .then(dados => {
 
 
-                this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next} >Carregar Mais Pokémons</button>)
+                this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next} ><img src={pokebalRedIcon} alt="icon pokebola" />Carregar Mais Pokémons</button>)
                 this.setState({ btn: this.state.btn })
 
                 console.log(dados)
@@ -234,10 +237,12 @@ export default class ContainerItems extends Component {
     }
 
     pesquisar(e) {
+        
         this.setState({ btn: [] })
 
 
         if (e.keyCode === 13) {
+            document.title = `Pesquisa - Pokédex`
             const url = `https://pokeapi.co/api/v2/pokemon/${e.target.value}`
 
             this.setState({ pokemonData: [] })

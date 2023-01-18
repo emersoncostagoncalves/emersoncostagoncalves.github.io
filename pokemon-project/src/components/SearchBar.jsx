@@ -4,7 +4,7 @@ import "../sass/SearchBar.scss"
 import searchIcon from "../icons/search-icon.svg"
 
 export default function SearchBar({func}) {
-    return <div className="search-bar">
+    return <div id="search-bar" className="search-bar">
         <div className="search-bar-info">
             <h1>Selecione o seu Pokémon</h1>
         </div>
