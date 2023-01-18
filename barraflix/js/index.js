@@ -11,6 +11,7 @@ const searchBar = document.querySelector(".searchBar")
 let pageNumber = 0;
 let tituloPtBR = [];
 
+
 btnHome.onclick = () => {
     window.location.href = "index.html"
 
@@ -51,7 +52,7 @@ fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=b502db08defaa68db6d
             el.onclick = e => {
                 // JQuery
 
-                
+
                 loadList(btnMenu, el);
 
 
@@ -207,12 +208,12 @@ function loadList(btnMenu, el, pageNumber = 1) {
                     //console.log(totalPages)
                 }
 
-                
+
             }
             // Card infos
             const todosCards = document.querySelectorAll("#cardBox")
             info(todosCards)
-            
+
         })
         .catch(err => {
             console.log(err)
@@ -820,18 +821,19 @@ function trailer(id) {
             const trailerContainer = document.createElement("div")
             trailerContainer.className = "trailer-container"
 
-            trailerContainer.innerHTML = `
-            <div class="trailer-container-header">
-               <h1>Trailer ${tituloPtBR[0]}</h1>
-               <img id="btn-close-trailer" class="btn-close-trailer" width="35px" src="/barraflix/icones/close-line.svg" title="Fechar Trailer">
-            </div>
-            <div class="trailer-container-movie">
-               <iframe class="trailer" width="90%" height="90%" src="https://www.youtube.com/embed/${trailer.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
+           
+                        trailerContainer.innerHTML = `
+                        <div class="trailer-container-header">
+                           <h1>Trailer ${tituloPtBR[0]}</h1>
+                           <img id="btn-close-trailer" class="btn-close-trailer" width="35px" src="/barraflix/icones/close-line.svg" title="Fechar Trailer">
+                        </div>
+                        <div class="trailer-container-movie">
+                           <iframe id="video" class="trailer" width="90%" height="90%" src="https://www.youtube.com/embed/${trailer.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
             
-            `
-
+                        
+                        `
+            
 
 
             infoContainer.insertAdjacentElement("afterbegin", trailerContainer)
@@ -842,6 +844,8 @@ function trailer(id) {
                 trailerContainer.remove()
                 infoBox.style.display = "flex"
             }
+
+            
         })
 }
 
