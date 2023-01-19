@@ -8,6 +8,8 @@
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 999;
     backdrop-filter: blur(5px);
+    animation-name: animaInfo;
+    animation-duration: 500ms;
 }
 
 .info-pokemon-container {
@@ -32,6 +34,22 @@
     animation-fill-mode: forwards;
 }
 
+[info-bg-close]{
+    animation-name: bgClose;
+    animation-duration: 500ms; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgClose {
+    from {
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+}
 
 @keyframes animaIn {
     from {
@@ -64,10 +82,12 @@
 
 @keyframes animaInfo {
     from {
-        opacity: 0;
+        backdrop-filter: blur(0px);
+        background-color: rgba(0, 0, 0, 0)
     }
     to {
-        opacity: 100%;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.4)
     }
 }
 

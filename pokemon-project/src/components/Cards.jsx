@@ -83,14 +83,18 @@ export default function Cards({ name, image, id, type, imgType }) {
         if (arr.length === 0) {
             return
         }
+
+        const infoBgCard = document.querySelector(".info-pokemon-bg")
+
+
         const infoCard = document.querySelector(".info-pokemon-container")
         infoCard.setAttribute("info-close", "")
 
-        infoCard.onanimationend = e => {
-            if (e.animationName === "animaOut") {
+        infoBgCard.setAttribute("info-bg-close", "")
+
+        infoBgCard.onanimationend = e => {
+            if (e.animationName === "bgClose")
                 setArr([])
-                
-            }
 
         }
 
