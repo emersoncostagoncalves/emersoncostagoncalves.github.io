@@ -36,7 +36,7 @@ export default function Cards({ name, image, id, type, imgType }) {
 
 
 
-   function iconPokemons(type) {
+    function iconPokemons(type) {
         const icon = [{ name: "normal", icon: iconNormal }, { name: "fighting", icon: iconFighting }, { name: "flying", icon: iconFlying }, { name: "poison", icon: iconPoison },
         { name: "ground", icon: iconGround }, { name: "rock", icon: iconRock }, { name: "bug", icon: iconBug }, { name: "ghost", icon: iconGhost }, { name: "steel", icon: iconSteel }, { name: "fire", icon: iconFire },
         { name: "water", icon: iconWater }, { name: "grass", icon: iconGrass }, { name: "electric", icon: iconEletric }, { name: "psychic", icon: iconPhyschic }, { name: "ice", icon: iconIce },
@@ -53,7 +53,7 @@ export default function Cards({ name, image, id, type, imgType }) {
 
 
     function RenderInfoCard(e) {
-        if(arr.length > 0){
+        if (arr.length > 0) {
             return
         }
         e.preventDefault()
@@ -65,8 +65,8 @@ export default function Cards({ name, image, id, type, imgType }) {
         fetch(url)
             .then(resp => resp.json())
             .then(dados => {
-                document.title = `${dados.name.charAt(0).toUpperCase()}${dados.name.slice(1,dados.name.lenght)} - Pokédex`
-                arr.push(<InfoPokemon type={dados.types[0].type.name} imgType={iconPokemons(dados.types[0].type.name)} func={removerInfoCard} abilities= {dados.abilities} weight={dados.weight} height={dados.height} speedStat={dados.stats[5].base_stat} spDefensekStat={dados.stats[4].base_stat} spAttackStat={dados.stats[3].base_stat} defenseStat={dados.stats[2].base_stat} attackStat={dados.stats[1].base_stat} hpStat={dados.stats[0].base_stat} name={dados.name} id={dados.id} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
+                document.title = `${dados.name.charAt(0).toUpperCase()}${dados.name.slice(1, dados.name.lenght)} - Pokédex`
+                arr.push(<InfoPokemon type={dados.types[0].type.name} imgType={iconPokemons(dados.types[0].type.name)} func={removerInfoCard} abilities={dados.abilities} weight={dados.weight} height={dados.height} speedStat={dados.stats[5].base_stat} spDefensekStat={dados.stats[4].base_stat} spAttackStat={dados.stats[3].base_stat} defenseStat={dados.stats[2].base_stat} attackStat={dados.stats[1].base_stat} hpStat={dados.stats[0].base_stat} name={dados.name} id={dados.id} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
                 setArr(arr)
                 console.log(dados.stats[0].base_stat)
             })
@@ -77,13 +77,25 @@ export default function Cards({ name, image, id, type, imgType }) {
 
     }
 
-    function removerInfoCard(){
+    function removerInfoCard() {
         const tag = document.querySelector("[actived='']")
-        document.title = `${tag.innerText?? "Início"} - Pokédex`
-        if(arr.length === 0){
+        document.title = `${tag.innerText ?? "Início"} - Pokédex`
+        if (arr.length === 0) {
             return
         }
-        setArr([])
+        const infoCard = document.querySelector(".info-pokemon-container")
+        infoCard.setAttribute("info-close", "")
+
+        infoCard.onanimationend = e => {
+            if (e.animationName === "animaOut") {
+                setArr([])
+                
+            }
+
+        }
+
+
+
     }
 
 
