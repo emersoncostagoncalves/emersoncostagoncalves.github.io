@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { useState } from 'react'
 
+
 import "../sass/Cards.scss"
 import "../sass/InfoPokemon.scss"
 import InfoPokemon from './InfoPokemon'

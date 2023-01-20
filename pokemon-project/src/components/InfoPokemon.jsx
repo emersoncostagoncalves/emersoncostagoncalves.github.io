@@ -54,7 +54,7 @@ function setBg(type){
     console.log(height.toString().split(""))
 
     return <div className="info-pokemon-bg">
-        <div className="info-pokemon-container" style={{background: `url(${setBg(type)})`}}>
+        <div className="info-pokemon-container" style={{background: `url(${setBg(type)})`, backgroundPosition: "center", backgroundSize: "contain"}}>
             <div className="info-pokemon-container-header">
                 <div className="text-container-title">
                     <div className="container-title-type">
@@ -62,7 +62,7 @@ function setBg(type){
                             <p>#{id}</p>
                         </div>
 
-                        <div class="info-type" >
+                        <div className="info-type" >
                             <img className={type} src={imgType} alt="type-icon" title={type} />
                             <p className={type}>{type}</p>
                         </div>
