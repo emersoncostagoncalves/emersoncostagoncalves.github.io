@@ -16,14 +16,16 @@
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 35%;
     max-width: 450px;
     height: 80%;
-    background-color: rgb(241, 84, 84);
+    /*background-color: rgb(241, 84, 84);*/
     border-radius: 20px;
     animation-name: animaIn;
     animation-duration: 500ms;
+    
     
     
 }
@@ -98,7 +100,7 @@
     align-items: center;
     width: 100%;
     height: 30%;
-    background-color: rgb(241, 84, 84);
+    /*background-color: rgb(241, 84, 84);*/
     > img {
         object-fit: contain;
         object-position: center;
@@ -138,14 +140,18 @@
 }
 
 .info-pokemon-text-container {
+    box-sizing: border-box;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 97%;
     height: 60%;
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
+    
+    
 }
 
 .info-pokemon-text-container-main {
@@ -259,10 +265,11 @@
 }
 
 .close-icon {
-    filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(325deg) brightness(100%) contrast(100%);
+    filter: invert(27%) sepia(0%) saturate(800%) hue-rotate(325deg) brightness(500%) contrast(100%);
     scale: 2.5;
     &:hover {
-        filter: invert(27%) sepia(100%) saturate(800%) hue-rotate(325deg) brightness(200%) contrast(100%);
+        cursor: pointer;
+        filter: invert(27%) sepia(0%) saturate(800%) hue-rotate(325deg) brightness(100%) contrast(100%);
     }
 }
 

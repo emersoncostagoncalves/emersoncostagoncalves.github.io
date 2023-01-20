@@ -17,8 +17,10 @@
     animation-direction: normal;
     transition: all 300ms;
     
+    
     &:hover{
         transform: scale(1.02);
+        cursor: pointer;
     }
     &:not(:hover){
         filter: brightness(98%);

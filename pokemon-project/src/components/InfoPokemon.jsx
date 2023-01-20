@@ -2,13 +2,59 @@ import React from "react"
 import { GrFormClose } from "react-icons/gr"
 
 
+import bgNormal from "../images/bg-normal.svg"
+import bgFighting from "../images/bg-fighting.svg"
+import bgFlying from "../images/bg-flying.svg"
+import bgPoison from "../images/bg-poison.svg"
+import bgGround from "../images/bg-ground.svg"
+import bgRock from "../images/bg-rock.svg"
+import bgBug from "../images/bg-bug.svg"
+import bgGhost from "../images/bg-ghost.svg"
+import bgSteel from "../images/bg-steel.svg"
+import bgFire from "../images/bg-fire.svg"
+import bgWater from "../images/bg-water.svg"
+import bgGrass from "../images/bg-grass.svg"
+import bgElectric from "../images/bg-electric.svg"
+import bgPsychic from "../images/bg-psychic.svg"
+import bgIce from "../images/bg-ice.svg"
+import bgDragon from "../images/bg-dragon.svg"
+import bgDark from "../images/bg-dark.svg"
+import bgFairy from "../images/bg-fairy.svg"
+
 export default function InfoPokemon({ type, imgType, func, image, name, id, height, weight, abilities, weak, hpStat, attackStat, defenseStat, spAttackStat, spDefensekStat, speedStat }) {
+
+    const bgInfo = [
+        {name: "normal", bg: bgNormal },
+        {name: "fighting", bg: bgFighting },
+        {name: "flying", bg: bgFlying },
+        {name: "poison", bg: bgPoison },
+        {name: "ground", bg: bgGround },
+        {name: "rock", bg: bgRock },
+        {name: "bug", bg: bgBug },
+        {name: "ghost", bg: bgGhost},
+        {name: "steel", bg: bgSteel },
+        {name: "fire", bg: bgFire },
+        {name: "water", bg: bgWater },
+        {name: "grass", bg: bgGrass },
+        {name: "electric", bg: bgElectric },
+        {name: "psychic", bg: bgPsychic },
+        {name: "ice", bg: bgIce },
+        {name: "dragon", bg: bgDragon },
+        {name: "dark", bg: bgDark},
+        {name: "fairy", bg: bgFairy }
+    ]
+
+function setBg(type){
+    const bg = bgInfo.filter(el => el.name === type)
+    console.log(bg)
+    return bg[0].bg
+}
 
 
     console.log(height.toString().split(""))
 
     return <div className="info-pokemon-bg">
-        <div className="info-pokemon-container">
+        <div className="info-pokemon-container" style={{background: `url(${setBg(type)})`}}>
             <div className="info-pokemon-container-header">
                 <div className="text-container-title">
                     <div className="container-title-type">
