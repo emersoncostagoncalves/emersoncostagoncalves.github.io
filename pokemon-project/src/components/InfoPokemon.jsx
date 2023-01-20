@@ -57,7 +57,7 @@ export default function InfoPokemon({ type, imgType, func, image, name, id, heig
 
     return (
         <div className="info-pokemon-bg">
-            <div className="info-pokemon-container" style={{ background: `url(${setBg(type)})`, backgroundPosition: "center", backgroundSize: "contain" }}>
+            <div className="info-pokemon-container" >
                 <div className="info-pokemon-container-header">
                     <div className="text-container-title">
                         <div className="container-title-type">
@@ -137,7 +137,7 @@ export default function InfoPokemon({ type, imgType, func, image, name, id, heig
                         </div>
                     </div>
                 </div>
-
+                <img className="bg-image" src={setBg(type)} alt="bg-info"/>
             </div>
 
         </div>
