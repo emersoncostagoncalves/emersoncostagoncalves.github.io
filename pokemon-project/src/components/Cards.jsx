@@ -30,11 +30,12 @@ import iconFairy from "../icons/fairy-icon.svg"
 import iconUnknown from "../icons/normal-icon.svg"
 import iconShadow from "../icons/normal-icon.svg"
 
+
+
 export default function Cards({ name, image, id, type, imgType }) {
 
     let [info, setInfo] = useState(false)
     let [arr, setArr] = useState([])
-
 
 
     function iconPokemons(type) {
@@ -46,11 +47,10 @@ export default function Cards({ name, image, id, type, imgType }) {
         ]
 
         const pokeType = icon.filter(el => el.name === type)
-        console.log(pokeType[0].icon)
+        //console.log(pokeType[0].icon)
         return pokeType[0].icon
 
     }
-
 
 
     function RenderInfoCard(e) {
@@ -60,7 +60,7 @@ export default function Cards({ name, image, id, type, imgType }) {
         e.preventDefault()
         setArr([])
         const id = parseInt(e.currentTarget.attributes.id.value.replace("#", ""), 10)
-        console.log(id)
+        //console.log(id)
         const url = `https://pokeapi.co/api/v2/pokemon/${id}`
 
         fetch(url)
@@ -69,7 +69,8 @@ export default function Cards({ name, image, id, type, imgType }) {
                 document.title = `${dados.name.charAt(0).toUpperCase()}${dados.name.slice(1, dados.name.lenght)} - Pokédex`
                 arr.push(<InfoPokemon type={dados.types[0].type.name} imgType={iconPokemons(dados.types[0].type.name)} func={removerInfoCard} abilities={dados.abilities} weight={dados.weight} height={dados.height} speedStat={dados.stats[5].base_stat} spDefensekStat={dados.stats[4].base_stat} spAttackStat={dados.stats[3].base_stat} defenseStat={dados.stats[2].base_stat} attackStat={dados.stats[1].base_stat} hpStat={dados.stats[0].base_stat} name={dados.name} id={dados.id} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
                 setArr(arr)
-                console.log(dados.stats[0].base_stat)
+                console.log(arr)
+
             })
 
         setInfo(info = true)
@@ -99,25 +100,23 @@ export default function Cards({ name, image, id, type, imgType }) {
 
         }
 
-
-
     }
 
-
-
-    return <div id={id} onClick={RenderInfoCard} className='card'>
-        <div className='card-img'>
-            <img src={image} alt={name} />
+    return (
+        <div id={id} onClick={RenderInfoCard} className='card'>
+            <div className='card-img'>
+                <img src={image} alt={name} />
+            </div>
+            <div className='card-id'>
+                <p>{id}</p>
+            </div>
+            <div className='card-footer-info'>
+                <h1>{name}</h1>
+                <img className={type} src={imgType} alt={type} />
+            </div>
+            {info && ReactDOM.createPortal([...arr], document.querySelector(".app"))}
         </div>
-        <div className='card-id'>
-            <p>{id}</p>
-        </div>
-        <div className='card-footer-info'>
-            <h1>{name}</h1>
-            <img className={type} src={imgType} alt={type} />
-        </div>
-        {info && ReactDOM.createPortal([...arr], document.querySelector(".app"))}
-    </div>
+    )
 }
 
 
