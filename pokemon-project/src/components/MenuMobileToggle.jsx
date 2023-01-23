@@ -1,31 +1,35 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 import "../sass/MenuMobileToggle.scss"
 
 export default function MenuMobileToggle() {
 
+const [menuMobile, setmenuMobile] = useState("")
+const [inputMenu, setinputMenu] = useState("")
 
+
+useEffect(() => {
+    setmenuMobile(document.querySelector(".menu-mobile-container"))
+    setinputMenu(document.querySelector("#checkbox"))
+})
 
 function displayMenuMobile(){
-    const menuMobile = document.querySelector(".menu-mobile-container")
-    const inputMenu = document.querySelector("#checkbox")
-    console.log("Cliquei no menu mobile")
     
 
-if(inputMenu.checked === true){
-    menuMobile.classList.toggle("display")
-}else{
-    menuMobile.classList.toggle("display")
-}
+ menuMobile.classList.toggle("display")
+    
+
 
     
 }
 
 
     return (
-        <div  className="menu-toggle-container" for="checkbox">
-            <input id="checkbox" type="checkbox"></input>
-            <label class="menu-label" onClick={displayMenuMobile} for="checkbox">
+        <div className="menu-toggle-container" >
+            <input id="checkbox" type="checkbox" ></input>
+            <label onClick={displayMenuMobile}  class="menu-label" for="checkbox">
                 <span></span>
                 <span></span>
                 <span></span>
