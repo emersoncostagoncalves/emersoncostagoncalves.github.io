@@ -1,5 +1,6 @@
 import React from "react"
 import { Component } from "react"
+import { createPortal } from "react-dom"
 
 import SearchBar from "./SearchBar"
 import ButtonMenu from "./ButtonMenu"
@@ -33,6 +34,7 @@ import Logo from "../images/pokemon-logo.svg"
 import pokeballBlue from "../icons/pokeball-blue.svg"
 
 import pokebalRedIcon from "../icons/pokeball-red-icon.svg"
+import MenuMobile from "./MenuMobile"
 
 export default class ContainerItems extends Component {
 
@@ -44,7 +46,9 @@ export default class ContainerItems extends Component {
             pokemonsQnt: "",
             pokemonAll: [],
             pages: [],
-            btn: []
+            btn: [],
+            isMount: false
+            
         }
         this.saudacao = this.saudacao.bind(this)
         this.loadPages = this.loadPages.bind(this)
@@ -54,13 +58,26 @@ export default class ContainerItems extends Component {
 
     }
 
+componentDidUpdate(){
+   console.log(`Atualizei ${this.state.isMount}`)
+}
+
+
+
     componentDidMount() {
         if (this.loadAllPokemons) {
             return
         }
 
+        const menuMobilePortal = document.createElement("div")
+        menuMobilePortal.className = "menuMobile-Portal"
+        const tagHeader = document.querySelector(".header")
+        tagHeader.insertAdjacentElement("afterend", menuMobilePortal)
+
+        this.setState({isMount: true})
+
         const btnTodos = document.querySelector("#todos")
-        btnTodos.setAttribute("actived","")
+        btnTodos.setAttribute("actived", "")
 
         const urlType = "https://pokeapi.co/api/v2/type/"
         fetch(urlType)
@@ -115,40 +132,40 @@ export default class ContainerItems extends Component {
         allBtns.forEach(el => {
             el.removeAttribute("actived")
         })
-        e.currentTarget.setAttribute("actived","")
+        e.currentTarget.setAttribute("actived", "")
 
         this.setState({ pokemonData: [] })
         this.loadAllPokemons = fetch("https://pokeapi.co/api/v2/pokemon")
-        .then(resp => resp.json())
-        .then(dados => {
+            .then(resp => resp.json())
+            .then(dados => {
 
-            //console.log(dados.next)
+                //console.log(dados.next)
 
-            this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next}><img src={pokebalRedIcon} alt="icon pokebola" />Carregar mais Pokémons</button>)
-            this.setState({ btn: this.state.btn })
-
-
-            this.setState({ pokemonsQnt: dados.count })
-            this.state.pages.push(dados.next)
-            this.setState({ pages: this.state.pages })
+                this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next}><img src={pokebalRedIcon} alt="icon pokebola" />Carregar mais Pokémons</button>)
+                this.setState({ btn: this.state.btn })
 
 
-            dados.results.forEach(el => {
-                fetch(el.url)
-                    .then(resp => resp.json())
-                    .then(dados => {
+                this.setState({ pokemonsQnt: dados.count })
+                this.state.pages.push(dados.next)
+                this.setState({ pages: this.state.pages })
 
-                        this.state.pokemonData.push(<Cards name={dados.name} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} id={`#${dados.id}`} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
-                        this.setState({ pokemonData: this.state.pokemonData })
-                        //console.log(dados.types[0].type.name)
-                    })
+
+                dados.results.forEach(el => {
+                    fetch(el.url)
+                        .then(resp => resp.json())
+                        .then(dados => {
+
+                            this.state.pokemonData.push(<Cards name={dados.name} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} id={`#${dados.id}`} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
+                            this.setState({ pokemonData: this.state.pokemonData })
+                            //console.log(dados.types[0].type.name)
+                        })
+
+                })
+
+
+
 
             })
-
-
-
-
-        })
     }
 
 
@@ -159,7 +176,7 @@ export default class ContainerItems extends Component {
         allBtns.forEach(el => {
             el.removeAttribute("actived")
         })
-        e.currentTarget.setAttribute("actived","")
+        e.currentTarget.setAttribute("actived", "")
 
         this.setState({ btn: [] })
         this.setState({ pokemonData: [] })
@@ -237,7 +254,7 @@ export default class ContainerItems extends Component {
     }
 
     pesquisar(e) {
-        
+
         this.setState({ btn: [] })
 
 
@@ -292,15 +309,14 @@ export default class ContainerItems extends Component {
                         <nav>
                             <ButtonMenu classe="todos" image={pokeballBlue} key="todos" id="todos" name="todos" func={this.callAllPokemons} />
                             {dados.map((el, i) => (
-                                <ButtonMenu  image={icon[i]} key={el.name} id={el.name} name={el.name} url={el.url} func={this.saudacao} />
+                                <ButtonMenu image={icon[i]} key={el.name} id={el.name} name={el.name} url={el.url} func={this.saudacao} />
                             ))}
                         </nav>
-
                     </aside>
                     <div className="container-list-items">
                         <div className="container-list-items-header">
                             <img src={pokebalRedIcon} alt="Pokeball" />
-                            <h1>{pokemonsQnt > 1 ? pokemonsQnt + " Pokémons" : pokemonsQnt + " Pokémon" }  </h1>
+                            <h1>{pokemonsQnt > 1 ? pokemonsQnt + " Pokémons" : pokemonsQnt + " Pokémon"}  </h1>
                         </div>
 
                         <div className="container-cards">
@@ -313,7 +329,14 @@ export default class ContainerItems extends Component {
                         </div>
                     </div>
                 </div>
+                { this.state.isMount ? createPortal(<MenuMobile> <nav>
+                            <ButtonMenu classe="todos" image={pokeballBlue} key="todos" id="todos" name="todos" func={this.callAllPokemons} />
+                            {dados.map((el, i) => (
+                                <ButtonMenu image={icon[i]} key={el.name} id={el.name} name={el.name} url={el.url} func={this.saudacao} />
+                            ))}
+                        </nav></MenuMobile>, document.querySelector(".menuMobile-Portal")) : null}
             </div>
+
         )
 
     }

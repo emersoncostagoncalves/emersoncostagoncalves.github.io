@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+
 .search-bar {
     box-sizing: border-box;
     display: flex;
@@ -10,35 +12,47 @@
     padding-bottom: 3rem;
 }
 
-.search-bar-input{
+.search-bar-input {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    >img{
-        position: relative;
-        width: 20px;
-        left: -35px
+}
+
+.search {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 1rem;
+    @include mobile {
+        width: 90%;
     }
-    ::placeholder{
+    > img {
+        width: 20px;
+    }
+    ::placeholder {
         color: rgb(126, 126, 126);
     }
 }
 
-.search-bar-info{
-    >h1{padding-right: 25px;}
+.search-bar-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.search-input{
+.search-input {
     position: relative;
     border: none;
     max-width: 500px;
-    width: 30%;
+    width: 90%;
     font-size: 1rem;
-    padding: 1rem;
-    border-radius: 20px;
-    &:focus{
+    &:focus {
         outline: none;
     }
-    
 }

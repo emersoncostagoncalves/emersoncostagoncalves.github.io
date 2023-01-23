@@ -1,0 +1,33 @@
+.menu-mobile-container{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: none;
+    margin-top: 100px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.display{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    left: 0px;
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: flex-start;
+        width: 100%;
+        height: 90%;
+        gap: 1rem;
+        .btn-menu{
+            width: auto;
+            height: auto;
+            
+        }
+    }
+    
+}

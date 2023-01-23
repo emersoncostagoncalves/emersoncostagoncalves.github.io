@@ -9,8 +9,11 @@ export default function SearchBar({func}) {
             <h1>Selecione o seu Pokémon</h1>
         </div>
         <div className="search-bar-input">
+            <div className="search">
             <input onKeyUp={func} className="search-input" placeholder="Pesquise por nome ou código..." type="text" name="" id="" />
             <img src={searchIcon} alt="search-icon" title="Pesquisar" />
+            </div>
+            
         </div>
     </div>
 }
