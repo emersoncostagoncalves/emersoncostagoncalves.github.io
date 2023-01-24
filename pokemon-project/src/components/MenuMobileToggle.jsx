@@ -7,29 +7,26 @@ import "../sass/MenuMobileToggle.scss"
 export default function MenuMobileToggle() {
 
 const [menuMobile, setmenuMobile] = useState("")
-const [inputMenu, setinputMenu] = useState("")
+
 
 
 useEffect(() => {
     setmenuMobile(document.querySelector(".menu-mobile-container"))
-    setinputMenu(document.querySelector("#checkbox"))
+    
 })
 
 function displayMenuMobile(){
-    
-
  menuMobile.classList.toggle("display")
+ console.log("cliquei no label")
     
 
-
-    
 }
 
 
     return (
         <div className="menu-toggle-container" >
-            <input id="checkbox" type="checkbox" ></input>
-            <label onClick={displayMenuMobile}  class="menu-label" for="checkbox">
+            <input onChange={displayMenuMobile}id="checkbox" type="checkbox" ></input>
+            <label className="menu-label" htmlFor="checkbox">
                 <span></span>
                 <span></span>
                 <span></span>

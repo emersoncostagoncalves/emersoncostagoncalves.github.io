@@ -48,7 +48,7 @@ export default class ContainerItems extends Component {
             pages: [],
             btn: [],
             isMount: false
-            
+
         }
         this.saudacao = this.saudacao.bind(this)
         this.loadPages = this.loadPages.bind(this)
@@ -58,9 +58,9 @@ export default class ContainerItems extends Component {
 
     }
 
-componentDidUpdate(){
-   console.log(`Atualizei ${this.state.isMount}`)
-}
+    componentDidUpdate() {
+        //console.log(`Atualizei ${this.state.isMount}`)
+    }
 
 
 
@@ -74,7 +74,7 @@ componentDidUpdate(){
         const tagHeader = document.querySelector(".header")
         tagHeader.insertAdjacentElement("afterend", menuMobilePortal)
 
-        this.setState({isMount: true})
+        this.setState({ isMount: true })
 
         const btnTodos = document.querySelector("#todos")
         btnTodos.setAttribute("actived", "")
@@ -111,7 +111,7 @@ componentDidUpdate(){
                         .then(resp => resp.json())
                         .then(dados => {
 
-                            this.state.pokemonData.push(<Cards name={dados.name} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} id={`#${dados.id}`} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
+                            this.state.pokemonData.push(<Cards key={dados.id} name={dados.name} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} id={`#${dados.id}`} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
                             this.setState({ pokemonData: this.state.pokemonData })
                             //console.log(dados.types[0].type.name)
                         })
@@ -155,7 +155,7 @@ componentDidUpdate(){
                         .then(resp => resp.json())
                         .then(dados => {
 
-                            this.state.pokemonData.push(<Cards name={dados.name} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} id={`#${dados.id}`} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
+                            this.state.pokemonData.push(<Cards key={dados.id} name={dados.name} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} id={`#${dados.id}`} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
                             this.setState({ pokemonData: this.state.pokemonData })
                             //console.log(dados.types[0].type.name)
                         })
@@ -193,7 +193,7 @@ componentDidUpdate(){
                         fetch(url)
                             .then(resp => resp.json())
                             .then(dados => {
-                                this.state.pokemonData.push(<Cards name={dados.name} id={`#${dados.id}`} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
+                                this.state.pokemonData.push(<Cards key={dados.id} name={dados.name} id={`#${dados.id}`} type={dados.types[0].type.name} imgType={this.iconPokemons(dados.types[0].type.name)} image={dados.sprites.other.home.front_default ? dados.sprites.other.home.front_default : Logo} />)
                                 this.setState({ pokemonData: this.state.pokemonData })
                                 //console.log(dados)
                             })
@@ -219,7 +219,7 @@ componentDidUpdate(){
         ]
 
         const pokeType = icon.filter(el => el.name === type)
-        console.log(pokeType[0].icon)
+        //console.log(pokeType[0].icon)
         return pokeType[0].icon
 
     }
@@ -237,7 +237,7 @@ componentDidUpdate(){
                 this.state.btn.push(<button onClick={this.loadPages} className="btn-more" url={dados.next} ><img src={pokebalRedIcon} alt="icon pokebola" />Carregar Mais Pokémons</button>)
                 this.setState({ btn: this.state.btn })
 
-                console.log(dados)
+                //console.log(dados)
                 dados.results.forEach(el => {
                     fetch(el.url)
                         .then(resp => resp.json())
@@ -269,7 +269,7 @@ componentDidUpdate(){
             fetch(url)
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data)
+                    //console.log(data)
                     this.state.pokemonData.push(<Cards name={data.name} id={`#${data.id}`} type={data.types[0].type.name} imgType={this.iconPokemons(data.types[0].type.name)} image={data.sprites.other.home.front_default ? data.sprites.other.home.front_default : Logo} />)
                     this.setState({ pokemonData: this.state.pokemonData })
 
@@ -278,7 +278,7 @@ componentDidUpdate(){
                     this.setState({ pokemonsQnt: 0 })
                     this.state.pokemonData.push(<p>Nenhum pokemon encontrado...</p>)
                     this.setState({ pokemonData: this.state.pokemonData })
-                    console.log(error)
+                    //console.log(error)
                 })
         }
     }
@@ -309,7 +309,7 @@ componentDidUpdate(){
                         <nav>
                             <ButtonMenu classe="todos" image={pokeballBlue} key="todos" id="todos" name="todos" func={this.callAllPokemons} />
                             {dados.map((el, i) => (
-                                <ButtonMenu image={icon[i]} key={el.name} id={el.name} name={el.name} url={el.url} func={this.saudacao} />
+                                <ButtonMenu image={icon[i]} key={i} id={el.name} name={el.name} url={el.url} func={this.saudacao} />
                             ))}
                         </nav>
                     </aside>
@@ -329,12 +329,12 @@ componentDidUpdate(){
                         </div>
                     </div>
                 </div>
-                { this.state.isMount ? createPortal(<MenuMobile> <nav>
-                            <ButtonMenu classe="todos" image={pokeballBlue} key="todos" id="todos" name="todos" func={this.callAllPokemons} />
-                            {dados.map((el, i) => (
-                                <ButtonMenu image={icon[i]} key={el.name} id={el.name} name={el.name} url={el.url} func={this.saudacao} />
-                            ))}
-                        </nav></MenuMobile>, document.querySelector(".menuMobile-Portal")) : null}
+                {this.state.isMount ? createPortal(<MenuMobile> <nav>
+                    <ButtonMenu classe="todos" image={pokeballBlue} key="todos" id="todos" name="todos" func={this.callAllPokemons} />
+                    {dados.map((el, i) => (
+                        <ButtonMenu image={icon[i]} key={i} id={el.name} name={el.name} url={el.url} func={this.saudacao} />
+                    ))}
+                </nav></MenuMobile>, document.querySelector(".menuMobile-Portal")) : null}
             </div>
 
         )
