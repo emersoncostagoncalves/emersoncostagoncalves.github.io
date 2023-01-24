@@ -8,6 +8,7 @@
     align-items: center;
     width: 40px;
     height: 40px;
+    
 
     @include mobile {
         display: flex;
@@ -18,9 +19,11 @@
         height: 40px;
         position: absolute;
         opacity: 0;
+        cursor: pointer;
     }
 
     label {
+        cursor: pointer;
         box-sizing: border-box;
         overflow: hidden;
         display: flex;
