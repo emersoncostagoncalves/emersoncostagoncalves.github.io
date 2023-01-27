@@ -109,7 +109,7 @@ border: none;
 text-decoration: ${props => props.state === "done" ? "line-through" : "none"};
 outline: none;
 :disabled{
-        background-color:none;
+        background-color:#ffffff;
     }
 @media (max-width: 767px){
         width: 75%;
