@@ -54,7 +54,9 @@ height: 100%;
 overflow-y: scroll;
 gap: 1rem;
 p{
-    color: #8a8a8a
+    font-size: 0.9rem;
+    color: #8a8a8a;
+    font-weight: 400;
 }
 span{
     text-decoration: underline;

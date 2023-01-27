@@ -25,6 +25,6 @@ div{
 }
 +h1{
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 `

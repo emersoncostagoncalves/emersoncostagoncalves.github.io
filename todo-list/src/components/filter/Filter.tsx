@@ -17,7 +17,7 @@ const { setFilterTasks } = useFunctions()
 
     return (
         <>
-        <Button filter={props.filter} id="done" onClick={(e) => setFilterTasks(e, props.filter, props.setFilter)}>Concluidas</Button>
+        <Button filter={props.filter} id="done" onClick={(e) => setFilterTasks(e, props.filter, props.setFilter)}>Concluídas</Button>
         <Button filter={props.filter} id="pendent" onClick={(e) => setFilterTasks(e,props.filter, props.setFilter)}>Pendentes</Button>
         
         </>
