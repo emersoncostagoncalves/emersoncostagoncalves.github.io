@@ -228,8 +228,7 @@ function SendScrap(e) {
 export default function ContainerCenter() {
 
     return <div className="container-center">
-        <Tweetar />
-
+        <Tweetar/>
     </div>
 
 
