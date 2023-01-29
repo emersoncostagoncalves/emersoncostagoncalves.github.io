@@ -14,13 +14,13 @@
   scrollbar-color: #4DA6B3 #F7F7F8;
 }
 
-/* Works on Chrome, Edge, and Safari */
+/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 12px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #F7F7F8;
+  background: #ffffff;
 }
 
 *::-webkit-scrollbar-thumb {
