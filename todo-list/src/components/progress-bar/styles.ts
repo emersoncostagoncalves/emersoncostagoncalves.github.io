@@ -4,6 +4,7 @@ export const Container = styled.div`
 background-color: #e4e4e4;
 width: 100%;
 height: 30px;
+min-height: 30px;
 `
 
 interface ProgressProps {

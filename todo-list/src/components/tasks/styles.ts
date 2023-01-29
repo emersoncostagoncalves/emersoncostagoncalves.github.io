@@ -8,8 +8,8 @@ align-items: center;
 flex-direction: column;
 width: 100%;
 height: 70%;
-//border: 1px solid #e4e4e4;
 gap: 1rem;
+
 `
 
 export const TaskInput = styled.div`
@@ -17,7 +17,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 width: 100%;
-height: auto;
+min-height:48px;
 border-radius: 5px;
 overflow: hidden;
 border: 1px solid #e4e4e4;
@@ -26,6 +26,7 @@ input{
     height: 40px;
     border: none;
     padding: 1rem;
+    outline:none;
     
 }
 button{
@@ -50,9 +51,12 @@ justify-content: flex-start;
 align-items: flex;
 flex-direction: column;
 width: 100%;
-height: 100%;
+height: 90%;
 overflow-y: scroll;
 gap: 1rem;
+padding-bottom: 1rem;
+
+
 p{
     font-size: 0.9rem;
     color: #8a8a8a;

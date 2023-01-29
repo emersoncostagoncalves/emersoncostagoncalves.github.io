@@ -11,12 +11,14 @@ export default function useFunctions() {
     let [isEdit, setIsEdit] = useState<boolean>(false)
     let [editTaskText, setEditTaskText] = useState<string>("")
     let [contador, setContador] = useState<number>(0)
+    let [inputTarget, setInputTarget] = useState<any>("")
     
 
 
 
     function AddTask(setbar: any, tasks: any, setTasks: any) {
         if (text.replaceAll(" ", "") === "") {
+            
             return
         }
         const task = new useTask(text, "pendent", id, true)
@@ -25,12 +27,15 @@ export default function useFunctions() {
         setNewTask(true)
         setId(id += 1)
         updateBar(setbar, tasks)
-
+        inputTarget.value = ""
+        setText("")
+        console.log(inputTarget)
     }
 
     function getTextInput(e: any) {
         
         setText(e.target.value)
+        setInputTarget(e.currentTarget)
     }
 
 

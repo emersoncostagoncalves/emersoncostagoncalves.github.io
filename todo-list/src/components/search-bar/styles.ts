@@ -6,6 +6,7 @@ justify-content: space-between;
 align-items: center;
 width: 100%;
 height: 80px;
+min-height: 80px;
 
 @media (max-width: 767px){
      flex-direction:column-reverse;
