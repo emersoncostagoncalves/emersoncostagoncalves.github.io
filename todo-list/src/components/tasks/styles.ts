@@ -21,6 +21,9 @@ min-height:48px;
 border-radius: 5px;
 overflow: hidden;
 border: 1px solid #e4e4e4;
+@media (max-width: 767px){
+    min-height:40px; 
+}
 input{
     width: 92%;
     height: 40px;
