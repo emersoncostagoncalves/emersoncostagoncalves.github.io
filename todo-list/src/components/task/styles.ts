@@ -34,12 +34,13 @@ export const ButtonOn = styled.button<ButtonOnProps>`
 display: flex;
 justify-content:center;
 align-items: center;
-height: 100%;
+height: 48px;
 border: none;
 background-color: ${props => props.color ?? "white"};
 width: 100%;
 @media (max-width: 767px){
         width: 50%;
+        height: 100%;
         svg{
         transform: scale(0.8)
     }
@@ -112,7 +113,7 @@ outline: none;
         background-color:#ffffff;
     }
 @media (max-width: 767px){
-        width: 75%;
+        width: 76%;
     }
     
 `
