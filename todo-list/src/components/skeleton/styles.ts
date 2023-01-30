@@ -12,6 +12,7 @@ export const Container = styled.div`
   width: 80%;
   height: 100%;
   padding: 2rem;
+  padding-top: 3rem;
   overflow: hidden;
   box-shadow: 10px 10px 80px rgba(0,0,0,.05);
   gap:1rem;
