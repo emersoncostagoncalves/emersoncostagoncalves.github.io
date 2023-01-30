@@ -12,13 +12,13 @@ export default function useFunctions() {
     let [editTaskText, setEditTaskText] = useState<string>("")
     let [contador, setContador] = useState<number>(0)
     let [inputTarget, setInputTarget] = useState<any>("")
-    
+
 
 
 
     function AddTask(setbar: any, tasks: any, setTasks: any) {
         if (text.replaceAll(" ", "") === "") {
-            
+
             return
         }
         const task = new useTask(text, "pendent", id, true)
@@ -33,7 +33,7 @@ export default function useFunctions() {
     }
 
     function getTextInput(e: any) {
-        
+
         setText(e.target.value)
         setInputTarget(e.currentTarget)
     }
@@ -69,12 +69,10 @@ export default function useFunctions() {
         if (e.target.checked) {
             task.state = "done"
             setContador(contador += 1)
-            //setContador(contador += 1)
 
         } else {
             task.state = "pendent"
             setNewTask(true)
-            //setContador(contador -= 1)
             setContador(contador -= 1)
         }
 
@@ -99,7 +97,7 @@ export default function useFunctions() {
         const qntTasks = tasks.length
         qntTasks > 0 ? setbar(100 / qntTasks * contador) : setbar(0)
 
-        
+
     }
 
 
@@ -107,12 +105,12 @@ export default function useFunctions() {
         const texto = e.target.value.toLowerCase()
         pesquisa = texto
         setPesquisa(pesquisa)
-        
+
     }
 
     function setFilterTasks(e: any, filter: string, setFilter: any) {
         const id = e.currentTarget.id
-        
+
         if (filter !== id) {
             filter = id
             setFilter(filter)
@@ -120,10 +118,6 @@ export default function useFunctions() {
             filter = "todos"
             setFilter(filter)
         }
-
-
-
-       
 
     }
 
