@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-display:flex;
+  display:flex;
   flex-direction: column;
   box-sizing: border-box;
   text-align: center;
@@ -16,6 +16,7 @@ display:flex;
   box-shadow: 10px 10px 80px rgba(0,0,0,.05);
   gap:1rem;
   @media (max-width: 767px){
+        padding-top: 4rem;
         width: 100%;
         height: 100%;
         max-height: 100%;
@@ -25,17 +26,24 @@ display:flex;
 interface RowsProps {
     height: number
     direction?: string
+    mobileH: number
+    justify?: string
 }
 
 export const Rows = styled.div<RowsProps>`
 display: flex;
 flex-direction: ${props => props.direction ?? "row"};
-justify-content: space-between;
+justify-content: ${props => props.justify ?? "space-between"};
 align-items: flex-start;
 width: 100%;
-height: ${props => props.height+"%"};
+height: ${props => props.height + "%"};
 //background-color: red;
-
+@media (max-width: 767px){
+        width: 100%;
+        height: ${props => props.mobileH+"%"};
+        gap: 0.5rem;
+        
+    }
 
 `
 
@@ -46,8 +54,8 @@ interface ItemsProps {
 
 export const Items = styled.div<ItemsProps>`
 display: flex;
-width: ${props => props.width+"%"};
-height: ${props => props.height+"%"};
+width: ${props => props.width + "%"};
+height: ${props => props.height + "%"};
 background-color: #dbdbdb;
 border-radius: 50px;
 background-image: linear-gradient(
