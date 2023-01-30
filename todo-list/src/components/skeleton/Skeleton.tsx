@@ -10,7 +10,7 @@ export default function Skeleton(){
             <Items width={30} height={60}/>
             </Rows>
 
-            <Rows height={5} mobileH={5}>
+            <Rows height={5} mobileH={4}>
             <Items width={100} height={100}/>
             </Rows>
 

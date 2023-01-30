@@ -16,10 +16,11 @@ export const Container = styled.div`
   box-shadow: 10px 10px 80px rgba(0,0,0,.05);
   gap:1rem;
   @media (max-width: 767px){
-        padding-top: 4rem;
         width: 100%;
         height: 100%;
         max-height: 100%;
+        padding: 1.5rem;
+        padding-top: 3.5rem;
     }
 `
 
