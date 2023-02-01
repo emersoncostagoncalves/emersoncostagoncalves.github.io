@@ -39,8 +39,6 @@ window.onresize = e => {
 }
 
 
-
-
 btnMenuMobile.onclick = () => {
     if (!animationEnd) {
         checkMenuMobile.disabled = true
@@ -84,9 +82,6 @@ btnMenuMobile.onclick = () => {
 
     }
 }
-
-
-
 
 
 redesSociais.forEach(el => {
@@ -179,7 +174,7 @@ ${el.Developer[key]}
             //console.log(Object.keys(el.Design))
         }
         )
-        
+
     })
 
 // Call Portifolio
@@ -223,3 +218,19 @@ fetch("../json/portifolio.json")
         })
     })
 
+
+//Send mensagem WhatsApp
+
+const btnSubmit = document.querySelector(".btn-submit")
+console.log(btnSubmit)
+
+btnSubmit.onclick = () => {
+    const name = document.querySelector("[name=Nome]")
+    const phone = document.querySelector("[name=Telefone]")
+    const assunto = document.querySelector("[name=Assunto]")
+    const email = document.querySelector("[name=Email]")
+    const msg = document.querySelector("[name=Mensagem]")
+
+
+    window.open(`https://wa.me/5547992735961?text=Nome:%20${name.value}%20Telefone:%20${phone.value}%20Assunto:%20${assunto.value}%20Email:%20${email.value}%20Mensagem:%20${msg.value}`, "_blank")
+}
