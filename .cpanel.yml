@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/rafaelsandem/public_html/todo-list
+    - export DEPLOYPATH=/home/rafaelsandem/public_html/
     - /bin/cp -R todo-list $DEPLOYPATH
