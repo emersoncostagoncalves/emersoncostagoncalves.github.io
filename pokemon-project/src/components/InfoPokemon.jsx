@@ -102,7 +102,6 @@ export default function InfoPokemon({ type, imgType, func, image, name, id, heig
                             </div>
                         </div>
                         <div className="text-container-weak">
-                            <p>Fraquezas</p>
                             <div>
                                 {weak}
                             </div>
@@ -137,7 +136,7 @@ export default function InfoPokemon({ type, imgType, func, image, name, id, heig
                         </div>
                     </div>
                 </div>
-                <img className="bg-image" src={setBg(type)} alt="bg-info"/>
+                <img className="bg-image" src={setBg(type)} alt="bg-info" />
             </div>
 
         </div>
