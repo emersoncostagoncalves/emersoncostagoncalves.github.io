@@ -18,8 +18,10 @@
             "SASS": "85%",
             "Bootstrap": "73%",
             "React": "80%",
-            "NextJs": "84%"
-            
+            "NextJs": "84%",
+            "NodeJs": "65%",
+            "API Rest": "90%",
+            "MySQL": "62%"
         }
     }
 ]
