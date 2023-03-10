@@ -5,15 +5,16 @@ import { useState } from "react";
 import "../sass/MenuMobileToggle.scss";
 
 export default function MenuMobileToggle() {
-  const [menuMobile, setmenuMobile] = useState("");
+  const [menuMobile, setmenuMobile] = useState();
 
   useEffect(() => {
     setmenuMobile(document.querySelector(".menu-mobile-container"));
-  }, []);
+    //console.log(menuMobile);
+  }, [menuMobile]);
 
   function displayMenuMobile() {
     menuMobile.classList.toggle("display");
-    console.log("cliquei no label");
+    //console.log("cliquei no label");
   }
 
   return (
