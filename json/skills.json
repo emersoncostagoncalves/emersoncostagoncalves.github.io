@@ -1,27 +1,27 @@
 [
     {
         "Design": {
-            "Adobe Ilustrator": "92%",
-            "Adobe Photoshop": "95%",
-            "Adobe Premiere Pro": "99%",
-            "Adobe After Effects": "75%",
-            "Adobe Lightroom": "96%",
-            "Corel Draw": "99%",
-            "Maxon Cinema 4D": "76%",
-            "Figma": "82%"
+            "Adobe Ilustrator": "100%",
+            "Adobe Photoshop": "100%",
+            "Adobe Premiere Pro": "100%",
+            "Adobe After Effects": "100%",
+            "Adobe Lightroom": "100%",
+            "Corel Draw": "100%",
+            "Maxon Cinema 4D": "100%",
+            "Figma": "100%"
         },
         "Developer": {
-            "HTML5": "97%",
-            "CSS3": "95%",
-            "JavaScript": "92%",
-            "JQuery": "80%",
-            "SASS": "85%",
-            "Bootstrap": "73%",
-            "React": "80%",
-            "NextJs": "84%",
-            "NodeJs": "65%",
-            "API Rest": "90%",
-            "MySQL": "62%"
+            "HTML5": "100%",
+            "CSS3": "100%",
+            "JavaScript": "100%",
+            "JQuery": "100%",
+            "SASS": "100%",
+            "Bootstrap": "100%",
+            "React": "100%",
+            "NextJs": "100%",
+            "NodeJs": "100%",
+            "API Rest": "100%",
+            "MySQL": "100%"
         }
     }
 ]
