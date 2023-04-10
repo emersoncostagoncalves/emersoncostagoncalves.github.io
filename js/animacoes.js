@@ -190,6 +190,7 @@ fetch("../json/portifolio.json")
     // Link Projeto
     const btnProjeto = document.querySelectorAll("#btn-projeto");
     btnProjeto.forEach((el) => {
+      el.style.cursor = "pointer";
       el.onclick = () => {
         const link = el.getAttribute("link");
         window.open(link, "blank");
