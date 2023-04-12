@@ -128,13 +128,25 @@ export default class ContainerItems extends Component {
       });
   }
 
-  callAllPokemons(e) {
-    document.title = `${e.target.innerText} - Pokédex`;
-    const allBtns = document.querySelectorAll(".btn-menu");
-    allBtns.forEach((el) => {
-      el.removeAttribute("actived");
-    });
-    e.currentTarget.setAttribute("actived", "");
+  callAllPokemons(e, type) {
+    //console.log("tipo: ", type.currentTarget.id);
+    if (type !== undefined) {
+      document.title = `${e.innerText} - Pokédex`;
+      const allBtns = document.querySelectorAll(".btn-menu");
+      allBtns.forEach((el) => {
+        el.removeAttribute("actived");
+      });
+      e.setAttribute("actived", "");
+      const btnTodos = document.querySelector("#todos");
+      btnTodos.setAttribute("actived", "");
+    } else {
+      document.title = `${e.target.innerText} - Pokédex`;
+      const allBtns = document.querySelectorAll(".btn-menu");
+      allBtns.forEach((el) => {
+        el.removeAttribute("actived");
+      });
+      e.currentTarget.setAttribute("actived", "");
+    }
 
     this.setState({ pokemonData: [] });
     this.loadAllPokemons = fetch("https://pokeapi.co/api/v2/pokemon")
@@ -154,10 +166,10 @@ export default class ContainerItems extends Component {
         );
         this.setState({ btn: this.state.btn });
 
-        this.setState({ pokemonsQnt: dados.count });
+        //this.setState({ pokemonsQnt: dados.count });
         this.state.pages.push(dados.next);
         this.setState({ pages: this.state.pages });
-
+        this.setState({ pokemonsQnt: dados.count });
         dados.results.forEach((el) => {
           fetch(el.url)
             .then((resp) => resp.json())
@@ -177,6 +189,7 @@ export default class ContainerItems extends Component {
                 />
               );
               this.setState({ pokemonData: this.state.pokemonData });
+
               //console.log(dados.types[0].type.name)
             });
         });
@@ -287,6 +300,7 @@ export default class ContainerItems extends Component {
             .then((data) => {
               this.state.pokemonData.push(
                 <Cards
+                  key={data.id}
                   name={data.name}
                   id={`#${data.id}`}
                   type={data.types[0].type.name}
@@ -307,23 +321,24 @@ export default class ContainerItems extends Component {
     //console.log(e.target.attributes.url.value)
   }
 
-  pesquisar(e) {
+  pesquisar(text) {
     this.setState({ btn: [] });
 
-    if (e.keyCode === 13) {
+    if (text.length !== 0) {
       document.title = `Pesquisa - Pokédex`;
-      const url = `https://pokeapi.co/api/v2/pokemon/${e.target.value}`;
+      const url = `https://pokeapi.co/api/v2/pokemon/${text}`;
 
       this.setState({ pokemonData: [] });
-      this.setState({ pokemonsQnt: 1 });
 
       //console.log(url)
       fetch(url)
         .then((resp) => resp.json())
         .then((data) => {
           //console.log(data)
+          this.setState({ pokemonsQnt: 1 });
           this.state.pokemonData.push(
             <Cards
+              key={data.id}
               name={data.name}
               id={`#${data.id}`}
               type={data.types[0].type.name}
@@ -337,11 +352,10 @@ export default class ContainerItems extends Component {
           );
           this.setState({ pokemonData: this.state.pokemonData });
         })
-        .catch((error) => {
-          this.setState({ pokemonsQnt: 0 });
-          this.state.pokemonData.push(<p>Nenhum pokemon encontrado...</p>);
-          this.setState({ pokemonData: this.state.pokemonData });
-          //console.log(error)
+        .catch(() => {
+          if (this.state.pokemonData.length === 0) {
+            this.setState({ pokemonsQnt: 0 });
+          }
         });
     }
   }
@@ -374,8 +388,8 @@ export default class ContainerItems extends Component {
 
     return (
       <div className="container-items">
-        <SearchBar func={this.pesquisar} />
-        <div className="container-list">
+        <SearchBar func={this.pesquisar} call={this.callAllPokemons} />
+        <div id="pokemons" className="container-list">
           <aside className="menu">
             <nav>
               <ButtonMenu
@@ -407,8 +421,14 @@ export default class ContainerItems extends Component {
                   : pokemonsQnt + " Pokémon"}{" "}
               </h1>
             </div>
+            {pokemonData.length > 0 ? (
+              <div className="container-cards">{[...pokemonData]}</div>
+            ) : (
+              <div className="container-cards">
+                <p>Nenhum pokemon encontrado...</p>
+              </div>
+            )}
 
-            <div className="container-cards">{[...pokemonData]}</div>
             <div className="container-cards-footer">
               {[this.state.btn[this.state.btn.length - 1]]}
             </div>

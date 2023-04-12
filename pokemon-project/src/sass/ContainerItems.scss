@@ -131,6 +131,7 @@
     gap: 0.3rem;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     transition: all 500ms;
+    cursor: pointer;
     &:hover {
         background-color: rgb(23, 62, 190);
     }
