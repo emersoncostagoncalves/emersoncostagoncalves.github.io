@@ -176,7 +176,7 @@ fetch("../json/portifolio.json")
          </div>
          <div class="box-main">
             <div class="portifolio-info">
-                 <h2>${el.tecnologias}</h2>
+                 <h2 style="text-align: center">${el.tecnologias}</h2>
                 <h1>${el.name}</h1>
                  <button id="btn-projeto" link="${el.link}">Ver Projeto</button>
              </div>
