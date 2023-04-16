@@ -1,5 +1,5 @@
 [
-    {"name": "5i Locação de Ferramentas", "tecnologias": "NextJS | JavaScript | Styled Components | Chakra UI | Material UI | Google API" , "img": "../imagens/5i_thumb.png", "link" : "https://5iferramentas.netlify.app/"},
+    {"name": "5i Locação de Ferramentas", "tecnologias": "NextJS | JavaScript | Styled Components | Chakra UI | Material UI | Google API | Zustand" , "img": "../imagens/5i_thumb.png", "link" : "https://5iferramentas.netlify.app/"},
     {"name": "Projeto Catálago de Filmes", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_1.png", "link" : "/barraflix/index.html"},
     {"name": "Projeto Pokédex", "tecnologias": "React | SASS | JavaScript | API", "img": "../imagens/pokemon-thumb.png", "link" : "https://pokedex-gules-six.vercel.app/"},
     {"name": "Projeto League of Legends", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_2.png", "link" : "/lol/index.html"},
