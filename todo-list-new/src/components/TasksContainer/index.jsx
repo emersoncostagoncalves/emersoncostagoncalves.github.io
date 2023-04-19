@@ -194,13 +194,16 @@ export default function TasksContainer() {
     <Container gap={1} theme={theme}>
       {!filterDone && !filterPendent && allTasks}
       {filterDone && tasksDone.length > 0 && tasksDone}
-      {!filterDone && !filterPendent && allTasks.length === 0 && (
-        <p>
-          Nenhuma tarefa encontrada{" "}
-          <span onClick={() => cleanAllFilter()}>clique aqui</span> para limpar
-          todos os filtros.
-        </p>
-      )}
+      {!filterDone &&
+        !filterPendent &&
+        searchText.length > 0 &&
+        allTasks.length === 0 && (
+          <p>
+            Nenhuma tarefa encontrada{" "}
+            <span onClick={() => cleanAllFilter()}>clique aqui</span> para
+            limpar todos os filtros.
+          </p>
+        )}
       {filterDone && tasksDone.length === 0 && (
         <p>
           Nenhuma tarefa encontrada{" "}
