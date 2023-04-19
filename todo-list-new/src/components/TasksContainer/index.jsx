@@ -283,10 +283,10 @@ export default function TasksContainer() {
           </ModalBody>
 
           <ModalFooter>
+            <Button onClick={closeEdit}>Cancelar</Button>
             <Button onClick={() => editTask(task)} colorScheme="green" mr={3}>
               Salvar
             </Button>
-            <Button onClick={closeEdit}>Cancelar</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
