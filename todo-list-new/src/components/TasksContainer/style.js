@@ -15,6 +15,38 @@ export const Container = styled.div`
       cursor: pointer;
     }
   }
+  //Mozilla
+  ::-moz-scrollbar {
+    width: 3px;
+  }
+
+  ::-moz-scrollbar-thumb {
+    background-color: ${(props) =>
+      props.theme ? props.theme.destaque : "none"};
+  }
+
+  ::-moz-scrollbar-track {
+    background-color: none;
+  }
+
+  //Chrome
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${(props) =>
+      props.theme ? props.theme.destaque : "none"};
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: none;
+  }
+
+  scrollbar-color: ${(props) =>
+    props.theme ? `${props.theme.destaque} ${props.theme.primary}` : "none"};
+  scrollbar-width: thin;
 `;
 
 export const Box = styled.div`
