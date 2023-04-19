@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: 100%;
   height: 53%;
   gap: ${(props) => (props.gap ? props.gap + "rem" : "none")};
-  padding-top: 1rem;
+  margin-top: 1rem;
   overflow-y: scroll;
   p {
     color: ${(props) => (props.theme ? props.theme.text : "none")};

@@ -255,6 +255,7 @@ export default function TasksContainer() {
         isOpen={editIsOpen}
         onClose={closeEdit}
         isCentered
+        motionPreset="slideInBottom"
       >
         <ModalOverlay />
         <ModalContent>
@@ -273,7 +274,7 @@ export default function TasksContainer() {
           </ModalBody>
 
           <ModalFooter>
-            <Button onClick={() => editTask(task)} colorScheme="blue" mr={3}>
+            <Button onClick={() => editTask(task)} colorScheme="green" mr={3}>
               Salvar
             </Button>
             <Button onClick={closeEdit}>Cancelar</Button>

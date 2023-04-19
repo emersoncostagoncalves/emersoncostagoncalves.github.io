@@ -18,4 +18,8 @@ export const Container = styled.div`
   padding: 2rem;
   box-sizing: border-box;
   overflow: hidden;
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 100%;
+  }
 `;

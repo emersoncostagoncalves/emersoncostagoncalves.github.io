@@ -5,6 +5,9 @@ export const Container = styled.div`
   padding: 1rem 0rem;
   width: 100%;
   gap: ${(props) => (props.gap ? props.gap + "rem" : "none")};
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const Button = styled.button`
