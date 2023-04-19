@@ -1,14 +1,14 @@
 [
     {"name": "5i Locação de Ferramentas", "tecnologias": "NextJS | JavaScript | Styled Components | Chakra UI | Material UI | Google API | Zustand" , "img": "../imagens/5i_thumb.png", "link" : "https://5iferramentas.netlify.app/"},
     {"name": "Projeto Catálago de Filmes", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_1.png", "link" : "/barraflix/index.html"},
-    {"name": "Projeto Pokédex", "tecnologias": "React | SASS | JavaScript | API", "img": "../imagens/pokemon-thumb.png", "link" : "https://pokedex-gules-six.vercel.app/"},
     {"name": "Projeto League of Legends", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_2.png", "link" : "/lol/index.html"},
+    {"name": "Projeto To Do List", "tecnologias": "NextJs | JavaScript | Styled Components | Zustand | Chakra UI", "img": "../imagens/newToDo_thumb.png", "link" : "https://newtasklist.netlify.app/"},
+    {"name": "Projeto Pokédex", "tecnologias": "React | SASS | JavaScript | API", "img": "../imagens/pokemon-thumb.png", "link" : "https://pokedex-gules-six.vercel.app/"},
     {"name": "Projeto Gerenciador Kanban", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_3.png", "link" : "/gkanban.html"},
     {"name": "Projeto Previsão do Tempo", "tecnologias": "HTML5 | CSS3 | JavaScript | API", "img": "../imagens/thumb_4.png", "link" : "/meteorologia.html"},
     {"name": "Projeto Calculadora", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_5.png", "link" : "/calculadora.html"},
     {"name": "Projeto Cronômetro", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_6.png", "link" : "/cronometro.html"},
     {"name": "Projeto Gerador de Senhas", "tecnologias": "HTML5 | CSS3 | JavaScript", "img": "../imagens/thumb_7.png", "link" : "/geradordesenha.html"},
-    {"name": "Projeto Twitter", "tecnologias": "React | SASS | JavaScript", "img": "../imagens/thumb_8.png", "link" : "https://emersoncostagoncalves-twitter.vercel.app/"},
-    {"name": "Projeto To Do List", "tecnologias": "React | Styled Components | TypeScript", "img": "../imagens/todo-list-thumb.png", "link" : "https://todolist-eight-beryl.vercel.app/"}
-    
+    {"name": "Projeto Twitter", "tecnologias": "React | SASS | JavaScript", "img": "../imagens/thumb_8.png", "link" : "https://emersoncostagoncalves-twitter.vercel.app/"}
+   
 ]
