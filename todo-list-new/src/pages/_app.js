@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors: {
-    primary: "#FF0000",
-    secondary: "#00FF00",
+    brand: { 100: "#9800f0", 200: "#7b03c0" },
+    emerson: { 100: "#18d888", 200: "#ffee04" },
   },
   fonts: {
     heading: "'Roboto', sans-serif",

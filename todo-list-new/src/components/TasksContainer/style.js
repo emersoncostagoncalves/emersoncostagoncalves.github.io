@@ -82,3 +82,6 @@ export const Task = styled.div`
       props.done === true ? "line-through" : "none"};
   }
 `;
+
+export const EditButton = styled.div``;
+export const DeleteButton = styled.div``;

@@ -32,3 +32,5 @@ export const InputTask = styled.input`
   outline: none;
   color: ${(props) => (props.theme ? props.theme.text : "none")};
 `;
+
+export const AddButton = styled.div``;

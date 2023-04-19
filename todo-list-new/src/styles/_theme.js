@@ -3,7 +3,7 @@ export const Dark = {
   primary: "#181A20",
   secondary: "#22252E",
   destaque: "#DD374D",
-  destaque2: "#3ad33a",
+  destaque2: "#7eee5c",
   text: "#BCBEC4",
   bgColor: "#181A20",
 };
@@ -13,7 +13,7 @@ export const Light = {
   primary: "#f5f5f5",
   secondary: "#ffffff",
   destaque: "#DD374D",
-  destaque2: "#3ad33a",
+  destaque2: "#7eee5c",
   text: "#181A20",
   bgColor: "#f5f5f5",
 };

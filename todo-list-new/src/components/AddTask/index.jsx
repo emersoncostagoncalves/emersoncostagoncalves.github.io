@@ -1,10 +1,10 @@
-import { Container, Box, InputTask } from "./style";
+import { Container, Box, InputTask, AddButton } from "./style";
 import { GrFormAdd } from "react-icons/gr";
 import { FaTasks } from "react-icons/fa";
 import { useTheme } from "@/stores/theme";
 import { useState, useLayoutEffect } from "react";
 import { useTask } from "@/stores/tasks";
-import { useToast } from "@chakra-ui/react";
+import { useToast, Tooltip } from "@chakra-ui/react";
 
 export default function AddTask() {
   const { theme } = useTheme();
@@ -33,11 +33,12 @@ export default function AddTask() {
         status: "success",
         duration: 4000,
         isClosable: true,
+        colorScheme: "messenger",
       });
     } else {
       setTaskText("");
       toast({
-        title: "Tarefa não criada",
+        title: "Erro ao criar tarefa",
         description: "Sua tarefa precisa conter algum texto!",
         status: "error",
         duration: 4000,
@@ -60,7 +61,15 @@ export default function AddTask() {
           placeholder="Adicionar nova tarefa"
           theme={theme}
         />
-        <GrFormAdd onClick={() => handlerTask()} size={30} cursor="pointer" />
+        <Tooltip hasArrow label="Add Tarefa" bg={theme.destaque}>
+          <AddButton>
+            <GrFormAdd
+              onClick={() => handlerTask()}
+              size={30}
+              cursor="pointer"
+            />
+          </AddButton>
+        </Tooltip>
       </Box>
     </Container>
   );

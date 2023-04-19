@@ -1,4 +1,4 @@
-import { Container, Box, Task } from "./style";
+import { Container, Box, Task, EditButton, DeleteButton } from "./style";
 import { useTask } from "@/stores/tasks";
 import { useTheme } from "@/stores/theme";
 import { Checkbox } from "@chakra-ui/react";
@@ -7,6 +7,7 @@ import { FiTrash2 } from "react-icons/fi";
 import { BiEditAlt } from "react-icons/bi";
 import React from "react";
 import { useToast } from "@chakra-ui/react";
+import { Tooltip } from "@chakra-ui/react";
 
 import {
   AlertDialog,
@@ -140,8 +141,16 @@ export default function TasksContainer() {
           <p>{el.text}</p>
         </Box>
         <Box gap={0.5} theme={theme}>
-          <BiEditAlt onClick={() => openEdit(el)} cursor="pointer" />
-          <FiTrash2 onClick={() => onOpen(el)} cursor="pointer" />
+          <Tooltip hasArrow label="Editar" bg={theme.primary}>
+            <EditButton>
+              <BiEditAlt onClick={() => openEdit(el)} cursor="pointer" />
+            </EditButton>
+          </Tooltip>
+          <Tooltip hasArrow label="Excluir" bg={theme.primary}>
+            <DeleteButton>
+              <FiTrash2 onClick={() => onOpen(el)} cursor="pointer" />
+            </DeleteButton>
+          </Tooltip>
         </Box>
       </Task>
     ));
