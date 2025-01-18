@@ -2080,6 +2080,8 @@ p {
         transition: display 2s;
     }
 
+    
+
     /*Animações*/
 
     @keyframes animar-texto {
@@ -2099,4 +2101,10 @@ p {
             width: 0%;
         }
     }
+}
+
+.footer-facebook {
+    color:#555555;
+    font-size: small;
+    text-align: center;
 }
