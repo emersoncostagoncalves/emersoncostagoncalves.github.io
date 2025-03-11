@@ -20,7 +20,7 @@ export default function Footer({ images, isLoading }) {
             </div>
             <div className={styles.boxCopy}>
             <a className={styles.copyright}>© {ano} CSS GLASS GENERATION - Todos os Direitos Reservados</a>
-            <a className={styles.powered}>Powered by Emerson Costa Gonçalves</a>
+            <a className={styles.powered} href="https://emersoncostagoncalves.github.io/">Powered by Emerson Costa Gonçalves</a>
             </div>
             
         </footer>
