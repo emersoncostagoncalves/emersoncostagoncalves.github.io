@@ -7,6 +7,7 @@ import Controls from "../components/controls";
 import BoxCode from "../components/boxCode";
 import CopyButton from "../components/copyButton";
 import PopUp from '../components/popUp';
+import Head from 'next/head';
 
 
 
@@ -35,7 +36,6 @@ export default function Home() {
     const FetchData = async () => {
       const resp = await fetch("../backgrounds.json");
       const data = await resp.json();
-      console.log(data);
       setLinks(data);
       setBackground({ backgroundImage: `url("${data[0].url}")` })
       setValue(data[0].url)
@@ -51,6 +51,11 @@ export default function Home() {
 
   return (
     <app>
+      <Head>
+        <title>Minha Página Inicial</title>
+        <meta name="description" content="Esta é a página inicial do meu site." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <main className={styles.main} style={{ backgroundImage: `url("${backStore}")` }}>
         <p className={styles.title}> CSS Glass Generation</p>
         <div className={styles.box_glass} style={{ backgroundColor: `rgba(255, 255, 255, ${opacity})`, borderRadius: `${border}px`, backdropFilter: `blur(${blur}px)` }}></div>
