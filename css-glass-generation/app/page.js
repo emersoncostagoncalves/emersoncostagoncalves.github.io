@@ -59,7 +59,7 @@ export default function Home() {
         <CopyButton ref={boxRef} refNotification={boxNotification} />
       </main>
       <PopUp ref={boxNotification}/>
-      <Footer isLoading={isLoading} images={links} ano="2025" nome="Emerson Costa Gonçalves" />
+      <Footer isLoading={isLoading} images={links}/>
     </app>
   );
 }

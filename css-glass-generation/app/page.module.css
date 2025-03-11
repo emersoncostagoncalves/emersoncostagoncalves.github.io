@@ -35,12 +35,27 @@
   background-color: rgb(22, 22, 22);
   position: absolute;
   bottom: 0;
-  gap: 10px;
+  gap: 15px;
   border-top: 1px solid rgb(71, 71, 71);
+}
+
+.boxCopy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyright {
   font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+
+}
+
+.powered {
+  font-size: 0.8rem;
   font-family: 'Roboto', sans-serif;
   color: rgb(77, 77, 77);
 
