@@ -11,7 +11,7 @@ export default function BoxCode({ref}){
         <div className={styles.boxCode}>
             <p ref={ref}>background-color: rgba(255, 255, 255, {opacityValue});
             <br/>border-radius: {borderValue}px;
-            <br/>-webkit-backdrop-filter: blur({blurValue}px);
+            <br/>backdrop-filter: blur({blurValue}px);
             </p>
             
         </div>
